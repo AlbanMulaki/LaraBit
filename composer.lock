@@ -4,8 +4,63 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "96098e473b028cdb2529580554a1ae3e",
+    "content-hash": "5d41dfcc9e0fe9efd7add28f47110d25",
     "packages": [
+        {
+            "name": "andywer/js-localization",
+            "version": "dev-laravel-5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andywer/laravel-js-localization.git",
+                "reference": "be35ca18cbb7587efdccb4a8e6cce766626ee58f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andywer/laravel-js-localization/zipball/be35ca18cbb7587efdccb4a8e6cce766626ee58f",
+                "reference": "be35ca18cbb7587efdccb4a8e6cce766626ee58f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.x",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.4",
+                "orchestra/testbench": "3.0.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "component": "package",
+                "frameworks": [
+                    "Laravel 5"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "JsLocalization\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andy Wermke",
+                    "email": "andy@dev.next-step-software.com"
+                }
+            ],
+            "description": "Laravel package to provide localizations to the Javascript code.",
+            "keywords": [
+                "javascript",
+                "laravel",
+                "localization",
+                "messages",
+                "translation"
+            ],
+            "time": "2017-02-16T13:36:39+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -3335,7 +3390,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "andywer/js-localization": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
