@@ -153,7 +153,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         JsLocalization\JsLocalizationServiceProvider::class,
-        Mulaki\Modules\ModuleServiceProvider::class,
     ],
     /*
       |--------------------------------------------------------------------------
