@@ -15,4 +15,4 @@
 //    return view('welcome'); 
 //});
 
-Route::get('/', 'Users\UsersController@index');
+Route::get('/test', 'TestController@getIndex');

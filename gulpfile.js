@@ -18,8 +18,14 @@ elixir(function (mix) {
     mix.scripts(npm + 'jquery/dist/jquery.min.js', './public/js/lib/jquery.min.js');
 
     //Bootstrap
-    mix.sass(npm + 'bootstrap/dist/css/bootstrap.min.css', './public/css/lib/bootstrap.min.css');
+    mix.copy(npm + 'bootstrap/dist/css/bootstrap.min.css', './public/css/lib/bootstrap.min.css');
     mix.scripts(npm + 'bootstrap/dist/js/bootstrap.min.js', './public/js/lib/bootstrap.min.js');
+    mix.copy('./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot', './public/css/fonts/glyphicons-halflings-regular.eot');
+    mix.copy('./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular', './public/css/fonts/glyphicons-halflings-regular');
+    mix.copy('./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf', './public/css/fonts/glyphicons-halflings-regular.ttf');
+    mix.copy('./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', './public/css/fonts/glyphicons-halflings-regular.woff');
+    mix.copy('./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2', './public/css/fonts/glyphicons-halflings-regular.woff2');
+ 
 
     //Nprogress 
     mix.copy('./node_modules/nprogress/nprogress.css', './public/css/lib/nprogress.min.css');
@@ -36,6 +42,7 @@ elixir(function (mix) {
 
     //Gentelella Framework
     mix.sass('./node_modules/gentelella/build/css/custom.min.css', './public/css/lib/custom.min.css');
+    mix.scripts('./node_modules/gentelella/build/js/custom.min.js', './public/js/lib/custom.min.js');
 
     //FastClick
     mix.scripts('./node_modules/fastclick/lib/fastclick.js', './public/js/lib/fastclick.min.js');
@@ -52,10 +59,44 @@ elixir(function (mix) {
     mix.scripts('./node_modules/echarts/dist/echarts.min.js', './public/js/lib/echarts.min.js');
     //chart.js
     mix.scripts('./node_modules/chart.js/dist/Chart.min.js', './public/js/lib/chart.min.js');
+    //JQVmap
+    mix.copy(npm + "jqvmap/dist/jqvmap.min.css", './public/css/lib/jqvmap.min.css');
+    mix.scripts(npm + "jqvmap/dist/jquery.vmap.js", './public/js/lib/jquery.vmap.min.js');
+    mix.scripts(npm + "jqvmap/dist/maps/jquery.vmap.world.js", './public/js/lib/jquery.vmap.world.min.js');
+
+    //iCheck
+    mix.sass(npm + "icheck/skins/square/green.css", './public/css/lib/icheck.min.css');
+    mix.copy(npm + "icheck/skins/square/green.png", './public/css/lib/green.png');
+    mix.copy(npm + "icheck/skins/square/green@2x.png", './public/css/lib/green@2x.png');
+    mix.scripts(npm + "icheck/icheck.min.js", './public/js/lib/icheck.min.js');
 
 
+    //skyCons - Weather
+    mix.scripts(npm + "skycons/skycons.js", './public/js/lib/skycons.min.js');
+
+    //Gauges
+//    mix.scripts(npm + "gauges/index.js", './public/js/lib/gauges.min.js');
+
+    //ionRangeslider
+    mix.sass([npm + "ion-rangeslider/css/ion.rangeSlider.css", npm + "ion-rangeslider/css/ion.rangeSlider.skinFlat.css"], './public/css/lib/ion.rangeSlider.min.css');
+    mix.scripts(npm + "ion-rangeslider/js/ion.rangeSlider.min.js", './public/js/lib/ion.rangeSlider.min.js');
+    //Bootstrap-colorpicker
+    mix.sass(npm + "bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css", './public/css/lib/bootstrap-colorpicker.min.css');
+    mix.scripts(npm + "bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js", './public/js/lib/bootstrap-colorpicker.min.js');
+    mix.copy(npm + "bootstrap-colorpicker/dist/img/bootstrap-colorpicker/alpha-horizontal.png", './public/css/lib/colorpicker/alpha-horizontal.png');
+    mix.copy(npm + "bootstrap-colorpicker/dist/img/bootstrap-colorpicker/alpha.png", './public/css/lib/colorpicker/alpha.png');
+    mix.copy(npm + "bootstrap-colorpicker/dist/img/bootstrap-colorpicker/hue-horizontal.png", './public/css/lib/colorpicker/hue-horizontal.png');
+    mix.copy(npm + "bootstrap-colorpicker/dist/img/bootstrap-colorpicker/hue.png", './public/css/lib/colorpicker/hue.png');
+    mix.copy(npm + "bootstrap-colorpicker/dist/img/bootstrap-colorpicker/saturation.png", './public/css/lib/colorpicker/saturation.png');
 
 
-
+    //jQuery Input Mask
+    mix.scripts(npm + "jquery-inputmask/index.js", './public/js/lib/jquery-inputmask.min.js');
+    //jQuery knob
+    mix.scripts(npm + "jquery-knob/dist/jquery.knob.min.js", './public/js/lib/jquery-knob.min.js');
+    
+    //LaraBit JS
+    mix.sass("app.scss", './public/css/lib/app.min.css');
+    mix.scripts("app.js", './public/js/lib/app.min.js');
 
 });
