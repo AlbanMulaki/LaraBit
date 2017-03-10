@@ -10,7 +10,7 @@
                 <div class="animate form login_form">
                     <section class="login_content">
                         <form>
-                            <h1>
+                            <h1>s
                                 <script type="text/javascript">
                                     document.write(Lang.get('login.login_form'));
                                 </script>
