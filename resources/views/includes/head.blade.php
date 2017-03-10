@@ -4,7 +4,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Title </title> <!-- Do Dynamic -->
+    <title> </title> <!-- Do Dynamic -->
     @yield('js-localization.head')
+
+    <script>
+        document.title = {!! $title !!}
+        ;
+    </script>
     @include('includes.stylesheets')
 </head>

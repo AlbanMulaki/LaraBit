@@ -1,0 +1,1 @@
+Config.addConfig({"app.debug":true});
