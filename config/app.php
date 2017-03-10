@@ -153,6 +153,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         JsLocalization\JsLocalizationServiceProvider::class,
+        App\Providers\ComposerServiceProvider ::class,
     ],
     /*
       |--------------------------------------------------------------------------

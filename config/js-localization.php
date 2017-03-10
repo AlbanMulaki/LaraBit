@@ -34,8 +34,23 @@ return [
       |   ['mynamespace.test1', 'mynamespace.test2']
       |
      */
-    'messages' => ['auth' => [
-            'failed'
+    'messages' => [
+        'passwords' => [
+            'password', 'user', 'token'
+        ],
+        'login' => [
+            'username',
+            'password',
+            'login',
+            'lost_your_password',
+            'new_to_site',
+            'create_account',
+            'login_form',
+        ],
+        'company' => [
+            'company_name',
+            'all_right_reserved',
+            
         ]
     ],
     /*
