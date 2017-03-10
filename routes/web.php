@@ -12,7 +12,12 @@
  */
 //
 //Route::get('/', function () {
-//    return view('welcome'); 
+//    return view('welcome');
 //});
 
-Route::get('/test', 'TestController@getIndex');
+
+
+Route::get('/home', 'HomeController@index');
+
+Auth::routes();
+

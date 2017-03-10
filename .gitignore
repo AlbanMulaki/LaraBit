@@ -5,6 +5,8 @@
 /public/fonts
 /public/images
 /public/assets
+/public/vendor
+/fonts
 /public/mix-manifest.json
 /public/hot
 /storage/*.key

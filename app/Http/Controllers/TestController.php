@@ -10,7 +10,7 @@ class TestController extends Controller {
 
 
     public function getIndex() {
-        return view('panels.users.index');
+        return view('test');
     }
 
 }
