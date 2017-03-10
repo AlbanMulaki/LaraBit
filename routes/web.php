@@ -15,9 +15,8 @@
 //    return view('welcome');
 //});
 
-
-
 Route::get('/home', 'HomeController@index');
 
 Auth::routes();
-
+Route::get('/test', 'TestController@getIndex');
+Route::get('/login', 'Users\UsersController@showLoginForm');

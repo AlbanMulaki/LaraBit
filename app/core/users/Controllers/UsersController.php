@@ -12,4 +12,8 @@ class UsersController extends Controller {
         return view('layouts.default');
     }
 
+    public function showLoginForm() {
+        return view('panels.users.login');
+    }
+
 }

@@ -155,6 +155,7 @@ return [
         JsLocalization\JsLocalizationServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class,
         App\Providers\CoreServiceProvider::class,
+        App\Providers\ComposerServiceProvider ::class,
     ],
     /*
       |--------------------------------------------------------------------------
