@@ -99,6 +99,6 @@ elixir(function (mix) {
     mix.sass("app.scss", './public/css/lib/app.min.css');
     mix.scripts("app.js", './public/js/lib/app.min.js');
     
-    mix.sass("node_modules/gentelella/vendors/animate.css/animate.min.css","./public/css/lib/animate.min.css");
+    mix.sass(npm + "gentelella/vendors/animate.css/animate.min.css","./public/css/lib/animate.min.css");
 
 });

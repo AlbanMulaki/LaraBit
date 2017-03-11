@@ -67,5 +67,9 @@ use RegistersUsers;
                     'password' => bcrypt($data['password']),
         ]);
     }
+    
+    public function showRegistrationForm(){
+        
+    }
 
 }
