@@ -46,6 +46,7 @@ return [
             'new_to_site',
             'create_account',
             'login_form',
+	    'email_add',
         ],
         'company' => [
             'company_name',

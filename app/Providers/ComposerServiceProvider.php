@@ -16,7 +16,7 @@ class ComposerServiceProvider extends ServiceProvider {
      */
     public function boot() {
         View::composer(
-                'panels.users.login', 'App\Http\ViewComposers\ProfileComposer'
+                'users::login', 'App\Http\ViewComposers\ProfileComposer'
         );
     }
 

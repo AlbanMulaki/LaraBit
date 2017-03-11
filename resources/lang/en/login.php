@@ -8,5 +8,6 @@ return [
     'new_to_site' => 'New to site?',
     'create_account' => 'Create Account',
     'login_form' => 'Login Form',
+    'email_add' => 'Email'
     
 ];

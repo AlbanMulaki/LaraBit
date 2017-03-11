@@ -36,6 +36,6 @@ use AuthenticatesUsers;
         $this->middleware('guest', ['except' => 'logout']);
     }
     public function showLoginForm(){
-        return view('panels.users.login');
+        return view('users::login');
     }
 }
