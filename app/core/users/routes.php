@@ -8,5 +8,7 @@
 
 
 Route::group(['namespace' => 'App\Core\Users\Controllers'], function() {
-    Route::get('/list', ['as' => 'roles.list', 'uses' => 'TestController@getIndex', 'middleware' => ['permission:view']]);
+//    Route::get('/list', ['as' => 'roles.list', 'uses' => 'TestController@getIndex', 'middleware' => ['permission:view']]);
+//    Route::get('/login', ['as' => 'login', 'uses' => 'UsersController@showLoginForm']);
+    Auth::routes();
 });

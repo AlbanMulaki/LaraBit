@@ -9,7 +9,8 @@
             <div class="login_wrapper">
                 <div class="animate form login_form">
                     <section class="login_content">
-                        <form>
+                        <form method="POST" action="{{ route('login') }}">
+                            {{ csrf_field() }}
                             <h1>
 
                                 <script type="text/javascript">
@@ -72,6 +73,42 @@
                         </form>
                     </section>
                 </div>
+
+            </div>
+            <div id="register" class="animate form registration_form">
+                <section class="login_content">
+                    <form>
+                        <h1>Create Account</h1>
+                        <div>
+                            <input class="form-control" placeholder="Username" required="" type="text">
+                        </div>
+                        <div>
+                            <input class="form-control" placeholder="Email" required="" type="email">
+                        </div>
+                        <div>
+                            <input class="form-control" placeholder="Password" required="" type="password">
+                        </div>
+                        <div>
+                            <a class="btn btn-default submit" href="index.html">Submit</a>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="separator">
+                            <p class="change_link">Already a member ?
+                                <a href="#signin" class="to_register"> Log in </a>
+                            </p>
+
+                            <div class="clearfix"></div>
+                            <br>
+
+                            <div>
+                                <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                                <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                            </div>
+                        </div>
+                    </form>
+                </section>
             </div>
         </div>
     </body>
