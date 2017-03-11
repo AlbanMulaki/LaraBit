@@ -21,3 +21,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
 <script src="{{ asset('/js/lib/custom.min.js')}}"></script>
 <script src="{{ asset('/js/lib/app.min.js')}}"></script>
+

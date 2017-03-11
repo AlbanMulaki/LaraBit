@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration {
             $table->timestamps();
         });
         $initialize = new App\User();
-        $initialize->name = 'Albert Mulaki';
+        $initialize->name = 'Albert';
         $initialize->email = 'albertmulaki6@gmail.com';
         $initialize->password = bcrypt('secret');
         $initialize->save();

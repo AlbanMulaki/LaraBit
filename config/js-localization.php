@@ -46,12 +46,19 @@ return [
             'new_to_site',
             'create_account',
             'login_form',
-	    'email_add',
+            'email_add',
+            'first_name',
+            'last_name',
+            'email',
+            'male',
+            'female',
+            'confirm_password',
+            'already_a_member',
+            
         ],
         'company' => [
             'company_name',
             'all_right_reserved',
-            
         ]
     ],
     /*
