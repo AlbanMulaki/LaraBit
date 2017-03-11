@@ -77,7 +77,7 @@ return [
       | the language folders that are provided through your application.
       |
      */
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'al',
     /*
       |--------------------------------------------------------------------------
       | Encryption Key
@@ -102,7 +102,7 @@ return [
       | Available Settings: "single", "daily", "syslog", "errorlog"
       |
      */
-    'log' => env('APP_LOG', 'single'),
+    'log' => env('APP_LOG', 'daily'),
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
     /*
       |--------------------------------------------------------------------------
@@ -154,8 +154,10 @@ return [
         App\Providers\RouteServiceProvider::class,
         JsLocalization\JsLocalizationServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class,
+        //Custom Provider
         App\Providers\CoreServiceProvider::class,
         App\Providers\ComposerServiceProvider ::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
     ],
     /*
       |--------------------------------------------------------------------------
@@ -202,5 +204,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Entrust' => Zizaco\Entrust\EntrustFacade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 ];
