@@ -65,10 +65,10 @@ elixir(function (mix) {
     mix.scripts(npm + "jqvmap/dist/maps/jquery.vmap.world.js", './public/js/lib/jquery.vmap.world.min.js');
 
     //iCheck
-    mix.sass(npm + "icheck/skins/square/green.css", './public/css/lib/icheck.min.css');
-    mix.copy(npm + "icheck/skins/square/green.png", './public/css/lib/green.png');
-    mix.copy(npm + "icheck/skins/square/green@2x.png", './public/css/lib/green@2x.png');
-    mix.scripts(npm + "icheck/icheck.min.js", './public/js/lib/icheck.min.js');
+    mix.sass(npm + "gentelella/vendors/iCheck/skins/square/green.css", './public/css/lib/icheck.min.css');
+    mix.copy(npm + "gentelella/vendors/iCheck/skins/square/green.png", './public/css/lib/green.png');
+    mix.copy(npm + "gentelella/vendors/iCheck/skins/square/green@2x.png", './public/css/lib/green@2x.png');
+    mix.scripts(npm + "gentelella/vendors/iCheck/icheck.min.js", './public/js/lib/icheck.min.js');
 
 
     //skyCons - Weather

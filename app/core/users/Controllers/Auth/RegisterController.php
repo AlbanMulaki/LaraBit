@@ -48,7 +48,9 @@ use RegistersUsers;
 
 
         return Validator::make($data, [
-                    'name' => 'required|max:255',
+                    'firstname' => 'required|max:255',
+                    'lastname' => 'required|max:255',
+                    'gender' => 'required',
                     'email' => 'required|email|max:255|unique:users',
                     'password' => 'required|min:6|confirmed',
         ]);
@@ -62,14 +64,16 @@ use RegistersUsers;
      */
     protected function create(array $data) {
         return User::create([
-                    'name' => $data['name'],
+                    'name' => $data['firstname'],
+                    'surname' => $data['lastname'],
                     'email' => $data['email'],
+                    'gender' => $data['gender'],
                     'password' => bcrypt($data['password']),
         ]);
     }
     
     public function showRegistrationForm(){
-        
+        return view('users::register');
     }
 
 }
