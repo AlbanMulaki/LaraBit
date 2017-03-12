@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core\Users\DB\Seeds;
+
 use Illuminate\Database\Seeder;
 use App\Permission;
 
@@ -13,24 +15,24 @@ class PermissionSeeder extends Seeder {
     public function run() {
         $permission = [
                 [
-                'name' => 'view',
-                'display_name' => 'Display Role Listing',
-                'description' => 'See only Listing Of Role'
-            ],
-                [
                 'name' => 'create',
-                'display_name' => 'Create Role',
-                'description' => 'Create New Role'
+                'display_name' => 'Create Acesss',
+                'description' => 'Be able to insert,create data'
             ],
                 [
-                'name' => 'edit',
-                'display_name' => 'Edit Role',
-                'description' => 'Edit Role'
+                'name' => 'view',
+                'display_name' => 'View Acesss',
+                'description' => 'Be able to View,Display,show'
+            ],
+                [
+                'name' => 'update',
+                'display_name' => 'Update Acesss',
+                'description' => 'Update, Edit'
             ],
                 [
                 'name' => 'delete',
-                'display_name' => 'Delete Role',
-                'description' => 'Delete Role'
+                'display_name' => 'Delete Acesss',
+                'description' => 'Delete,Remove data Acesss'
             ]
         ];
         foreach ($permission as $key => $value) {

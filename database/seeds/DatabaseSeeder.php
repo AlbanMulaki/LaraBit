@@ -11,8 +11,13 @@ class DatabaseSeeder extends Seeder {
      */
     public function run() {
         // $this->call(UsersTableSeeder::class);
-        $this->call(PermissionSeeder::class);
-        $this->call(UsersSeeder::class);
+        $coreModules = config('core.modules');
+        $corePath = config('core.core_path');
+        foreach ($coreModules as $moduleName => $module) {
+            if ($module === true) {
+                include $corePath.$moduleName.'/db/seeds/Seed.php';
+            }
+        }
     }
 
 }
