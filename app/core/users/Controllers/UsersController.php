@@ -4,16 +4,25 @@ namespace App\Core\Users\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\View;
 
 class UsersController extends Controller {
 
-    //
-    public function index() {
-        return view('layouts.default');
+    /**
+     * Define what to show first
+     * Redirect to their path as first show
+     * @return type
+     */
+    public function routes() {
+        return redirect()->action("\\".(self::class)."@index");
     }
 
-    public function showLoginForm() {
-        return view('panels.users.login');
+    public function index() {
+        View::share('title','Hello World');
+        return view('users::addUser');
+    }
+    public function lists() {
+        return view('users::list');
     }
 
 }

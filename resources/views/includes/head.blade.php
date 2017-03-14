@@ -8,7 +8,7 @@
     @yield('js-localization.head')
 
     <script>
-        document.title = {!! $title !!}
+        document.title = "{{ $title }}"
         ;
     </script>
     @include('includes.stylesheets')

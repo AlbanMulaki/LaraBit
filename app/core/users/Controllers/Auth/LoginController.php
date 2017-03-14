@@ -5,6 +5,7 @@ namespace App\Core\Users\Controllers\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\View;
 
 class LoginController extends Controller {
     /*
@@ -25,7 +26,7 @@ use AuthenticatesUsers;
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/cp';
 
     /**
      * Create a new controller instance.
@@ -36,6 +37,8 @@ use AuthenticatesUsers;
         $this->middleware('guest', ['except' => 'logout']);
     }
     public function showLoginForm(){
+        View::share('title','Hello World');
+        info($title);
         return view('users::login');
     }
 }
