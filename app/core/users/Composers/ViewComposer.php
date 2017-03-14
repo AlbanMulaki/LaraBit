@@ -6,13 +6,20 @@ use Illuminate\View\View;
 use App\Repositories\UserRepository;
 use Illuminate\Support\Facades\Lang;
 
+class ViewComposer {
 
-class ViewComposer
-{
-    public $views = ['users::login'];
+  public $views = ['users::login',
+	'users::list',
+	'users::addUser',
+	'users::list'];
 
-    public function compose(View $view)
-    {
-        $view->with('title', "Lang.get('login.login_form')");
-    }
+  /**
+   * For all views of this modules
+   */
+//  public $views = "*";
+
+  public function compose(View $view) {
+	$view->with('title', "Lang.get('login.login_form')");
+  }
+
 }

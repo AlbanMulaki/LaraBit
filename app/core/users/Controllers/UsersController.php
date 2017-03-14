@@ -8,21 +8,21 @@ use Illuminate\Support\Facades\View;
 
 class UsersController extends Controller {
 
-    /**
-     * Define what to show first
-     * Redirect to their path as first show
-     * @return type
-     */
-    public function routes() {
-        return redirect()->action("\\".(self::class)."@index");
-    }
+  /**
+   * Define what to show first
+   * Redirect to their path as first show
+   * @return type
+   */
+  public function routes() {
+	return redirect()->action("\\" . (self::class) . "@index");
+  }
 
-    public function index() {
-        View::share('title','Hello World');
-        return view('users::addUser');
-    }
-    public function lists() {
-        return view('users::list');
-    }
+  public function index() {
+	return view('users::addUser');
+  }
+
+  public function lists() {
+	return view('users::list');
+  }
 
 }
