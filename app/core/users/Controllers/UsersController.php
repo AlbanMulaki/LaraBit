@@ -8,21 +8,26 @@ use Illuminate\Support\Facades\View;
 
 class UsersController extends Controller {
 
-  /**
-   * Define what to show first
-   * Redirect to their path as first show
-   * @return type
-   */
-  public function routes() {
-	return redirect()->action("\\" . (self::class) . "@index");
-  }
+    public function __construct() {
+        parent::__construct();
+        $this->setPageName(trans('users::general.users_title'));
+    }
 
-  public function index() {
-	return view('users::addUser');
-  }
+    /**
+     * Define what to show first
+     * Redirect to their path as first show
+     * @return type
+     */
+    public function routes() {
+        return redirect()->action("\\" . (self::class) . "@index");
+    }
 
-  public function lists() {
-	return view('users::list');
-  }
+    /**
+     * List all users
+     * @return type
+     */
+    public function index() {
+        return view('users::users');
+    }
 
 }
