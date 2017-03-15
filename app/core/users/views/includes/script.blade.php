@@ -10,15 +10,7 @@
 <script src="{{ asset('/js/lib/daterangepicker.min.js')}}"></script>
 <script src="{{ asset('/js/lib/echarts.min.js')}}"></script>
 <script src="{{ asset('/js/lib/chart.min.js')}}"></script>
-<script src="{{ asset('/js/lib/jquery.vmap.min.js')}}"></script>
-<script src="{{ asset('/js/lib/jquery.vmap.world.min.js')}}"></script>
 <script src="{{ asset('/js/lib/icheck.min.js')}}"></script>
-<!--<script src="{{ asset('/js/lib/gauges.min.js')}}"></script>-->
-<script src="{{ asset('/js/lib/ion.rangeSlider.min.js')}}"></script>
-<script src="{{ asset('/js/lib/bootstrap-colorpicker.min.js')}}"></script>
-<script src="{{ asset('/js/lib/jquery-inputmask.min.js')}}"></script>
-<script src="{{ asset('/js/lib/jquery-knob.min.js')}}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+
 <script src="{{ asset('/js/lib/custom.min.js')}}"></script>
 <script src="{{ asset('/js/lib/app.min.js')}}"></script>
-

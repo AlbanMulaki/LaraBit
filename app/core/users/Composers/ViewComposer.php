@@ -8,10 +8,13 @@ use Illuminate\Support\Facades\Lang;
 
 class ViewComposer {
 
-  public $views = ['users::login',
-	'users::list',
-	'users::addUser',
-	'users::list'];
+  public $views = [
+    'users::login',
+    'users::list',
+    'users::addUser',
+    'users::list',
+    'users::register'
+  ];
 
   /**
    * For all views of this modules
@@ -20,6 +23,7 @@ class ViewComposer {
 
   public function compose(View $view) {
 	$view->with('title', "Lang.get('login.login_form')");
+  
   }
 
 }

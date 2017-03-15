@@ -16,6 +16,6 @@ return [
     'female' => 'Female',
     'confirm_password' => 'Confirm password',
     'already_a_member' => 'Already a member ?',
-    
-    
+
+
 ];
