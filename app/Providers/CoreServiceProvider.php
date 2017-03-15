@@ -40,25 +40,11 @@ class CoreServiceProvider extends ServiceProvider {
 		);
 		$this->publishes($seed);
 
-		info(config('core.core_namespace'));
 		$composerViewClassName = config('core.core_namespace') . ucfirst($moduleName) . "\Composers\ViewComposer";
-		info($composerViewClassName);
-//                 \App\Core\Users\Composers\ViewComposer
+
 		$composerView = new \App\Core\Users\Composers\ViewComposer();
-		info($composerView->views);
 		View::composer($composerView->views, $composerViewClassName);
 
-//        View::composer(
-//                'users::addUser',
-//                'App\Http\ViewComposers\UsersComposer'
-//        );
-//                $composerView = new $composerViewClass
-//                View::composer('',$composerViewClass);
-//
-//        View::composer(
-//                'users::login',
-//                'App\Http\ViewComposers\RegisterComposer'
-//        );
 	  }
 	}
   }

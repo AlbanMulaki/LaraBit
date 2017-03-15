@@ -15,22 +15,22 @@ class PermissionSeeder extends Seeder {
     public function run() {
         $permission = [
                 [
-                'name' => 'create',
+                'name' => 'users.list-create',
                 'display_name' => 'Create Acesss',
                 'description' => 'Be able to insert,create data'
             ],
                 [
-                'name' => 'view',
+                'name' => 'users.list-view',
                 'display_name' => 'View Acesss',
                 'description' => 'Be able to View,Display,show'
             ],
                 [
-                'name' => 'update',
+                'name' => 'users.list-update',
                 'display_name' => 'Update Acesss',
                 'description' => 'Update, Edit'
             ],
                 [
-                'name' => 'delete',
+                'name' => 'users.list-delete',
                 'display_name' => 'Delete Acesss',
                 'description' => 'Delete,Remove data Acesss'
             ]
