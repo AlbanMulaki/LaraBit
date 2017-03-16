@@ -20,13 +20,13 @@ class LoginController extends Controller {
    */
 
 use AuthenticatesUsers;
-
+  // sadasda
   /**
    * Where to redirect users after login.
    *
    * @var string
    */
-  protected $redirectTo = '/cp';
+  protected $redirectTo = '/home';
 
   /**
    * Create a new controller instance.
@@ -41,6 +41,10 @@ use AuthenticatesUsers;
 
   public function showLoginForm() {
 	return view('users::login');
+  }
+  public function test()
+  {
+    
   }
 
 }

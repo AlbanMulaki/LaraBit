@@ -7,9 +7,5 @@
     <title> </title> <!-- Do Dynamic -->
     @yield('js-localization.head')
 
-    <script>
-        document.title = {!! $title !!}
-        ;
-    </script>
-    @include('includes.stylesheets')
+    @include('users::includes.stylesheets')
 </head>
