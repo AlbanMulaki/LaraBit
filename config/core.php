@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'core_path'=> base_path('app/core/'),
+    'core_path'=> base_path('app/Core/'),
     'core_namespace'=> '\App\Core\\',
     'modules' => [
-        'users' => true,
-        'common'=> true,
+        'Common'=> true,
+        'Users' => true,
         
     ]
 ];

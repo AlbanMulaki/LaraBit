@@ -20,6 +20,7 @@ class LoginController extends Controller {
    */
 
 use AuthenticatesUsers;
+
   // sadasda
   /**
    * Where to redirect users after login.
@@ -34,17 +35,13 @@ use AuthenticatesUsers;
    * @return void
    */
   public function __construct() {
-      parent::__construct();
-      $this->setPageName("Login");
-	$this->middleware('guest', ['except' => 'logout']);
+    parent::__construct();
+    $this->setPageName("Login");
+    $this->middleware('guest', ['except' => 'logout']);
   }
 
   public function showLoginForm() {
-	return view('users::login');
-  }
-  public function test()
-  {
-    
+    return view('users::login');
   }
 
 }

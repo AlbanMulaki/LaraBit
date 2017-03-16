@@ -15,7 +15,9 @@ class DatabaseSeeder extends Seeder {
         $corePath = config('core.core_path');
         foreach ($coreModules as $moduleName => $module) {
             if ($module === true) {
+                if(is_file($corePath.$moduleName."/db/seeds/Seed.php")){
                 include $corePath.$moduleName.'/db/seeds/Seed.php';
+                }
             }
         }
     }

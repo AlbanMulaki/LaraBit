@@ -54,7 +54,7 @@
   <script src="{{ asset('/js/lib/jquery.min.js')}}"></script>
   <script>
   $(document).ready(function () {
-    document.title = {!! $title !!};
+    document.title = "{!! $title !!}";
     document.getElementById("email").placeholder = Lang.get('login.email');
     document.getElementById("password").placeholder = Lang.get('login.password');
     $('#title').append(Lang.get('login.login_form'));
