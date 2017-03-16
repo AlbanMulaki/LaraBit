@@ -39,7 +39,7 @@ class BuildMenu {
                         'name' => 'common::menu.roles'
                     ]
                 ]
-            ]
+            ],
         ];
     }
 

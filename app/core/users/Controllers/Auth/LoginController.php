@@ -34,6 +34,8 @@ use AuthenticatesUsers;
    * @return void
    */
   public function __construct() {
+      parent::__construct();
+      $this->setPageName("Login");
 	$this->middleware('guest', ['except' => 'logout']);
   }
 
