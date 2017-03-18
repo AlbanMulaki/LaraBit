@@ -1,7 +1,8 @@
 
                 <footer>
                     <div class="pull-right">
-                        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                        @ {{ $settings['app_name']}} 
+                        <b> v0.{{ shell_exec('git rev-list --count HEAD') }}</b>
                     </div>
                     <div class="clearfix"></div>
                 </footer>
