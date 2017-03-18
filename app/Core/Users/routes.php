@@ -1,14 +1,17 @@
 <?php
 
 Route::group(['middleware' => ['web'], 'namespace' => 'App\Core\Users\Controllers'], function() {
-    Route::Auth();
+  Route::Auth();
 });
 
 /**
  * All routes for authenticated users
  */
-Route::group(['prefix' => 'cp', 'middleware' => ['web', 'auth'], 'namespace' => 'App\Core\Users\Controllers'], function() {
-    Route::get('/index', ['as' => 'users.list', 'uses' => 'UsersController@index']);
-    Route::get('/roles', ['as' => 'users.roles', 'uses' => 'UsersController@index','middleware'=>'permission:users.roles']);
-    Route::get('/', ['uses' => 'UsersController@routes']);
+Route::group(['prefix' => 'cp/users', 'middleware' => ['web', 'auth'], 'namespace' => 'App\Core\Users\Controllers'], function() {
+  Route::get('/list', ['as' => 'users.list', 'uses' => 'UsersController@listsUser']);
+  Route::group(['prefix' => 'roles', 'middleware' => 'permission:users.roles-view'], function() {
+    Route::get('/roles', ['as' => 'users.roles-view', 'uses' => 'UsersController@roles', 'middleware' => 'permission:users.roles-view']);
+  });
 });
+
+

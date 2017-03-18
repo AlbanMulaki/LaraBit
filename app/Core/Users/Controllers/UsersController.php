@@ -18,7 +18,7 @@ class UsersController extends Controller {
      * Redirect to their path as first show
      * @return type
      */
-    public function routes() {
+    public function redirect() {
         return redirect()->action("\\" . (self::class) . "@index");
     }
 
@@ -26,8 +26,15 @@ class UsersController extends Controller {
      * List all users
      * @return type
      */
-    public function index() {
-        return view('users::users');
+    public function listsUser() {
+        return view('users::listUser');
     }
-
+    
+    /*
+     * Manage Roles page
+     * @return view
+     */
+    public function roles(){
+      return view('users::roles');
+    }
 }

@@ -25,6 +25,11 @@ class BuildMenu {
     public function buildMenus() {
         $this->menu_tree = [
             [
+                'route' => 'dashboard.stats',
+                'class' => 'fa fa-dashboard',
+                'name' => 'common::menu.dashboard'
+            ],
+            [
                 'route' => 'users',
                 'class' => 'fa fa-users',
                 'name' => 'common::menu.users',
@@ -35,7 +40,7 @@ class BuildMenu {
                         'name' => 'common::menu.all_users'
                     ],
                     [
-                        'route' => 'users.roles',
+                        'route' => 'users.roles-view',
                         'name' => 'common::menu.roles'
                     ]
                 ]

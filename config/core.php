@@ -6,6 +6,7 @@ return [
     'modules' => [
         'Common'=> true,
         'Users' => true,
+        'Dashboard' => true,
         
     ]
 ];
