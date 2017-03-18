@@ -43,7 +43,12 @@ class PermissionSeeder extends Seeder {
             'name' => 'dashboard.stats',
             'display_name' => 'Users Role',
             'description' => ''
-        ]
+        ],
+        [
+            'name' => 'images.view',
+            'display_name' => 'Image view',
+            'description' => 'Image view'
+        ],
     ];
     foreach ($permission as $key => $value) {
       Permission::create($value);

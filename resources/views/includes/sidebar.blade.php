@@ -9,11 +9,11 @@
                         <!-- menu profile quick info -->
                         <div class="profile clearfix">
                             <div class="profile_pic">
-                                <img src="" alt="..." class="img-circle profile_img">
+                                <i class='fa fa-user fa-4x profile_img img-circle' style='background:none;'></i>
                             </div>
                             <div class="profile_info">
-                                <span>Welcome,</span>
-                                <h2>John Doe</h2>
+                                <span>@lang('common::general.welcome'),</span>
+                                <h2>{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
