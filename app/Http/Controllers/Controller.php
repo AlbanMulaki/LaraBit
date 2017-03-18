@@ -6,6 +6,8 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use App\Settings;
+use Illuminate\Support\Facades\View;
 
 class Controller extends BaseController
 {
@@ -14,10 +16,13 @@ class Controller extends BaseController
     private $pageName;
     private $appName;
     private $pageDescription;
+    public $settings;
     
     public function __construct() {
         $this->setPageName();
         $this->setPageDescription();
+        $this->settings = Settings::pluck('value','code')->all();
+        View::share('settings',$this->settings);
     }
     
     public function setPageName($text=null){

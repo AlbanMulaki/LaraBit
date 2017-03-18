@@ -17,6 +17,10 @@ class SettingsSeeder extends Seeder {
         [
             'code' => 'app_name',
             'value' => 'Larabit'
+        ],
+        [
+            'code'=> 'logo',
+            'value'=>'logo',
         ]
     ];
     foreach ($permission as $key => $value) {

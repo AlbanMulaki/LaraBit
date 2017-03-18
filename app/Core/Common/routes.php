@@ -16,5 +16,5 @@
 
 
 Route::group(['middleware' => ['web','auth'], 'namespace' => 'App\Core\Common\Controllers'], function() {
-  Route::get('/cp', [ 'uses' => 'CommonController@redirect']);
+  Route::get('/cp', ['as'=> 'baseapp', 'uses' => 'CommonController@redirect']);
 });

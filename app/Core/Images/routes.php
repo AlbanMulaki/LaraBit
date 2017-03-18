@@ -16,5 +16,5 @@
 
 
 Route::group(['middleware' => ['web','auth'], 'namespace' => 'App\Core\Images\Controllers'], function() {
-  Route::get('/assets/image/{filename}/{thumbnail}', ['as'=>'images.view',  'uses' => 'ImagesController@getResourceImage','middleware'=>['permission:images.view']]);
+  Route::get('/assets/image/{filename}/{thumbnail}', ['as'=>'images.resourceview',  'uses' => 'ImagesController@getResourceImage','middleware'=>['permission:images.resourceview']]);
 });

@@ -45,9 +45,9 @@ class PermissionSeeder extends Seeder {
             'description' => ''
         ],
         [
-            'name' => 'images.view',
-            'display_name' => 'Image view',
-            'description' => 'Image view'
+            'name' => 'images.resourceview',
+            'display_name' => 'Image Resource view',
+            'description' => 'Image Resource view (Logo,avatar...)'
         ],
     ];
     foreach ($permission as $key => $value) {
