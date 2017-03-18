@@ -7,7 +7,7 @@ return [
         'Common'=> true,
         'Users' => true,
         'Dashboard' => true,
-        
+        'Images'=>true,
         
     ]
 ];

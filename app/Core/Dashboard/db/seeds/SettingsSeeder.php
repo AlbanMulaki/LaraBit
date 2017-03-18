@@ -3,7 +3,7 @@
 namespace App\Core\Dashboard\DB\Seeds;
 
 use Illuminate\Database\Seeder;
-use App\Permission;
+use App\Settings;
 
 class SettingsSeeder extends Seeder {
 
@@ -14,13 +14,13 @@ class SettingsSeeder extends Seeder {
    */
   public function run() {
     $permission = [
-        ['code' => 'app_name',
+        [
+            'code' => 'app_name',
             'value' => 'Larabit'
-            
         ]
     ];
     foreach ($permission as $key => $value) {
-      Permission::create($value);
+      Settings::create($value);
     }
   }
 
