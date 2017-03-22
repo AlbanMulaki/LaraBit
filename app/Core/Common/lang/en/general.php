@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'welcome'=>'Welcome',
+  'welcome' => 'Welcome',
+  'profile' => 'Profile',
 ];

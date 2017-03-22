@@ -24,6 +24,7 @@
     "morris.js": "^0.5.0",
     "nprogress": "^0.2.0",
     "raphael": "^2.2.7",
-    "skycons": "^1.0.0"
+    "skycons": "^1.0.0",
+    "vue": "^2.2.4"
   }
 }

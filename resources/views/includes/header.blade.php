@@ -13,7 +13,7 @@
                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <!--<img src="" alt="">-->
                         <b class='fa fa-user fa-2x fa-lg'> </b>
-                        
+
                         {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
                         <span class=" fa fa-angle-down"></span>
                     </a>

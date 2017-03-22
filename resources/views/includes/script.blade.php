@@ -5,6 +5,7 @@
 <script src="{{ asset('/js/lib/nprogress.min.js')}}"></script>
 <script src="{{ asset('/js/lib/raphael.min.js')}}"></script>
 <script src="{{ asset('/js/lib/morris.min.js')}}"></script>
+<script src="{{ asset('/js/lib/vue.min.js')}}"></script>
 <script src="{{ asset('/js/lib/bootstrap-progressbar.min.js')}}"></script>
 <script src="{{ asset('/js/lib/moment.min.js')}}"></script>
 <script src="{{ asset('/js/lib/daterangepicker.min.js')}}"></script>
