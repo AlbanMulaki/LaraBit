@@ -19,6 +19,9 @@ master.
 
 * https://technick.net/guides/software/software_json_api_format/
 
+* http://www.php-fig.org/psr/
+
+
 ## PSR 4
 # Autoloader
 
