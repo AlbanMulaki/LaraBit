@@ -11,13 +11,13 @@
                     @include('includes.sidebar')
                 </div>
                 @include('includes.header')
-                <div class="right_col" role="main">
+                <div class="right_col" role="main" id='larabit-app'>
                     @yield('content')
                 </div>
                 @include('includes.footer')
             </div>
         </div>
         @include('includes.script')
-        
+
     </body>
 </html>

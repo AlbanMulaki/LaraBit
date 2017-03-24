@@ -93,14 +93,27 @@ elixir(function (mix) {
 
     //jQuery Input Mask
     mix.scripts(npm + "jquery-inputmask/index.js", './public/js/lib/jquery-inputmask.min.js');
+
     //jQuery knob
     mix.scripts(npm + "jquery-knob/dist/jquery.knob.min.js", './public/js/lib/jquery-knob.min.js');
-
-    //LaraBit JS
-    mix.sass("app.scss", './public/css/lib/app.min.css');
-    mix.scripts("app.js", './public/js/lib/app.min.js');
+    // Vue Js
     mix.scripts(npm + "vue/dist/vue.js", './public/js/lib/vue.min.js');
 
+
+    //LaraBit JS
+    mix.scripts("app.js", './public/js/lib/app.min.js');
+    //Animate.CSS
     mix.sass(npm + "gentelella/vendors/animate.css/animate.min.css", "./public/css/lib/animate.min.css");
+
+    //PNotify
+    mix.scripts(npm + "pnotify/dist/pnotify.js", './public/js/lib/pnotify.min.js');
+    mix.sass(npm + "pnotify/dist/pnotify.css", './public/css/lib/pnotify.min.css');
+
+
+    //Users Module
+    mix.sass("app.scss", './public/css/lib/app.min.css');
+    mix.sass("users/user-roles.scss", './public/css/lib/user-roles.min.css');
+    mix.scripts("user/user-roles.js", './public/js/lib/user-roles.min.js');
+
 
 });

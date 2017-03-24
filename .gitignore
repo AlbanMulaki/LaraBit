@@ -16,3 +16,5 @@ Homestead.json
 Homestead.yaml
 .env
 /nbproject
+/composer.lock
+/public/vendor/js-localization/messages.js
