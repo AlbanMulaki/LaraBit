@@ -11,7 +11,7 @@ return [
     |
    */
 
-  'enabled' => env('DEBUG', true),
+  'enabled' => env('APP_DEBUG', true),
   /*
     |--------------------------------------------------------------------------
     | Storage settings

@@ -22,5 +22,12 @@
 <script src="{{ asset('/js/lib/jquery-knob.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
 <script src="{{ asset('/js/lib/custom.min.js')}}"></script>
+<script src="{{ asset('/js/lib/parsleyjs.min.js')}}"></script>
+<script src="{{ asset('/js/lib/en.min.js')}}"></script>
 <script src="{{ asset('/js/lib/app.min.js')}}"></script>
 @yield('scripts')
+@foreach($errors->getMessages() as $fieldName => $error)
+<script>
+    window.ParsleyUI.addError($('input[name="{{$fieldName}}"]').parsley(), '{{$fieldName}}', '{{$error[0]}}');
+</script>
+@endforeach

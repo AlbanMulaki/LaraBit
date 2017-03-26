@@ -108,6 +108,9 @@ elixir(function (mix) {
     //PNotify
     mix.scripts(npm + "pnotify/dist/pnotify.js", './public/js/lib/pnotify.min.js');
     mix.sass(npm + "pnotify/dist/pnotify.css", './public/css/lib/pnotify.min.css');
+    //ParsleyJS
+    mix.scripts(npm+"parsleyjs/dist/parsley.min.js", './public/js/lib/parsleyjs.min.js');
+    mix.scripts(npm+"parsleyjs/dist/i18n/en.js", './public/js/lib/en.min.js');
 
 
     //Users Module
