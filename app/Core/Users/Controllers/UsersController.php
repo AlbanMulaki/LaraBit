@@ -107,4 +107,21 @@ class UsersController extends Controller {
         abort(500);
     }
 
+    /**
+     * Create new permission
+     * @return 
+     */
+    public function createPermission() {
+        
+    }
+
+    /**
+     * Return all permissions list and forms for creating 
+     */
+    public function getPermissions() {
+        $this->setPageName(trans('users::general.permissions'));
+        $permissions = Permission::all();        
+        return view('users::permissions',['permissions'=>$permissions]);
+    }
+
 }

@@ -42,6 +42,10 @@ class BuildMenu {
                     [
                         'route' => 'users.roles-view',
                         'name' => 'common::menu.roles'
+                    ],
+                    [
+                        'route' => 'users.permission-view',
+                        'name' => 'common::menu.permissions'
                     ]
                 ]
             ],

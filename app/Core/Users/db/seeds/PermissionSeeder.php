@@ -59,6 +59,16 @@ class PermissionSeeder extends Seeder {
                 'display_name' => 'Create roles',
                 'description' => 'Create roles group'
             ],
+            [
+                'name' => 'users.permission-create',
+                'display_name' => 'Create New Permission',
+                'description' => 'Create new permission for any route.'
+            ],
+            [
+                'name' => 'users.permission-view',
+                'display_name' => 'View permission Permission',
+                'description' => 'View permissions.'
+            ]
         ];
         foreach ($permission as $key => $value) {
             Permission::create($value);

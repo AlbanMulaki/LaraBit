@@ -10,5 +10,12 @@ return [
     'create_role' => 'Create Role',
     'create_role_new_for_users' => 'Create new roles for users',
     'success_created_role' => 'Role created successfully',
-    'create_role' => 'Create Role'
+    'create_role' => 'Create Role',
+    'permissions' => 'Permissions',
+    'permissions_list' => 'Permissions List',
+    'permission_name' => "Permission Name",
+    'permission_display_name' => "Display Name",
+    'permission_description' => 'Description',
+    'save' => 'Save',
+    'create_new_permission' => "Create new permission",
 ];

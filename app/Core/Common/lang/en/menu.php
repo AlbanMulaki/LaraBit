@@ -6,4 +6,5 @@ return [
     'all_users' => 'All Users',
     'roles' => 'Roles',
     'dashboard'=>'Dashboard',
+    'permissions' => "Permissions",
 ];

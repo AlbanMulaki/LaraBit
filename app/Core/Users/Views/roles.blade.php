@@ -1,7 +1,6 @@
 @extends('layouts.default')
 
 @section('content')
-{{ debug($errors->all())}}
 <div class="col-md-6 col-xs-12">
     <div class="x_panel" style="height: auto;" id='idxs'>
 
@@ -47,7 +46,7 @@
                 <div class="ln_solid"></div>
                 <div class="form-group">
                     <div class="col-md-12 col-sm-12 col-xs-12 text-right">
-                        <button type="submit" class="btn btn-success">@lang('users::general.create_role')</button>
+                        <button type="submit" class="btn btn-success">@lang('users::general.save')</button>
                     </div>
                 </div>
 
