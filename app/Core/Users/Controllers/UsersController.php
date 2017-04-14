@@ -10,6 +10,7 @@ use App\Role;
 use App\Permission;
 use App\PermissionRole;
 use App\Core\Users\Validator\PermissionRoleValidator;
+use App\Core\Users\Validator\PermissionCreateValidator;
 use App\Core\Users\Validator\CreateRoleValidator;
 
 class UsersController extends Controller {
@@ -111,8 +112,11 @@ class UsersController extends Controller {
      * Create new permission
      * @return 
      */
-    public function createPermission() {
+    public function createPermission(PermissionCreateValidator $request) {
+
+        $permission = Permission::create($request->except('_token'));
         
+        return redirect()->back();
     }
 
     /**
@@ -120,8 +124,8 @@ class UsersController extends Controller {
      */
     public function getPermissions() {
         $this->setPageName(trans('users::general.permissions'));
-        $permissions = Permission::all();        
-        return view('users::permissions',['permissions'=>$permissions]);
+        $permissions = Permission::all();
+        return view('users::permissions', ['permissions' => $permissions]);
     }
 
 }
