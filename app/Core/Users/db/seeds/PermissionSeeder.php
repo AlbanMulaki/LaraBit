@@ -68,7 +68,17 @@ class PermissionSeeder extends Seeder {
                 'name' => 'users.permission-view',
                 'display_name' => 'View permission Permission',
                 'description' => 'View permissions.'
-            ]
+            ],
+            [
+                'name' => 'dashboard.settings',
+                'display_name' => 'Settings Management View',
+                'description' => 'Settings Management View .'
+            ],
+            [
+                'name' => 'dashboard.settings-update',
+                'display_name' => 'Settings Management Update',
+                'description' => 'Settings Management Update.'
+            ],
         ];
         foreach ($permission as $key => $value) {
             Permission::create($value);

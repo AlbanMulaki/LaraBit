@@ -25,7 +25,6 @@ class CoreServiceProvider extends ServiceProvider {
 
         //Load Views of module
         $viewsDir = $baseCore . $moduleName . "/Views";
-        info($viewsDir);
         $this->loadViewsFrom($viewsDir, strtolower($moduleName));
 
         //Load languages

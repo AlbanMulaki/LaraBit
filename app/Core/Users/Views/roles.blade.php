@@ -106,7 +106,6 @@
 @stop
 
 @section('scripts')
-
 <script src="{{ asset('/js/lib/user-roles.min.js')}}"></script>
 @stop
 

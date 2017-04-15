@@ -27,7 +27,18 @@ class BuildMenu {
             [
                 'route' => 'dashboard.stats',
                 'class' => 'fa fa-dashboard',
-                'name' => 'common::menu.dashboard'
+                'name' => 'common::menu.dashboard',
+                'children' =>
+                [
+                    [
+                        'route' => 'dashboard.settings',
+                        'name' => 'common::menu.settings'
+                    ],
+                    [
+                        'route' => 'dashboard.stats',
+                        'name' => 'common::menu.dashboard'
+                    ]
+                ]
             ],
             [
                 'route' => 'users',

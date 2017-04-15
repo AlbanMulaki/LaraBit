@@ -117,6 +117,7 @@ elixir(function (mix) {
     mix.sass("app.scss", './public/css/lib/app.min.css');
     mix.sass("users/user-roles.scss", './public/css/lib/user-roles.min.css');
     mix.scripts("user/user-roles.js", './public/js/lib/user-roles.min.js');
+    
 
 
 });

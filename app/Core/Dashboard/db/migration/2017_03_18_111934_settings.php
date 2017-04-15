@@ -18,6 +18,9 @@ class Settings extends Migration
             $table->string('code')->unique();
             $table->string('value')->nullable();
             $table->string('lang')->nullable();
+            $table->string('tab_name')->nullable();
+            $table->string('type');
+            $table->string('validation_rules')->nullable();
             $table->timestamps();
         });
     }

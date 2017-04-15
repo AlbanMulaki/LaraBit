@@ -11,4 +11,6 @@
 
 Route::group(['prefix'=>'cp/dashboard', 'middleware' => ['web','auth'], 'namespace' => 'App\Core\Dashboard\Controllers'], function() {
   Route::get('/', ['as'=>'dashboard.stats', 'uses' => 'DashboardController@dashboard']);
+  Route::get('/settings', ['as'=>'dashboard.settings', 'uses' => 'DashboardController@settings']);
+  Route::post('/settings', ['as'=>'dashboard.settings-update', 'uses' => 'DashboardController@updateSettings']);
 });

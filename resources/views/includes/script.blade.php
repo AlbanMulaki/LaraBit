@@ -20,7 +20,7 @@
 <script src="{{ asset('/js/lib/bootstrap-colorpicker.min.js')}}"></script>
 <script src="{{ asset('/js/lib/jquery-inputmask.min.js')}}"></script>
 <script src="{{ asset('/js/lib/jquery-knob.min.js')}}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>-->
 <script src="{{ asset('/js/lib/custom.min.js')}}"></script>
 <script src="{{ asset('/js/lib/parsleyjs.min.js')}}"></script>
 <script src="{{ asset('/js/lib/en.min.js')}}"></script>
