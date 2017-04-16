@@ -4,6 +4,7 @@
     "bootstrap": "^3.3.7",
     "bootstrap-colorpicker": "^2.5.1",
     "bootstrap-daterangepicker": "^2.1.25",
+    "bootstrap-fileinput": "^4.3.8",
     "bootstrap-progressbar": "^0.9.0",
     "chart.js": "^2.5.0",
     "echarts": "^3.4.0",

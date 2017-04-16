@@ -9,5 +9,6 @@
 <link href="{{ asset('/css/lib/custom.min.css')}}" rel="stylesheet">
 <link href="{{ asset('/css/lib/animate.min.css')}}" rel="stylesheet">
 <link href="{{ asset('/css/lib/pnotify.min.css')}}" rel="stylesheet">
+<link href="{{ asset('/css/lib/fileinput.min.css')}}" rel="stylesheet">
 <link href="{{ asset('/css/lib/app.min.css')}}" rel="stylesheet">
 @yield('styles')

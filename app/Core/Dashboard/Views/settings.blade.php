@@ -28,12 +28,24 @@
                             @foreach($options as $tabName => $option)
                             <div role="tabpanel" class="tab-pane fade @if($i==0) active in @endif" id="{{ $tabName }}" aria-labelledby="home-tab">
                                 @foreach($option as $optionValue)
-                                
+
                                 @if($optionValue->code == 'logo')
-                                
-                                @endif
-                                
-                                @if($optionValue->type == "string")
+
+                                <!-- the avatar markup -->
+                                <div id="kv-avatar-errors-2" class="center-block" style="width:800px;display:none"></div>
+                                <form class="text-center" action="/avatar_upload.php" method="post" enctype="multipart/form-data">
+                                    <div class="kv-avatar center-block" style="width:200px">
+                                        <input id="logo" name="avatar-2" type="file" class="file-loading">
+                                    </div>
+                                    <!-- include other inputs if needed and include a form submit (save) button -->
+                                </form>
+                                <!-- your server code `avatar_upload.php` will receive `$_FILES['avatar']` on form submission -->
+
+                                <!-- the fileinput plugin initialization -->
+                                <script>
+
+                                </script>
+                                @elseif($optionValue->type == "string")
                                 @include('dashboard::partials.settings.text-input')
                                 @endif
                                 @endforeach
@@ -55,4 +67,28 @@
 
     </div>
 </div>
+@stop
+
+@section('scripts')
+<script>
+    $("#logo").fileinput({
+        overwriteInitial: true,
+        maxFileSize: 1500,
+        showClose: false,
+        showCaption: false,
+        showBrowse: false,
+        browseOnZoneClick: true,
+        removeLabel: '',
+        removeIcon: '<i class="fa fa-remove"></i>',
+        removeTitle: 'Cancel or reset changes',
+        elErrorContainer: '#kv-avatar-errors-2',
+        msgErrorClass: 'alert alert-block alert-danger',
+        defaultPreviewContent: '<img src="/uploads/default_avatar_male.jpg" alt="Your Avatar" style="width:160px"><h6 class="text-muted">Click to select</h6>',
+        layoutTemplates: {main2: '{preview} {remove} {browse}'},
+        allowedFileExtensions: ["jpg", "png", "gif"]
+    });
+    
+//    uploadUrl: "http://localhost/file-upload-single/1", // server upload action
+//    uploadAsync: true,
+</script>
 @stop

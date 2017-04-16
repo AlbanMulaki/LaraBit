@@ -119,5 +119,8 @@ elixir(function (mix) {
     mix.scripts("user/user-roles.js", './public/js/lib/user-roles.min.js');
     
 
+    //Users Module
+    mix.sass(npm+"bootstrap-fileinput/css/fileinput.min.css", './public/css/lib/fileinput.min.css');
+    mix.scripts(npm+"bootstrap-fileinput/js/fileinput.min.js", './public/js/lib/fileinput.min.js');
 
 });
