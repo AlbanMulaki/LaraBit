@@ -79,6 +79,11 @@ class PermissionSeeder extends Seeder {
                 'display_name' => 'Settings Management Update',
                 'description' => 'Settings Management Update.'
             ],
+            [
+                'name' => 'images.image-upload',
+                'display_name' => 'Image Upload',
+                'description' => 'Image upload'
+            ],
         ];
         foreach ($permission as $key => $value) {
             Permission::create($value);

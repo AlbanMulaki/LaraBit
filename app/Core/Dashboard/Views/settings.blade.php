@@ -21,7 +21,7 @@
                         <?php $i++; ?>
                         @endforeach
                     </ul>
-                    <form data-parsley-validate action="{{ route('dashboard.settings-update') }}" class="form-horizontal form-label-left input_mask" method="POST">
+                    <form data-parsley-validate action="{{ route('dashboard.settings-update') }}" class=" form-horizontal form-label-left input_mask" method="POST" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div id="myTabContent" class="tab-content">
                             <?php $i = 0; ?>
@@ -30,21 +30,24 @@
                                 @foreach($option as $optionValue)
 
                                 @if($optionValue->code == 'logo')
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ $optionValue->code }}">{{ trans('dashboard::general.'.$optionValue->lang) }}</label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
 
-                                <!-- the avatar markup -->
-                                <div id="kv-avatar-errors-2" class="center-block" style="width:800px;display:none"></div>
-                                <form class="text-center" action="/avatar_upload.php" method="post" enctype="multipart/form-data">
-                                    <div class="kv-avatar center-block" style="width:200px">
-                                        <input id="logo" name="avatar-2" type="file" class="file-loading">
+                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                            <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;">
+
+                                            </div>
+                                            <div>
+                                                <span class="btn btn-default btn-file">
+                                                    <span class="fileinput-new">Select image</span>
+                                                    <span class="fileinput-exists">Change</span>
+                                                    <input type="file" name="logo"></span>
+                                                <a href="#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput"><span class="fa fa-remove"> </span>Remove</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- include other inputs if needed and include a form submit (save) button -->
-                                </form>
-                                <!-- your server code `avatar_upload.php` will receive `$_FILES['avatar']` on form submission -->
-
-                                <!-- the fileinput plugin initialization -->
-                                <script>
-
-                                </script>
+                                </div>
                                 @elseif($optionValue->type == "string")
                                 @include('dashboard::partials.settings.text-input')
                                 @endif
@@ -71,24 +74,9 @@
 
 @section('scripts')
 <script>
-    $("#logo").fileinput({
-        overwriteInitial: true,
-        maxFileSize: 1500,
-        showClose: false,
-        showCaption: false,
-        showBrowse: false,
-        browseOnZoneClick: true,
-        removeLabel: '',
-        removeIcon: '<i class="fa fa-remove"></i>',
-        removeTitle: 'Cancel or reset changes',
-        elErrorContainer: '#kv-avatar-errors-2',
-        msgErrorClass: 'alert alert-block alert-danger',
-        defaultPreviewContent: '<img src="/uploads/default_avatar_male.jpg" alt="Your Avatar" style="width:160px"><h6 class="text-muted">Click to select</h6>',
-        layoutTemplates: {main2: '{preview} {remove} {browse}'},
-        allowedFileExtensions: ["jpg", "png", "gif"]
-    });
-    
-//    uploadUrl: "http://localhost/file-upload-single/1", // server upload action
-//    uploadAsync: true,
+    var successTitle = "@lang('dashboard::validation.success_update_settings')";
+    var successText = "@lang('dashboard::validation.success_update_settings')";
+    var errorTitle = "@lang('dashboard::validation.settings_cannot_be_updated')";
+    var errorText = "@lang('dashboard::validation.settings_cannot_be_updated')";
 </script>
 @stop

@@ -1,9 +1,7 @@
 <?php
 
 return [
-  'not_found' => ':subject Not Found',
-  'success_attach_permission' => 'Privilege attached Successfully!',
-  'success_attach_permission_desc' => 'Privilege attached Successfully!',
-  'success_revoked_permission' => 'Privilege revoked Successfully!',
-  'success_revoked_permission_desc' => 'Privilege revoked Successfully!'
+    'not_found' => ':subject Not Found',
+    'settings_cannot_be_updated' => 'Settings cant be updated!',
+    'success_update_settings' => 'Settings updated successfully!',
 ];

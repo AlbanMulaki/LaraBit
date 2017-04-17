@@ -24,6 +24,7 @@
 <script src="{{ asset('/js/lib/custom.min.js')}}"></script>
 <script src="{{ asset('/js/lib/parsleyjs.min.js')}}"></script>
 <script src="{{ asset('/js/lib/fileinput.min.js')}}"></script>
+<script src="{{ asset('/js/lib/settings.min.js')}}"></script>
 <script src="{{ asset('/js/lib/en.min.js')}}"></script>
 <script src="{{ asset('/js/lib/app.min.js')}}"></script>
 @yield('scripts')

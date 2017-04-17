@@ -17,7 +17,43 @@
                 @include('includes.footer')
             </div>
         </div>
+
+
+
+        {{ debug(session()->get('code')) }}
+
         @include('includes.script')
 
+        @if(session()->get('code') == 200)
+        <script>
+            new PNotify({
+                title: successTitle,
+                text: successText,
+                type: 'success',
+                styling: 'bootstrap3',
+                icon: 'fa fa-check fa-lg',
+                animate: {
+                    animate: true,
+                    in_class: 'bounce',
+                    out_class: 'zoomOutRight'
+                }
+            });
+        </script>
+        @elseif(session()->get('code') == 500 || $errors->count())
+        <script>
+            new PNotify({
+                title: errorTitle,
+                text: errorText,
+                type: 'error',
+                styling: 'bootstrap3',
+                icon: 'fa fa-times fa-lg',
+                animate: {
+                    animate: true,
+                    in_class: 'bounce',
+                    out_class: 'zoomOutRight'
+                }
+            });
+        </script>
+        @endif
     </body>
 </html>

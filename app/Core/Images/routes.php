@@ -17,4 +17,5 @@
 
 Route::group(['middleware' => ['web','auth'], 'namespace' => 'App\Core\Images\Controllers'], function() {
   Route::get('/assets/image/{filename}/{thumbnail}', ['as'=>'images.resourceview',  'uses' => 'ImagesController@getResourceImage','middleware'=>['permission:images.resourceview']]);
+  Route::post('/assets/imageUpload/{saveTo?}/{fileName?}', ['as'=>'images.image-upload',  'uses' => 'ImagesController@uploadImage','middleware'=>['permission:images.image-upload']]);
 });

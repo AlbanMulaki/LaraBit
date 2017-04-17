@@ -4,6 +4,7 @@ namespace App\Core\Images\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class ImagesController extends Controller {
 
@@ -26,14 +27,21 @@ class ImagesController extends Controller {
             'Connection' => 'close'
         ));
     }
-    
+
     /**
      * Upload image to the server
      */
-    public function uploadImage($filename,$saveTo){
-        
-        
+    public function uploadImage($saveTo, $filename) {
+        info("At upload image");
+        return ($saveTo);
         return "Uploaded";
+    }
+
+    public function saveImage($image, $saveToDir = "", $imageType = "png") {
+        $fileName = str_random(15) . '.' . $imageType;
+        $filePath = $saveToDir."/".$fileName;
+        $image->storeAs($saveToDir, $fileName, 'images');
+        return $filePath;
     }
 
 }

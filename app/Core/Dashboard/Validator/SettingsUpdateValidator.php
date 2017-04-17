@@ -15,6 +15,7 @@ class SettingsUpdateValidator extends FormRequest {
         foreach($settings as $setting) {
             $this->rules[$setting->code] = $setting->type."|".$setting->validation_rules;
         }
+        info($this->rules);
     }
 
     /**
