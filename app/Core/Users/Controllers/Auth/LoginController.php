@@ -41,7 +41,7 @@ use AuthenticatesUsers;
   }
 
   public function showLoginForm() {
-    return view('users::login');
+    return view('users::auth.login');
   }
 
 }

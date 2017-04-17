@@ -75,7 +75,7 @@ use RegistersUsers;
 
     public function showRegistrationForm(){
         View::share('title', 'Lang.get("login.create_account")');
-        return view('users::register');
+        return view('users::auth.register');
     }
 
 }
