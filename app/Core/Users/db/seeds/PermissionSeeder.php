@@ -45,7 +45,7 @@ class PermissionSeeder extends Seeder {
                 'description' => ''
             ],
             [
-                'name' => 'images.resourceview',
+                'name' => 'images.image-get',
                 'display_name' => 'Image Resource view',
                 'description' => 'Image Resource view (Logo,avatar...)'
             ],

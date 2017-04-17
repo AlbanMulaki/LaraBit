@@ -16,6 +16,6 @@
 
 
 Route::group(['middleware' => ['web','auth'], 'namespace' => 'App\Core\Images\Controllers'], function() {
-  Route::get('/assets/image/{filename}/{thumbnail}', ['as'=>'images.resourceview',  'uses' => 'ImagesController@getResourceImage','middleware'=>['permission:images.resourceview']]);
-  Route::post('/assets/imageUpload/{saveTo?}/{fileName?}', ['as'=>'images.image-upload',  'uses' => 'ImagesController@uploadImage','middleware'=>['permission:images.image-upload']]);
+  Route::get('/assets/image/{filename}/{thumbnail}', ['as'=>'images.image-get',  'uses' => 'ImagesController@getResourceImage','middleware'=>['permission:images.image-get']])->where('filename', '(.*(?:%2F:)?.*)');
+  Route::post('/assets/imageUpload/{saveTo}', ['as'=>'images.image-upload',  'uses' => 'ImagesController@uploadImage','middleware'=>['permission:images.image-upload']])->where('saveTo', '(.*(?:%2F:)?.*)');
 });

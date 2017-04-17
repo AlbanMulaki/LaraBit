@@ -36,12 +36,12 @@
 
                                         <div class="fileinput fileinput-new" data-provides="fileinput">
                                             <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;">
-
+                                                <img src="{{ route('images.image-get',['filename'=>$optionValue->value,'thumbnail'=>'small'])}}" />
                                             </div>
                                             <div>
                                                 <span class="btn btn-default btn-file">
-                                                    <span class="fileinput-new">Select image</span>
-                                                    <span class="fileinput-exists">Change</span>
+                                                    <span class="fileinput-new">@lang('dashboard::general.select_image')</span>
+                                                    <span class="fileinput-exists">@lang('dashboard::general.change')</span>
                                                     <input type="file" name="logo"></span>
                                                 <a href="#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput"><span class="fa fa-remove"> </span>Remove</a>
                                             </div>

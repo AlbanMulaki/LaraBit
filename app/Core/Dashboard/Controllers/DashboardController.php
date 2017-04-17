@@ -21,8 +21,7 @@ class DashboardController extends Controller {
      * Settings page
      */
     public function settings() {
-
-
+        $this->setPageName(trans('dashboard::general.settings'));
         $settings = Settings::get(['id', 'code', 'value', 'tab_name', 'lang', 'type']);
         $options = $settings->groupBy('tab_name');
         return view('dashboard::settings', ['options' => $options]);
@@ -32,26 +31,19 @@ class DashboardController extends Controller {
      * Update settings
      */
     public function updateSettings(SettingsUpdateValidator $request) {
-//        Settings::
-        return app('\App\Core\Images\Controllers\ImagesController')->saveImage($request->file('logo'));
-        
-        $updateSettings = $request->except(['_token']);
-        return $updateSettings['logo']->getClientOriginalName();
-        Settings::updateSettings($request->except(['_token']));
-        return $request->file('logo');
-
+        $updateSettings = $request->except(['_token', 'logo']);
+        if (!is_null($request->file('logo'))) {
+            $updateSettings['logo'] = app('\App\Core\Images\Controllers\ImagesController')->uploadImage("", $request->file('logo'));
+            if (strlen($updateSettings['logo']) < 3) {
+                unset($updateSettings['logo']);
+            }
+        }
+        Settings::updateSettings($updateSettings);
         $message['message'][] = trans('dashboard::validation.success_update');
         $message['code'] = 200;
         $message['status'] = 'success';
         $message['action'] = 'update';
         return redirect()->back()->with($message);
-        
-        return app('\App\Core\Images\Controllers\ImagesController')->saveImage($request->file('logo'));
-        return request()->file('logo');
-//        return $request->file('logo');
-//    }
-//    public function updateSettings(){
-        return request()->file('logo');
     }
 
 }

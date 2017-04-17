@@ -17,13 +17,7 @@
                 @include('includes.footer')
             </div>
         </div>
-
-
-
-        {{ debug(session()->get('code')) }}
-
         @include('includes.script')
-
         @if(session()->get('code') == 200)
         <script>
             new PNotify({

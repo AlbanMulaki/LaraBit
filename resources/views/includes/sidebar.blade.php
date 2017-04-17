@@ -2,7 +2,7 @@
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
                             <a href="{{ route('baseapp') }}" class="site_title">
-                                <img src='{{ route('images.resourceview',[$settings['logo'],'smmall']) }}'  style='max-height: 40px;' /> <span>{{ $settings['app_name']}}</span>
+                                <img src='{{ route('images.image-get',[$settings['logo'],'thumbnail']) }}'  style='max-height: 40px;' /> <span>{{ $settings['app_name']}}</span>
                             </a>
                         </div>
 

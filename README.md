@@ -15,7 +15,7 @@ After complete developing on that branch, then merge that branch to ***master-de
 master.
 
 
-### JSON Standard Response for API or different response as json.
+### JSON Standard Response for API or different response as json and helpful documents.
 
 * https://technick.net/guides/software/software_json_api_format/
 
@@ -24,6 +24,8 @@ master.
 * https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_error
 
 * http://www.php-fig.org/psr/
+
+* http://image.intervention.io/
 
 
 ![PragmaticLinux](https://pragmaticlinux.org/pragmaticlinux/resource/images/logo/PragmaticLinuxLogoInvert.png)

@@ -8,4 +8,6 @@ return [
     'settings' => 'Settings',
     'setting_description' => 'Settings, maintenance configuration',
     'contact_email'=> 'Contact Email',
+    'select_image' => 'Select Image',
+    'change' => 'Change',
 ];
