@@ -27,6 +27,11 @@ class ForgotPasswordController extends Controller
      */
     public function __construct()
     {
+        $this->setPageName("Reset Password");
         $this->middleware('guest');
+    }
+    public function showLinkRequestForm()
+    {
+        return view('users::auth.passwords.email');
     }
 }

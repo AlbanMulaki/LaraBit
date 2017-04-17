@@ -60,6 +60,9 @@ return [
 	  'female',
 	  'confirm_password',
 	  'already_a_member',
+          'reset_password',
+          'email_address',
+          'send_password_reset_link',
 	],
 	'company' => [
 	  'company_name',
