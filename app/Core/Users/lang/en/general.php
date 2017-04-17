@@ -18,4 +18,9 @@ return [
     'permission_description' => 'Description',
     'save' => 'Save',
     'create_new_permission' => "Create new permission",
+    'username' => 'Username',
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'email' => 'E-Mail',
+    'phone' => 'Phone'
 ];

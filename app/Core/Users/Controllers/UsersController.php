@@ -12,6 +12,7 @@ use App\PermissionRole;
 use App\Core\Users\Validator\PermissionRoleValidator;
 use App\Core\Users\Validator\PermissionCreateValidator;
 use App\Core\Users\Validator\CreateRoleValidator;
+use app\User;
 
 class UsersController extends Controller {
 
@@ -34,7 +35,9 @@ class UsersController extends Controller {
      * @return type
      */
     public function listsUser() {
-        return view('users::listUser');
+        $users = User::paginate(20);
+  
+        return view('users::listUser')->with(['users' => $users]);
     }
 
     /*

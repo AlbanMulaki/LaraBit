@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder {
                 }
             }
         }
+        factory(App\User::class, 50)->create();
     }
 
 }
