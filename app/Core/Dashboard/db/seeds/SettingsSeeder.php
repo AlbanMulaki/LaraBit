@@ -26,7 +26,7 @@ class SettingsSeeder extends Seeder {
                 'code' => 'logo',
                 'value' => 'logo',
                 'lang' => 'logo',
-                'type' => 'string',
+                'type' => 'image',
                 'tab_name' => 'general',
                 'validation_rules' => ''
             ],
