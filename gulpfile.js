@@ -117,14 +117,14 @@ elixir(function (mix) {
     mix.sass("app.scss", './public/css/lib/app.min.css');
     mix.sass("users/user-roles.scss", './public/css/lib/user-roles.min.css');
     mix.scripts("user/user-roles.js", './public/js/lib/user-roles.min.js');
-    
+
 
     //Fileinput
     mix.sass(npm+"jasny-bootstrap/dist/css/jasny-bootstrap.min.css", './public/css/lib/fileinput.min.css');
     mix.scripts(npm+"jasny-bootstrap/dist/js/jasny-bootstrap.min.js", './public/js/lib/fileinput.min.js');
-    
-    
-    mix.sass("users/settings.css", './public/css/lib/user-roles.min.css');
+
+
+    // mix.sass("users/user-roles.scss", './public/css/lib/user-roles.min.css');
     mix.scripts("dashboard/settings.js", './public/js/lib/settings.min.js');
 //    mix.sass(npm+"dropzone/dist/dropzone.css", './public/css/lib/dropzone.min.css');
 //    mix.scripts(npm+"dropzone/dist/dropzone.js", './public/js/lib/dropzone.min.js');
