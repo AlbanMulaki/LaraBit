@@ -25,15 +25,16 @@ elixir(function (mix) {
     mix.copy('./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf', './public/css/fonts/glyphicons-halflings-regular.ttf');
     mix.copy('./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', './public/css/fonts/glyphicons-halflings-regular.woff');
     mix.copy('./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2', './public/css/fonts/glyphicons-halflings-regular.woff2');
- 
 
-    //Nprogress 
+
+    //Nprogress
     mix.copy('./node_modules/nprogress/nprogress.css', './public/css/lib/nprogress.min.css');
     mix.scripts('./node_modules/nprogress/nprogress.js', './public/js/lib/nprogress.min.js');
 
     // Font Awesome
     mix.sass('./node_modules/font-awesome/scss/font-awesome.scss', './public/css/lib/font-awesome.min.css');
-    mix.copy('./node_modules/font-awesome/fonts', './public/css/fonts');
+    mix.copy('./node_modules/font-awesome/fonts/fontawesome-webfont.woff', './public/css/fonts/fontawesome-webfont.woff');
+    mix.copy('./node_modules/font-awesome/fonts/fontawesome-webfont.ttf', './public/css/fonts/fontawesome-webfont.ttf');
 
     //Bootstrap DateRangepicker
     mix.sass('./node_modules/bootstrap-daterangepicker/daterangepicker.scss', './public/css/lib/bootstrap-daterangepicker.min.css');
@@ -92,13 +93,40 @@ elixir(function (mix) {
 
     //jQuery Input Mask
     mix.scripts(npm + "jquery-inputmask/index.js", './public/js/lib/jquery-inputmask.min.js');
+
     //jQuery knob
     mix.scripts(npm + "jquery-knob/dist/jquery.knob.min.js", './public/js/lib/jquery-knob.min.js');
-    
+    // Vue Js
+    mix.scripts(npm + "vue/dist/vue.js", './public/js/lib/vue.min.js');
+
+
     //LaraBit JS
-    mix.sass("app.scss", './public/css/lib/app.min.css');
     mix.scripts("app.js", './public/js/lib/app.min.js');
+    //Animate.CSS
+    mix.sass(npm + "gentelella/vendors/animate.css/animate.min.css", "./public/css/lib/animate.min.css");
+
+    //PNotify
+    mix.scripts(npm + "pnotify/dist/pnotify.js", './public/js/lib/pnotify.min.js');
+    mix.sass(npm + "pnotify/dist/pnotify.css", './public/css/lib/pnotify.min.css');
+    //ParsleyJS
+    mix.scripts(npm+"parsleyjs/dist/parsley.min.js", './public/js/lib/parsleyjs.min.js');
+    mix.scripts(npm+"parsleyjs/dist/i18n/en.js", './public/js/lib/en.min.js');
+
+
+    //Users Module
+    mix.sass("app.scss", './public/css/lib/app.min.css');
+    mix.sass("users/user-roles.scss", './public/css/lib/user-roles.min.css');
+    mix.scripts("user/user-roles.js", './public/js/lib/user-roles.min.js');
     
-    mix.sass(npm + "gentelella/vendors/animate.css/animate.min.css","./public/css/lib/animate.min.css");
+
+    //Fileinput
+    mix.sass(npm+"jasny-bootstrap/dist/css/jasny-bootstrap.min.css", './public/css/lib/fileinput.min.css');
+    mix.scripts(npm+"jasny-bootstrap/dist/js/jasny-bootstrap.min.js", './public/js/lib/fileinput.min.js');
+    
+    
+    mix.sass("users/settings.css", './public/css/lib/user-roles.min.css');
+    mix.scripts("dashboard/settings.js", './public/js/lib/settings.min.js');
+//    mix.sass(npm+"dropzone/dist/dropzone.css", './public/css/lib/dropzone.min.css');
+//    mix.scripts(npm+"dropzone/dist/dropzone.js", './public/js/lib/dropzone.min.js');
 
 });

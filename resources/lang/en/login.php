@@ -16,6 +16,7 @@ return [
     'female' => 'Female',
     'confirm_password' => 'Confirm password',
     'already_a_member' => 'Already a member ?',
-    
-    
+    'email_address' => 'E-Mail Address',
+    'reset_password' => 'Reset Password',
+    'send_password_reset_link' => 'Send Password Reset Link',
 ];

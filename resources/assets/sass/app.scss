@@ -5,5 +5,21 @@
 // Variables
 //@import "variables";
 
-@import "./users/user-search.scss";
-@import "./users/user-profile.scss";
+/*@import "./users/user-roles.scss";*/
+//@import "./users/user-profile.scss";
+
+
+
+
+.top_nav li a i{
+    font-size: none;
+}
+
+.collapse-link{
+    cursor : pointer;
+}
+
+.panel_toolbox > li {
+    float: right;
+    margin-right: 10px;
+}
