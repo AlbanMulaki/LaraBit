@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
+use Carbon\Carbon;
 
 class User extends Authenticatable {
 
@@ -54,5 +55,9 @@ class User extends Authenticatable {
     protected $hidden = [
         'password', 'remember_token',
     ];
-
+    
+    
+    public function getBirthdateAttribute($value){
+        return new Carbon($value);
+    }
 }

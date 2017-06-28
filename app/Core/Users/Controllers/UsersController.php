@@ -13,6 +13,7 @@ use App\Core\Users\Validator\PermissionRoleValidator;
 use App\Core\Users\Validator\PermissionCreateValidator;
 use App\Core\Users\Validator\CreateRoleValidator;
 use app\User;
+use Auth;
 
 class UsersController extends Controller {
 
@@ -36,7 +37,7 @@ class UsersController extends Controller {
      */
     public function listsUser() {
         $users = User::paginate(20);
-  
+
         return view('users::listUser')->with(['users' => $users]);
     }
 
@@ -113,22 +114,30 @@ class UsersController extends Controller {
 
     /**
      * Create new permission
-     * @return 
+     * @return
      */
     public function createPermission(PermissionCreateValidator $request) {
 
         $permission = Permission::create($request->except('_token'));
-        
+
         return redirect()->back();
     }
 
     /**
-     * Return all permissions list and forms for creating 
+     * Return all permissions list and forms for creating
      */
     public function getPermissions() {
         $this->setPageName(trans('users::general.permissions'));
         $permissions = Permission::all();
         return view('users::permissions', ['permissions' => $permissions]);
+    }
+    /*
+    * Show the profile form information of the currently logged in own user
+     * @return view
+    */
+    public function showProfileForm(){
+        $user = User::find(Auth::user()->id);
+        return view('users::profile.profile')->with(['user' => $user]);
     }
 
 }

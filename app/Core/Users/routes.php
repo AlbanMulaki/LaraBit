@@ -15,8 +15,10 @@ Route::group(['prefix' => 'cp/users', 'middleware' => ['web', 'auth'], 'namespac
     Route::post('/create', ['as' => 'users.roles-createRole', 'uses' => 'UsersController@createRole', 'middleware' => 'permission:users.roles-createRole']);
     Route::post('/permission', ['as' => 'users.permission-create', 'uses' => 'UsersController@createPermission', 'middleware' => 'permission:users.permission-create']);
     Route::get('/permission', ['as' => 'users.permission-view', 'uses' => 'UsersController@getPermissions', 'middleware' => 'permission:users.permission-view']);
-    
+
+  });
+
+  Route::group(['prefix' => 'profile'], function( ){
+      Route::get('/', ['as' => 'users.profile-view', 'uses' => 'UsersController@showProfileForm', 'middleware' => 'permission:users.profile-view']);
   });
 });
-
-
