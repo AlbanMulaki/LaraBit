@@ -1,0 +1,85 @@
+[Tue Jul 18 17:41:39.792312 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Tue Jul 18 17:41:39.821515 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Tue Jul 18 17:41:39.822240 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Tue Jul 18 17:41:39.853730 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Tue Jul 18 17:41:39.853760 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Jul 18 17:41:49.565981 2017] [php7:warn] [pid 12] [client 172.18.0.1:39118] PHP Warning:  require(/var/www/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/bootstrap/autoload.php on line 17
+[Tue Jul 18 17:41:49.566034 2017] [php7:error] [pid 12] [client 172.18.0.1:39118] PHP Fatal error:  require(): Failed opening required '/var/www/bootstrap/../vendor/autoload.php' (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/bootstrap/autoload.php on line 17
+[Tue Jul 18 17:41:59.198552 2017] [mpm_prefork:notice] [pid 10] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Jul 18 17:43:02.219197 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Tue Jul 18 17:43:02.250900 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Tue Jul 18 17:43:02.251632 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Tue Jul 18 17:43:02.284510 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Tue Jul 18 17:43:02.284541 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Jul 18 17:46:45.815078 2017] [php7:warn] [pid 12] [client 172.18.0.1:39754] PHP Warning:  require(/var/www/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/bootstrap/autoload.php on line 17
+[Tue Jul 18 17:46:45.815147 2017] [php7:error] [pid 12] [client 172.18.0.1:39754] PHP Fatal error:  require(): Failed opening required '/var/www/bootstrap/../vendor/autoload.php' (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/bootstrap/autoload.php on line 17
+[Tue Jul 18 17:47:36.101112 2017] [php7:warn] [pid 16] [client 172.18.0.1:39868] PHP Warning:  require(/var/www/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/bootstrap/autoload.php on line 17
+[Tue Jul 18 17:47:36.101176 2017] [php7:error] [pid 16] [client 172.18.0.1:39868] PHP Fatal error:  require(): Failed opening required '/var/www/bootstrap/../vendor/autoload.php' (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/bootstrap/autoload.php on line 17
+[Wed Jul 19 06:34:42.303885 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jul 19 06:34:42.338109 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Wed Jul 19 06:34:42.338931 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Wed Jul 19 06:34:42.418848 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Wed Jul 19 06:34:42.418901 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Jul 19 16:34:23.263150 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jul 19 16:34:23.768981 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Wed Jul 19 16:34:23.769673 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Wed Jul 19 16:34:26.163332 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Wed Jul 19 16:34:26.163376 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Jul 19 16:34:26.648783 2017] [php7:warn] [pid 13] [client 172.18.0.1:51270] PHP Warning:  require(/var/www/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/bootstrap/autoload.php on line 17
+[Wed Jul 19 16:34:26.648783 2017] [php7:warn] [pid 15] [client 172.18.0.1:51274] PHP Warning:  require(/var/www/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/bootstrap/autoload.php on line 17
+[Wed Jul 19 16:34:26.648805 2017] [php7:warn] [pid 14] [client 172.18.0.1:51288] PHP Warning:  require(/var/www/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/bootstrap/autoload.php on line 17
+[Wed Jul 19 16:34:26.648859 2017] [php7:error] [pid 15] [client 172.18.0.1:51274] PHP Fatal error:  require(): Failed opening required '/var/www/bootstrap/../vendor/autoload.php' (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/bootstrap/autoload.php on line 17
+[Wed Jul 19 16:34:26.648858 2017] [php7:error] [pid 13] [client 172.18.0.1:51270] PHP Fatal error:  require(): Failed opening required '/var/www/bootstrap/../vendor/autoload.php' (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/bootstrap/autoload.php on line 17
+[Wed Jul 19 16:34:26.648863 2017] [php7:error] [pid 14] [client 172.18.0.1:51288] PHP Fatal error:  require(): Failed opening required '/var/www/bootstrap/../vendor/autoload.php' (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/bootstrap/autoload.php on line 17
+[Wed Jul 19 16:34:27.693282 2017] [php7:warn] [pid 16] [client 172.18.0.1:51292] PHP Warning:  require(/var/www/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/bootstrap/autoload.php on line 17
+[Wed Jul 19 16:34:27.693342 2017] [php7:error] [pid 16] [client 172.18.0.1:51292] PHP Fatal error:  require(): Failed opening required '/var/www/bootstrap/../vendor/autoload.php' (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/bootstrap/autoload.php on line 17
+[Wed Jul 19 16:34:28.588658 2017] [php7:warn] [pid 12] [client 172.18.0.1:51296] PHP Warning:  require(/var/www/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/bootstrap/autoload.php on line 17
+[Wed Jul 19 16:34:28.588716 2017] [php7:error] [pid 12] [client 172.18.0.1:51296] PHP Fatal error:  require(): Failed opening required '/var/www/bootstrap/../vendor/autoload.php' (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/bootstrap/autoload.php on line 17
+[Wed Jul 19 16:45:27.389972 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jul 19 16:45:27.422114 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Wed Jul 19 16:45:27.423015 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Wed Jul 19 16:45:27.465251 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Wed Jul 19 16:45:27.465285 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Jul 19 16:45:31.202378 2017] [php7:warn] [pid 12] [client 172.18.0.1:56584] PHP Warning:  require(/var/www/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/bootstrap/autoload.php on line 17
+[Wed Jul 19 16:45:31.202453 2017] [php7:error] [pid 12] [client 172.18.0.1:56584] PHP Fatal error:  require(): Failed opening required '/var/www/bootstrap/../vendor/autoload.php' (include_path='.:/usr/share/pear:/usr/share/php') in /var/www/bootstrap/autoload.php on line 17
+[Wed Jul 19 16:57:28.209110 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jul 19 16:57:28.241923 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Wed Jul 19 16:57:28.242616 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Wed Jul 19 16:57:28.275989 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Wed Jul 19 16:57:28.276024 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Jul 19 17:12:53.422351 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jul 19 17:12:53.454548 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Wed Jul 19 17:12:53.455404 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Wed Jul 19 17:12:53.488076 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Wed Jul 19 17:12:53.488105 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Jul 19 17:41:03.814155 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jul 19 17:41:03.845625 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Wed Jul 19 17:41:03.846442 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Wed Jul 19 17:41:03.880376 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Wed Jul 19 17:41:03.880407 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Jul 19 21:25:43.451779 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jul 19 21:25:43.486277 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Wed Jul 19 21:25:43.487136 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Wed Jul 19 21:25:43.521960 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Wed Jul 19 21:25:43.521992 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Jul 19 21:44:45.387189 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jul 19 21:44:45.415483 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Wed Jul 19 21:44:45.416175 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Wed Jul 19 21:44:45.449706 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Wed Jul 19 21:44:45.449745 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Jul 19 21:55:10.084461 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jul 19 21:55:10.116124 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Wed Jul 19 21:55:10.116872 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Wed Jul 19 21:55:10.149895 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Wed Jul 19 21:55:10.149928 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'

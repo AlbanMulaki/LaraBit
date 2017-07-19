@@ -1,0 +1,30 @@
+version: '3'
+services:
+  web:
+    container_name: webserver
+    build: .
+    env_file:
+    - ${APP_DIR}/.env
+    ports:
+    - "${APACHE_HTTP}:80"
+    - "${APACHE_HTTPS}:443"
+    volumes:
+    - ${APP_DIR}:/var/www
+    - ${APACHE_LOGS}:/var/log/httpd
+    tty: true
+#    extra_hosts:
+#    - "larabit:webserver"
+    links:
+    - "db:${MYSQL_HOSTNAME}"
+  db:
+    container_name: database
+    image: mariadb
+    ports:
+    - "${MYSQL_PORT}:3306"
+    env_file:
+    - ${APP_DIR}/.env
+    environment:
+    - MYSQL_DATABASE=${MYSQL_DATABASE}
+    - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    - MYSQL_USER=${MYSQL_USER}
+    - MYSQL_PASSWORD=${MYSQL_PASSWORD}
