@@ -83,3 +83,85 @@ AH00558: httpd: Could not reliably determine the server's fully qualified domain
 [Wed Jul 19 21:55:10.116872 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
 [Wed Jul 19 21:55:10.149895 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
 [Wed Jul 19 21:55:10.149928 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Jul 20 16:45:37.613597 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Jul 20 16:45:38.554411 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Thu Jul 20 16:45:38.555619 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Thu Jul 20 16:45:42.674297 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Thu Jul 20 16:45:42.674348 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Jul 20 16:54:57.934539 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Jul 20 16:54:57.970215 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Thu Jul 20 16:54:57.971099 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Thu Jul 20 16:54:58.007583 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Thu Jul 20 16:54:58.007624 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[Thu Jul 20 17:09:53.290544 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Jul 20 17:09:53.322258 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Thu Jul 20 17:09:53.322961 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Thu Jul 20 17:09:53.356472 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Thu Jul 20 17:09:53.356506 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[Thu Jul 20 17:11:43.806706 2017] [suexec:notice] [pid 10] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Jul 20 17:11:43.854867 2017] [auth_digest:notice] [pid 10] AH01757: generating secret for digest authentication ...
+[Thu Jul 20 17:11:43.855737 2017] [lbmethod_heartbeat:notice] [pid 10] AH02282: No slotmem from mod_heartmonitor
+[Thu Jul 20 17:11:43.899342 2017] [mpm_prefork:notice] [pid 10] AH00163: Apache/2.4.6 (CentOS) PHP/7.1.6 configured -- resuming normal operations
+[Thu Jul 20 17:11:43.899382 2017] [core:notice] [pid 10] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: Not a git repository (or any parent up to mount point /var/www)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).

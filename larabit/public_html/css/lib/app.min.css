@@ -1,0 +1,13 @@
+/*@import "./users/user-roles.scss";*/
+.top_nav li a i {
+  font-size: none;
+}
+
+.collapse-link {
+  cursor: pointer;
+}
+
+.panel_toolbox > li {
+  float: right;
+  margin-right: 10px;
+}
