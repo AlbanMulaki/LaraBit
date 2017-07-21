@@ -1,4 +1,6 @@
 {
+  "name": "larabit",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "blueimp-file-upload-node": "^2.1.0",

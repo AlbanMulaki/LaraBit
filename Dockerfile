@@ -14,7 +14,7 @@ RUN yum install mod_php71w \
     php71w-mysql \
     php71w-imagick \
     php71w-mcrypt \
-    php71w-mbstring \
+    php71w-mbstring \    
     -y
 RUN echo "IncludeOptional sites-enabled/*.conf" >> /etc/httpd/conf/httpd.conf
 RUN mkdir /etc/httpd/sites-enabled
@@ -38,11 +38,14 @@ RUN rpm -U http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-relea
 ### Install Composer #########################################
 RUN cd tmp && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
-RUN yum install net-tools -y
+RUN yum install net-tools npm -y
 WORKDIR /
 #RUN mkdir /var/www/html
 ADD run-startup.sh /run-startup.sh
 RUN chmod -v +x /run-startup.sh
+
+ADD build.sh /build.sh
+RUN chmod -v +x /build.sh
 
 
 ### Install Larabit Project ########################################################

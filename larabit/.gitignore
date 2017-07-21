@@ -20,3 +20,4 @@ Homestead.yaml
 /composer.lock
 /public/vendor/js-localization/messages.js
 /.vagrant/machines/larabit/virtualbox/action_set_name
+/npm-debug.log
