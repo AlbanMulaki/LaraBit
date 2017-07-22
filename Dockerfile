@@ -21,8 +21,8 @@ RUN mkdir /etc/httpd/sites-enabled
 RUN touch /etc/httpd/sites-enabled/larabit.conf
 RUN echo -e \
 "<VirtualHost *:80>\n\
-    DocumentRoot /var/www/html\n\
-    <Directory "/var/www/html">\n\
+    DocumentRoot /var/www/public_html\n\
+    <Directory "/var/www/public_html">\n\
        AllowOverride All \n\
        # Allow open access: \n\
        Require all granted \n\
@@ -39,14 +39,14 @@ RUN rpm -U http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-relea
 RUN cd tmp && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
 RUN yum install net-tools npm -y
-WORKDIR /
-#RUN mkdir /var/www/html
+WORKDIR /var/www
 ADD run-startup.sh /run-startup.sh
 RUN chmod -v +x /run-startup.sh
 
 ADD build.sh /build.sh
 RUN chmod -v +x /build.sh
 
+COPY ./larabit/ /var/www/
 
 ### Install Larabit Project ########################################################
 #RUN rm -r /var/www/html && rm -r /var/www/cgi-bin
