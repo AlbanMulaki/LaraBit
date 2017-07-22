@@ -33,7 +33,7 @@ master.
 * Install Docker & Docker Compose
 * git clone https://github.com/AlbanMulaki/LaraBit.git 
 * cd LaraBit
-* sh build.sh # To Build or Rebuild
+* sh install.sh # To Build or Rebuild environment
 * sh boot.sh  # To bootup start environment locally
 
 
