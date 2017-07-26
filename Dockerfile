@@ -14,7 +14,8 @@ RUN yum install mod_php71w \
     php71w-mysql \
     php71w-imagick \
     php71w-mcrypt \
-    php71w-mbstring \    
+    php71w-mbstring \
+    php71w-gd /
     -y
 RUN echo "IncludeOptional sites-enabled/*.conf" >> /etc/httpd/conf/httpd.conf
 RUN mkdir /etc/httpd/sites-enabled
