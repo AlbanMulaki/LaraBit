@@ -39,6 +39,8 @@ class ImagesController extends Controller {
 
     /**
      * Upload image to the disk
+     * $saveTo - Target Directory it can be ""
+     * $image - Content Image
      */
     public function uploadImage($saveTo, $image = NULL) {
         if ($image === NULL) {
@@ -62,7 +64,7 @@ class ImagesController extends Controller {
      */
     public function saveImage($image, $saveToDir = "") {
         if ($image === NULL) {
-            return 404;
+            return abort(404);
         }
         $imageCore = new ImageCore($image, $saveToDir);
         return $imageCore->saveImage();
