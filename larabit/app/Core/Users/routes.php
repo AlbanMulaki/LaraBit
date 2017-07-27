@@ -19,6 +19,7 @@ Route::group(['prefix' => 'cp/users', 'middleware' => ['web', 'auth'], 'namespac
   });
 
   Route::group(['prefix' => 'profile'], function( ){
-      Route::get('/', ['as' => 'users.profile-view', 'uses' => 'UsersController@showProfileForm', 'middleware' => 'permission:users.profile-view']);
+      Route::get('/', ['as' => 'users.profile', 'uses' => 'UsersController@showProfile', 'middleware' => 'permission:users.profile-view']);
+      Route::post('/', ['as' => 'users.profile-update', 'uses' => 'UsersController@updateProfile', 'middleware' => 'permission:users.profile-update']);
   });
 });

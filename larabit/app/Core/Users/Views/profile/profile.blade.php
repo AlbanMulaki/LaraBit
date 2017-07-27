@@ -22,7 +22,7 @@
 
 @yield('heading-title')
 <div class="row">
-    <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="col-md-6 col-sm-6 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
                 <h2>@lang('users::general.users_title') @lang('users::general.profile') <small>@lang('users::general.details')</small></h2>
@@ -36,54 +36,62 @@
             </div>
             <div class="x_content">
                 <br>
-                <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
-
+                <form data-parsley-validate="" action="{{ route('users.profile-update') }}" method="POST" class="form-horizontal form-label-left" novalidate="">
+                    {{ csrf_field() }}
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="username">@lang('users::general.username') <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="username">@lang('users::general.username')
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input  type="text" id="username" value="{{ $user->username }}" readonly="" style="background-color: white;"  required="required" class="form-control col-md-7 col-xs-12">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@username) value="{{ !empty(old('username')) ? old("username") : $user->username }}" class="form-control ">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">@lang('users::general.first_name') <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">@lang('users::general.first_name')
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" id="first-name" value="{{ $user->first_name }}" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">@lang('users::general.last_name') <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" value="{{ $user->last_name }}" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">@lang('users::general.title')</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input id="middle-name" value="{{ $user->title }}" class="form-control col-md-7 col-xs-12" type="text" name="title">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="company_name">@lang('users::general.company') 
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" value="{{ $user->company }}" id="company_name" name="company_name" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">@lang('users::general.email') <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" value="{{ $user->email }}" id="email" name="email" required="required" class="form-control col-md-7 col-xs-12">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@first_name) value="{{ !empty(old('first_name')) ? old("first_name") : $user->first_name }}" class="form-control ">
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last_name">@lang('users::general.last_name')
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@last_name) value="{{ !empty(old('last_name')) ? old("last_name") : $user->last_name }}" class="form-control ">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">@lang('users::general.title')
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@title) value="{{ !empty(old('title')) ? old("title") : $user->title }}" class="form-control ">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="company">@lang('users::general.company')
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@company) value="{{ !empty(old('company')) ? old("company") : $user->company }}" class="form-control ">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">@lang('users::general.email')
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@email) value="{{ !empty(old('email')) ? old("email") : $user->email }}" class="form-control ">
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="language_code">@lang('users::general.language_code')</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" value="{{ $user->language_code }}" id="language_code" name="language_code" class="form-control col-md-7 col-xs-12">
+
+                            <select class="form-control" @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@language_code)>
+                                    @foreach(config('core.language') as $code => $language)
+                                    <option value='{{$code}}' {{ $code==app()->getLocale()? "selected":""}} >{{$language}}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
 
@@ -92,36 +100,38 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div id="gender" class="btn-group" data-toggle="buttons">
                                 <label  data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                    <input type="radio" name="gender" value="1"data-parsley-multiple="gender" {{ $user->gender == 2 ? 'checked' : '' }}> &nbsp; @lang('users::general.male') &nbsp;
+                                    <input type="radio" @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@gender) value="{{App\Core\Common\Helper\Enum::MALE}}" {{ $user->gender == App\Core\Common\Helper\Enum::MALE ? 'checked' : '' }}> &nbsp; @lang('users::general.male') &nbsp;
                                 </label>
                                 <label  data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                    <input type="radio" name="gender"  value="2" data-parsley-multiple="gender" {{ $user->gender == 1 ? 'checked' : '' }}> @lang('users::general.female')
+                                    <input type="radio" @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@gender)  value="{{App\Core\Common\Helper\Enum::FEMALE}}" {{ $user->gender == App\Core\Common\Helper\Enum::FEMALE ? 'checked' : '' }}> @lang('users::general.female')
                                 </label>
                             </div>
                         </div>
                     </div>
 
+                    
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="address">@lang('users::general.address') 
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="address">@lang('users::general.address')
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" value="{{ $user->address }}" id="address" name="address" class="form-control col-md-7 col-xs-12">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <textarea @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@address) class="form-control ">{{ !empty(old('address')) ? old("address") : $user->address }}</textarea>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="address_2" >@lang('users::general.address_2') 
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="address_2">@lang('users::general.address_2')
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" value="{{ $user->address_2 }}" id="address_2" name="address_2" class="form-control col-md-7 col-xs-12">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <textarea @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@address_2) class="form-control ">{{ !empty(old('address_2')) ? old("address_2") : $user->address_2 }}</textarea>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="address_3" >@lang('users::general.address_3') 
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="address_3">@lang('users::general.address_3')
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" value="{{ $user->address_3 }}" id="address_3" name="address_3" class="form-control col-md-7 col-xs-12">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <textarea @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@address_3) class="form-control ">{{ !empty(old('address_3')) ? old("address_3") : $user->address_3 }}</textarea>
                         </div>
                     </div>
+                    
 
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">@lang('users::general.dateofbirth') <span class="required">*</span>

@@ -84,6 +84,16 @@ class PermissionSeeder extends Seeder {
                 'display_name' => 'Image Upload',
                 'description' => 'Image upload'
             ],
+            [
+                'name' => 'users.profile-view',
+                'display_name' => 'Users Profile View',
+                'description' => 'Users Profile View'
+            ],
+            [
+                'name' => 'users.profile-update',
+                'display_name' => 'Users Profile Update',
+                'description' => 'Users Profile Update'
+            ],
         ];
         foreach ($permission as $key => $value) {
             Permission::create($value);

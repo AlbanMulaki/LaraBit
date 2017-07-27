@@ -12,6 +12,7 @@ use App\PermissionRole;
 use App\Core\Users\Validator\PermissionRoleValidator;
 use App\Core\Users\Validator\PermissionCreateValidator;
 use App\Core\Users\Validator\CreateRoleValidator;
+use App\Core\Users\Validator\SelfProfileUpdateValidator;
 use app\User;
 use Auth;
 
@@ -135,9 +136,18 @@ class UsersController extends Controller {
     * Show the profile form information of the currently logged in own user
      * @return view
     */
-    public function showProfileForm(){
+    public function showProfile(){
         $user = User::find(Auth::user()->id);
         return view('users::profile.profile')->with(['user' => $user]);
+    }
+    /*
+    * Update the self profile.
+    * @return view
+    */
+    public function updateProfile(SelfProfileUpdateValidator $request){
+        User::find(Auth::user()->id)->update($request->all());
+        
+        return redirect()->back();
     }
 
 }
