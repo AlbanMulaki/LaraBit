@@ -137,6 +137,7 @@ class UsersController extends Controller {
      * @return view
     */
     public function showProfile(){
+        $this->setPageName(auth()->user()->first_name." ".auth()->user()->last_name." | ".trans("users::general.profile"));
         $user = User::find(Auth::user()->id);
         return view('users::profile.profile')->with(['user' => $user]);
     }

@@ -117,6 +117,7 @@ elixir(function (mix) {
     mix.sass("app.scss", './public_html/css/lib/app.min.css');
     mix.sass("users/user-roles.scss", './public_html/css/lib/user-roles.min.css');
     mix.scripts("user/user-roles.js", './public_html/js/lib/user-roles.min.js');
+    mix.scripts("user/user-profile.js", './public_html/js/lib/user-profile.min.js');
 
 
     //Fileinput

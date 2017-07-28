@@ -6,7 +6,22 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class SelfProfileUpdateValidator extends FormRequest {
     private $rules = [
-	  'username' => 'required|min:3|string'
+	  'username' => 'required|min:3|string',
+	  'first_name' => 'required|min:3|string',
+	  'last_name' => 'required|min:3|string',
+	  'title' => 'min:3|string|nullable',
+	  'company' => 'min:3|string|nullable',
+	  'email' => 'required|email|max:255',
+	  'language_code' => 'required|string',
+	  'birthdate' => 'required|date',
+	  'address' => 'string|nullable',
+	  'address_2' => 'string|nullable',
+	  'address_3' => 'string|nullable',
+	  'state' => 'min:3|string|nullable',
+	  'zipcode' => 'min:3|numeric|nullable',
+	  'website' => 'url|nullable',
+	  'facebook_uri' => 'url|nullable',
+	  'twitter_uri' => 'url|nullable'
 	];
 
   /**

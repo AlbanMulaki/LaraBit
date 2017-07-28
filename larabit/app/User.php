@@ -60,4 +60,8 @@ class User extends Authenticatable {
     public function getBirthdateAttribute($value){
         return new Carbon($value);
     }
+    public function setBirthdateAttribute($value){
+        $value = new Carbon($value);
+        $this->attributes['birthdate'] = $value->format('Y-m-d');
+    }
 }

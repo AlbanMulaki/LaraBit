@@ -2,42 +2,22 @@
 @section('heading-title')
 <div class="page-title">
     <div class="title_left">
-        <h3>{{ $title }} <small>@lang('users::general.profile')</small></h3>
+        <h3>@lang('users::general.profile') </h3>
     </div>
     <div class="clearfix"></div>
 </div>
-<div class="title_right">
-    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="@lang('users::general.search_for')">
-            <span class="input-group-btn">
-                <button class="btn btn-default" type="button">@lang('users::general.go!')</button>
-            </span>
-        </div>
-    </div>
-</div>
-
 @stop
 @section('content')
 
 @yield('heading-title')
 <div class="row">
-    <div class="col-md-6 col-sm-6 col-xs-12">
+    <form data-parsley-validate="" action="{{ route('users.profile-update') }}" method="POST" class="form-horizontal form-label-left" novalidate="">
+        {{ csrf_field() }}
+
         <div class="x_panel">
-            <div class="x_title">
-                <h2>@lang('users::general.users_title') @lang('users::general.profile') <small>@lang('users::general.details')</small></h2>
-                <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                </ul>
-                <div class="clearfix"></div>
-            </div>
-            <div class="x_content">
-                <br>
-                <form data-parsley-validate="" action="{{ route('users.profile-update') }}" method="POST" class="form-horizontal form-label-left" novalidate="">
-                    {{ csrf_field() }}
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="x_content">
+                    <br>
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="username">@lang('users::general.username')
                         </label>
@@ -108,8 +88,19 @@
                             </div>
                         </div>
                     </div>
-
-                    
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">@lang('users::general.dateofbirth')
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="birthday" name="birthdate" value="{{ $user->birthdate ? $user->birthdate->format('d/m/Y') : ''}}" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                        </div>
+                    </div>
+                    <div class="ln_solid"></div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="x_content">
+                    <br>
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="address">@lang('users::general.address')
                         </label>
@@ -131,82 +122,70 @@
                             <textarea @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@address_3) class="form-control ">{{ !empty(old('address_3')) ? old("address_3") : $user->address_3 }}</textarea>
                         </div>
                     </div>
-                    
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="state">@lang('users::general.state')
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@state) class="form-control " value="{{ !empty(old('state')) ? old("state") : $user->state }}"></input>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="zipcode">@lang('users::general.zipcode')
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@zipcode) class="form-control " value="{{ !empty(old('zipcode')) ? old("zipcode") : $user->zipcode }}"></input>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="website">@lang('users::general.website')
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@website) class="form-control " value="{{ !empty(old('website')) ? old("website") : $user->website }}"></input>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="facebook_uri">@lang('users::general.facebook_uri')
+                        </label>
 
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">@lang('users::general.dateofbirth') <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input id="birthday" value="{{ $user->birthdate ? $user->birthdate->format('d/m/Y') : ''}}" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-facebook-official fa-lg"></i></div>
+                                <input @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@facebook_uri) class="form-control " value="{{ !empty(old('facebook_uri')) ? old("facebook_uri") : $user->facebook_uri }}"></input>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">@lang('users::general.state') 
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="twitter_uri">@lang('users::general.twitter_uri')
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" value="{{ $user->state }}" id="state" name="state" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">@lang('users::general.zipcode') 
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" value="{{ $user->zipcode }}" id="zipcode" name="zipcode" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">@lang('users::general.website') 
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" value="{{ $user->website }}" id="website" name="website" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">@lang('users::general.facebook_uri') 
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" value="{{ $user->facebook_uri }}" id="facebook_uri" name="facebook_uri" class="form-control col-md-7 col-xs-12">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">@lang('users::general.twitter_uri') 
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input type="text" value="{{ $user->twitter_uri }}" id="twitter_uri" name="twitter_uri" class="form-control col-md-7 col-xs-12">
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-twitter fa-lg"></i></div>
+                                <input @validate(App\Core\Users\Validator\SelfProfileUpdateValidator@twitter_uri) class="form-control " value="{{ !empty(old('twitter_uri')) ? old("twitter_uri") : $user->twitter_uri }}"></input>
+                            </div>
                         </div>
                     </div>
 
                     <div class="ln_solid"></div>
-                    <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                            <button class="btn btn-primary" type="button">Cancel</button>
-                            <button class="btn btn-primary" type="reset">Reset</button>
-                            <button type="submit" class="btn btn-success">Submit</button>
-                        </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                <div class="form-group">
+                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                        <button type="submit" class="btn btn-success">@lang('common::general.update')</button>
                     </div>
-
-                </form>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 </div>
 
 @stop
 
 
 @section('script')
-<script>
-//    $('#birthday').daterangepicker();
-    $(function () {
-        $('#birthday').daterangepicker({
-            singleDatePicker: true,
-            showDropdowns: true
-        }
-
-        );
-    });
-</script>
-
+@section('scripts')
+<script src="{{ asset('/js/lib/user-profile.min.js')}}"></script>
+@stop
 @stop
 
 
