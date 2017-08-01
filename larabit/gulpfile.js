@@ -30,6 +30,11 @@ elixir(function (mix) {
     //Nprogress
     mix.copy('./node_modules/nprogress/nprogress.css', './public_html/css/lib/nprogress.min.css');
     mix.scripts('./node_modules/nprogress/nprogress.js', './public_html/js/lib/nprogress.min.js');
+    
+    
+    //Easy Pie Chart
+    mix.scripts('./node_modules/easy-pie-chart/dist/jquery.easypiechart.min.js', './public_html/js/lib/jquery.easypiechart.min.js');
+//    mix.scripts('./node_modules/nprogress/nprogress.js', './public_html/js/lib/nprogress.min.js');
 
     // Font Awesome
     mix.sass('./node_modules/font-awesome/scss/font-awesome.scss', './public_html/css/lib/font-awesome.min.css');
@@ -75,8 +80,8 @@ elixir(function (mix) {
     //skyCons - Weather
     mix.scripts(npm + "skycons/skycons.js", './public_html/js/lib/skycons.min.js');
 
-    //Gauges
-//    mix.scripts(npm + "gauges/index.js", './public_html/js/lib/gauges.min.js');
+    //gaugeJS
+    mix.scripts(npm + "gaugeJS/dist/gauge.min.js", './public_html/js/lib/gaugeJS.min.js');
 
     //ionRangeslider
     mix.sass([npm + "ion-rangeslider/css/ion.rangeSlider.css", npm + "ion-rangeslider/css/ion.rangeSlider.skinFlat.css"], './public_html/css/lib/ion.rangeSlider.min.css');

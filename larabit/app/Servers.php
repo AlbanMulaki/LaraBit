@@ -11,14 +11,12 @@ class Servers extends Model {
      * @var type 
      */
     protected $table = 'servers';
-
     /**
-     * Update Settings in database
-     * @param type $updateSettings
+     * Get Healths of server
+     * @return type
      */
-    public static function getAllServer() {
-        return self::all();
-        
+    public function healths() {
+        return ServersHealthPivot::where('server_id', $this->id)->get();
     }
 
 }

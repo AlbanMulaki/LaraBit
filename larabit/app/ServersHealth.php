@@ -4,13 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ServersHealthTask extends Model {
+class ServersHealth extends Model {
 
     /**
      * Table Name
      * @var type 
      */
-    protected $table = 'servers_tasks';
+    protected $table = 'servers_health';
 
     /**
      * Update Settings in database
@@ -19,6 +19,10 @@ class ServersHealthTask extends Model {
     public static function getAllHealthTask() {
         return self::all();
         
+    }
+
+    public function server() {
+        return $this->belongsToMany('App\Servers');
     }
 
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ServersMonitor extends Migration {
+class ServersHealthPivot extends Migration {
 
     /**
      * Run the migrations.
@@ -12,15 +12,14 @@ class ServersMonitor extends Migration {
      * @return void
      */
     public function up() {
-        Schema::create('servers_monitor', function (Blueprint $table) {
+        Schema::create('servers_servers_health', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('status');
-            $table->string('latency'); 
             $table->integer('server_id')->unsigned();
-            $table->integer('tasks_id')->unsigned();
+            $table->integer('health_id')->unsigned();
             $table->timestamps();
+            $table->unique(['server_id','health_id'],'shr_id');
             $table->foreign('server_id')->references('id')->on('servers');
-            $table->foreign('tasks_id')->references('id')->on('servers_tasks');
+            $table->foreign('health_id')->references('id')->on('servers_health');
         });
     }
 
@@ -30,7 +29,7 @@ class ServersMonitor extends Migration {
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('servers_monitor');
+        Schema::dropIfExists('servers_servers_health');
     }
 
 }

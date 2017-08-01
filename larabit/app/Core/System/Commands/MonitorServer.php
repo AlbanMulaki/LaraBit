@@ -5,7 +5,7 @@ namespace App\Core\System\Commands;
 use Illuminate\Console\Command;
 use App\Servers;
 use App\ServersHealthTask;
-use App\ServersMonitor;
+use App\ServersHealthChecks;
 use App\Core\Common\Helper\Enum;
 
 class MonitorServer extends Command {
@@ -31,19 +31,19 @@ class MonitorServer extends Command {
      */
     public function __construct() {
         parent::__construct();
-        $healthTasks = ServersHealthTask::getAllHealthTask();
-        $servers = Servers::getAllServer();
-        foreach ($healthTasks as $task) {
-            foreach ($servers as $server) {
-                if ($task->protocol == "http" || $task->protocol == "https") {
-                    $result = $this->checkHttp($server, $task->timeout, $task->port, $task->protocol);
+        $servers = Servers::all();
+        foreach ($servers as $server) { //Check healths for each server
+            foreach ($server->healths() as $healthService) {// Check each health
+                $health = $healthService->getHealth;
+                if ($health->protocol == "http" || $health->protocol == "https") {
+                    $result = $this->checkHttp($server, $health->timeout, $health->port, $health->protocol);
                 } else {
-                    $result = $this->checkPing($server, $task->timeout);
+                    $result = $this->checkPing($server, $health->timeout);
                 }
-                ServersMonitor::create(array('status' => $result['status'],
+
+                ServersHealthChecks::create(array('status' => $result['status'],
                     "latency" => $result['latency'],
-                    "server_id" => $server->id,
-                    'tasks_id' => $task->id));
+                    'shr_id' => $healthService->id));
             }
         }
     }
@@ -96,7 +96,6 @@ class MonitorServer extends Command {
         curl_setopt($testServer, CURLOPT_TIMEOUT, $timeout);
         curl_exec($testServer);
         $result = curl_getinfo($testServer);
-        print_r($result);
         if (preg_match("/(2|3)[0-9][0-9]/", $result['http_code'])) {
 
             return array('status' => Enum::SUCCESS,

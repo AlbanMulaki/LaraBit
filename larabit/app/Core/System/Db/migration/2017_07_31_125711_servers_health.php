@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ServersTasks extends Migration {
+class ServersHealth extends Migration {
 
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class ServersTasks extends Migration {
      * @return void
      */
     public function up() {
-        Schema::create('servers_tasks', function (Blueprint $table) {
+        Schema::create('servers_health', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
             $table->string('description')->nullable();
@@ -21,9 +21,7 @@ class ServersTasks extends Migration {
             $table->string('request_path')->default("/");
             $table->integer('check_interval')->default("300"); // Seconds
             $table->integer('timeout')->default("5"); // Seconds
-            $table->integer('server_id')->unsigned();
             $table->timestamps();
-            $table->foreign('server_id')->references('id')->on('servers');
         });
     }
 
@@ -33,7 +31,7 @@ class ServersTasks extends Migration {
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('servers_tasks');
+        Schema::dropIfExists('servers_health');
     }
 
 }
