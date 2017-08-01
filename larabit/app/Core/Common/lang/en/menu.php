@@ -7,5 +7,7 @@ return [
     'roles' => 'Roles',
     'dashboard'=>'Dashboard',
     'permissions' => "Permissions",
-    'settings' => 'Settings'
+    'settings' => 'Settings',
+    'system' => 'System',
+    'system_monitor' => 'Monitor'
 ];

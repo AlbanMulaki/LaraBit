@@ -94,6 +94,11 @@ class PermissionSeeder extends Seeder {
                 'display_name' => 'Users Profile Update',
                 'description' => 'Users Profile Update'
             ],
+            [
+                'name' => 'system.monitor',
+                'display_name' => 'System Monitor health',
+                'description' => 'Monitor system health'
+            ]
         ];
         foreach ($permission as $key => $value) {
             Permission::create($value);

@@ -60,6 +60,18 @@ class BuildMenu {
                     ]
                 ]
             ],
+            [
+                'route' => 'system',
+                'class' => 'fa fa-life-ring',
+                'name' => 'common::menu.system',
+                'children' =>
+                [
+                    [
+                        'route' => 'system.monitor',
+                        'name' => 'common::menu.system_monitor'
+                    ]
+                ]
+            ],
         ];
     }
 

@@ -158,7 +158,9 @@ return [
         App\Providers\CoreServiceProvider::class,
         App\Providers\ComposerServiceProvider ::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class
+        Intervention\Image\ImageServiceProvider::class,
+        EricMakesStuff\ServerMonitor\ServerMonitorServiceProvider::class,
+        'Gufy\CpanelWhm\CpanelWhmServiceProvider'
     ],
     /*
       |--------------------------------------------------------------------------

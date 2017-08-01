@@ -9,6 +9,7 @@ return [
         'Users' => true,
         'Images' => true,
         'Dashboard' => true,
+        'System' => true,
     ],
     'packages' => [
         'Core'

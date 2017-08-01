@@ -32,7 +32,7 @@ class CoreServiceProvider extends ServiceProvider {
         $this->loadTranslationsFrom($langDir, strtolower($moduleName));
 
         //Load migration
-        $migrationDir = $baseCore . $moduleName . "/db/migration";
+        $migrationDir = $baseCore . $moduleName . "/Db/migration";
         $this->loadMigrationsFrom($migrationDir);
 
 //        $seed = array(

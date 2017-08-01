@@ -8,6 +8,8 @@
         "php": ">=5.6.4",
         "andywer/js-localization": "dev-laravel-5",
         "barryvdh/laravel-debugbar": "^2.3",
+        "gufy/cpanel-whm": "~1.0",
+        "ericmakesstuff/laravel-server-monitor": "1.2.4",
         "intervention/image": "^2.3",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
