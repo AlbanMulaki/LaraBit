@@ -3,5 +3,6 @@
 return [
     'system_title' => 'System Monitor',
     'operating_system' => 'OS Information',
-    'edit'=> 'Edit'
+    'edit'=> 'Edit',
+    'select_check_health' => "Check health"
 ];

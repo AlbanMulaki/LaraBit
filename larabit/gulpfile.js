@@ -125,6 +125,9 @@ elixir(function (mix) {
     mix.scripts("user/user-profile.js", './public_html/js/lib/user-profile.min.js');
 
 
+    //System Module
+    mix.scripts("system/system-monitor.js", './public_html/js/lib/system-monitor.min.js');
+    
     //Fileinput
     mix.sass(npm+"jasny-bootstrap/dist/css/jasny-bootstrap.min.css", './public_html/css/lib/fileinput.min.css');
     mix.scripts(npm+"jasny-bootstrap/dist/js/jasny-bootstrap.min.js", './public_html/js/lib/fileinput.min.js');

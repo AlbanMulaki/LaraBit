@@ -13,7 +13,7 @@ class ServersHealthPivot extends Model {
      * @var type 
      */
     protected $table = 'servers_servers_health';
-
+    protected $fillable = ['server_id','health_id'];
     public static function insertResultStatus($parameters) {
         return self::all();
     }
