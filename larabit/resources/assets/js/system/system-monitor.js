@@ -8,9 +8,8 @@ var systemMonitor = {
     el: '#larabit-app',
     methods: {
         'healthServer': function (server_id, health_id) {
-//    currentCheckbox.iCheck('uncheck');
             $.ajax({
-                url: "/cp/system/monitor/health-server",
+                url: "/cp/system/monitor/attach-health-server",
                 context: document.body,
                 dataType: 'json',
                 data: {
@@ -77,19 +76,7 @@ var systemMonitor = {
                             out_class: 'zoomOutRight'
                         }
                     });
-                } else if (response.action == "delete") {
-                    new PNotify({
-                        title: Lang.get('users::validation.success_revoked_permission_desc'),
-                        text: Lang.get('users::validation.success_revoked_permission_desc'),
-                        type: 'warning',
-                        styling: 'bootstrap3',
-                        icon: 'fa fa-info-circle fa-lg',
-                        animate: {
-                            animate: true,
-                            in_class: 'bounce',
-                            out_class: 'zoomOutRight'
-                        }
-                    });
+                    window.setTimeout(function(){location.reload()},1000);
                 }
             });
         }
@@ -104,8 +91,7 @@ var vue = new Vue({
 });
 
 
-
-// Create permission roles
+// Attach health check to server
 $('.add-health-server').on('click', function () {
     var server = $(".add-health-server").data("server");
     var health = $("select[name=health_check").val();

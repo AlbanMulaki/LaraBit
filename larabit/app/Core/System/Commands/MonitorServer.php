@@ -31,6 +31,9 @@ class MonitorServer extends Command {
      */
     public function __construct() {
         parent::__construct();
+    }
+    
+    public function handle(){
         $servers = Servers::all();
         foreach ($servers as $server) { //Check healths for each server
             foreach ($server->healths() as $healthService) {// Check each health
@@ -102,15 +105,6 @@ class MonitorServer extends Command {
                 'latency' => $this->checkLatency($server));
         }
         return array('status' => Enum::FAILED, 'latency' => '');
-    }
-
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     */
-    public function handle() {
-        //
     }
 
 }

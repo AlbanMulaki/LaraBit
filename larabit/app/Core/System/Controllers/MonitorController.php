@@ -5,13 +5,10 @@ namespace App\Core\System\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\View;
-//use Auth;
 use App\Core\System\Validator\HealthServerValidator;
 use App\ServersMonitor;
 use App\ServersHealthPivot;
 use App\ServersHealth;
-
-//use App\Core\System\Helper\CPANEL;
 
 class MonitorController extends Controller {
 
@@ -20,15 +17,14 @@ class MonitorController extends Controller {
         $this->setPageName(trans('system::general.system_title'));
     }
 
+    /**
+     * Get servers status
+     * @return type
+     */
     public function status() {
-//        $serversStatus = \App\ServersMonitor::getOverallStatus();
         $servers = \App\Servers::all();
         $healthList = \App\ServersHealth::all();
-//          
-//          $health = $servers[0]->healths();
-//          return ($health[0]->getHealthCheckStatus());
-////        debug($serversStatus);
-        return view('system::monitor', ['servers' => $servers, 'healthList' => $healthList]);
+        return view('system::monitor', ['healthList' => $healthList, 'servers' => $servers]);
     }
 
     /**
@@ -36,7 +32,7 @@ class MonitorController extends Controller {
      * @param HealthServerValidator $request
      * @return json
      */
-    public function healthServer(HealthServerValidator $request) {
+    public function attachHealthServer(HealthServerValidator $request) {
         try {
             $healthServer = ServersHealthPivot::create($request->all());
         } catch (\Illuminate\Database\QueryException $e) {
@@ -56,6 +52,50 @@ class MonitorController extends Controller {
         $message['status'] = 'success';
         $message['action'] = 'create';
         return response()->json($message, $message['code']);
+    }
+
+    /**
+     * Remove check health from server
+     * @param HealthServerValidator $request
+     * @return json
+     */
+    public function dettachHealthServer(HealthServerValidator $request) {
+        try {
+            $serverHealth = ServersHealthPivot::where('server_id', $request->server_id)->where('health_id', $request->health_id)->first();
+            \App\ServersHealthChecks::where('shr_id', $serverHealth->id)->delete();
+            $serverHealth->delete();
+        } catch (\ErrorException $e) {
+            if ((request()->ajax() && !request()->pjax()) || request()->wantsJson()) {
+                $message['message'][] = trans("system::validation.health_server_doesnt_exist");
+                $message['code'] = 500;
+                $message['status'] = 'error';
+                $message['action'] = 'delete';
+                return response()->json($message, $message['code']);
+            }
+            return abort(500);
+        } catch (\Illuminate\Database\QueryException $e) {
+
+            if ((request()->ajax() && !request()->pjax()) || request()->wantsJson()) {
+                if ($e->errorInfo[1] == 1062) {
+                    $message['message'][] = trans("common::validation.generic_error");
+                } else {
+                    $message['message'][] = $e->errorInfo;
+                }
+                $message['code'] = 500;
+                $message['status'] = 'error';
+                $message['action'] = 'delete';
+                return response()->json($message, $message['code']);
+            }
+            return abort(500);
+        }
+        if ((request()->ajax() && !request()->pjax()) || request()->wantsJson()) {
+            $message['message'][] = trans('system::validation.health_check_dettached', ["healthcheck" => ""]);
+            $message['code'] = 200;
+            $message['status'] = 'success';
+            $message['action'] = 'delete';
+            return response()->json($message, $message['code']);
+        }
+        return redirect()->back();
     }
 
 }

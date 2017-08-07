@@ -98,6 +98,16 @@ class PermissionSeeder extends Seeder {
                 'name' => 'system.monitor',
                 'display_name' => 'System Monitor health',
                 'description' => 'Monitor system health'
+            ],
+            [
+                'name' => 'system.monitor.attach-health-server',
+                'display_name' => 'Attach Health Check to server',
+                'description' => 'Attach any healthcheck to servers.'
+            ],
+            [
+                'name' => 'system.monitor.detach-health-server',
+                'display_name' => 'Dettach Health Check to server',
+                'description' => 'Dettach any healthcheck to servers.'
             ]
         ];
         foreach ($permission as $key => $value) {

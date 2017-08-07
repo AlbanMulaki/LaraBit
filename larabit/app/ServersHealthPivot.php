@@ -13,7 +13,8 @@ class ServersHealthPivot extends Model {
      * @var type 
      */
     protected $table = 'servers_servers_health';
-    protected $fillable = ['server_id','health_id'];
+    protected $fillable = ['server_id', 'health_id'];
+
     public static function insertResultStatus($parameters) {
         return self::all();
     }
@@ -36,7 +37,7 @@ class ServersHealthPivot extends Model {
             return $item->count();
         });
         $statusValidated[Enum::FAILED] = (isset($status[Enum::FAILED]) ? $status[Enum::FAILED] : 0);
-        $statusValidated[Enum::SUCCESS] = (isset($status[Enum::SUCCESS]) ? $status[Enum::SUCCESS] : 0);
+        $statusValidated[Enum::SUCCESS] = (isset($status[Enum::SUCCESS]) ? $status[Enum::SUCCESS] : 1);
         return collect(['latency' => number_format((float) $checkHealth->avg("latency"), 2),
             'status' => [
                 'failed' => $statusValidated[Enum::FAILED],

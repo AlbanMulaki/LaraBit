@@ -39,7 +39,6 @@ class CoreServiceProvider extends ServiceProvider {
 //            $baseCore . $moduleName . "/db/seed/" => base_path('database/seeds')
 //        );
 //        $this->publishes($seed);
-
         $composerViewClassName = config('core.core_namespace') . ucfirst($moduleName) . "\Composers\ViewComposer";
 
         $composerView = new \App\Core\Users\Composers\ViewComposer();

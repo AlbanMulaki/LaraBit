@@ -4,7 +4,6 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use App\Core\Common\Helper\Enum;
 
 class ServersHealthChecks extends Model {
 

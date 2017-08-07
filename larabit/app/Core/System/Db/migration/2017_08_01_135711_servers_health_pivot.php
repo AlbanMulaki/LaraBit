@@ -18,8 +18,8 @@ class ServersHealthPivot extends Migration {
             $table->integer('health_id')->unsigned();
             $table->timestamps();
             $table->unique(['server_id','health_id'],'shr_id');
-            $table->foreign('server_id')->references('id')->on('servers');
-            $table->foreign('health_id')->references('id')->on('servers_health');
+//            $table->foreign('server_id')->references('id')->on('servers');
+//            $table->foreign('health_id')->references('id')->on('servers_health');
         });
     }
 
