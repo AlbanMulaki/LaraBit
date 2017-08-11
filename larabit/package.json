@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "blueimp-file-upload-node": "^2.1.0",
+    "bootflat": "^2.0.4",
     "bootstrap": "^3.3.7",
     "bootstrap-colorpicker": "^2.5.1",
     "bootstrap-daterangepicker": "^2.1.25",

@@ -10,6 +10,8 @@ return [
         'Images' => true,
         'Dashboard' => true,
         'System' => true,
+        'Clients' => true,
+        'Pages' => true,
     ],
     'packages' => [
         'Core'

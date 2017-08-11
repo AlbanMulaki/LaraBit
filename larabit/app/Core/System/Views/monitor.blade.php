@@ -4,7 +4,6 @@
 
 <div class='row'>
 
-
     @foreach($servers as $server)
     <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
         <div class="well profile_view">

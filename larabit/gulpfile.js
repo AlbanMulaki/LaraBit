@@ -26,6 +26,10 @@ elixir(function (mix) {
     mix.copy('./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', './public_html/css/fonts/glyphicons-halflings-regular.woff');
     mix.copy('./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2', './public_html/css/fonts/glyphicons-halflings-regular.woff2');
 
+    //Bootflat
+//    mix.copy(npm + 'bootflat/bootflat/css/bootflat.min.css', './public_html/css/lib/bootflat.min.css');
+    mix.sass("clients/clientarea.scss", './public_html/css/lib/clients.min.css');
+    mix.sass("website/website.scss", './public_html/css/lib/website.min.css');
 
     //Nprogress
     mix.copy('./node_modules/nprogress/nprogress.css', './public_html/css/lib/nprogress.min.css');
