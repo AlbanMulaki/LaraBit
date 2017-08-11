@@ -23,3 +23,60 @@
     float: right;
     margin-right: 10px;
 }
+
+.menu-header{
+    background:#f7f7f7;
+}
+
+
+/**
+ * Bootstrap Modification
+ */
+body{
+    color:#4A5960;
+}
+.btn{
+    transition: all .25s linear;
+    border-radius:1px;    
+    text-transform:uppercase;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+}
+.btn:hover{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.26);
+}
+.btn-primary{
+    background:#3d8be0;
+    border-color:#3d8be0;
+    border:none;
+}
+.btn-primary:hover{
+    background:#5ca5f3;
+    border-color:#5ca5f3;
+    border:none;
+}
+.btn-default{
+    color:#3d8be0;
+    background:#fff;
+    border:none;
+}
+.btn-default:hover{
+    background:#fff;
+    color:#3d8be0;
+    border:none;
+}
+.btn-danger{
+    background:#f84545;
+    border-color:#f84545;
+    border:none;
+}
+.btn-danger:hover{
+    background:#fd5d5d;
+    border-color:#fd5d5d;
+    border:none;
+}
+.btn-info{
+    border:none;
+}
+.btn-info:hover{
+    border:none;
+}

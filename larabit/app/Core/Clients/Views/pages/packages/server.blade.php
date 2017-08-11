@@ -2,10 +2,26 @@
 
 @section('content')
 
-<hr>
-<h3 class="text-uppercase"> Server mulakihost.com #15123</h3>
+<div class="col-xs-12">
+    <br>
+    <a href="#" class="btn btn-default btn-lg "><i class="fa fa-terminal "></i> SSH</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="#" class="btn btn-default btn-lg"><i class="fa fa-terminal"></i> Console</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="#" class="btn btn-default btn-lg"><i class="fa fa-line-chart"></i> Reboot</a>
+    &nbsp;&nbsp;&nbsp;
+    <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-line-chart"></i> Upgrade</a>
+    &nbsp;&nbsp;&nbsp;
+    <br>
+</div>
 
-<hr>
+
+<div class="col-xs-12">
+    <hr>
+    <h3 class="text-uppercase"> Server mulakihost.com #15123</h3>
+
+    <hr>
+</div>
 <style>
     .panel-heading-server{
         border-radius: 0;
