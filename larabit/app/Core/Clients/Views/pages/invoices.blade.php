@@ -7,7 +7,7 @@
         <h3>Your Invoices</h3>
     </div>
     <div class="text-right col-xs-12 col-lg-6"> 
-        <span class="btn btn-info">
+        <span class="btn btn-primary">
             <i class="fa fa-shopping-cart"></i> Account balance: <i class="fa fa-eur"></i> 150.50
         </span>
         <a href="#" class="btn btn-success">
@@ -37,7 +37,7 @@
                         <th>Actions</th>
                     </tr>
                     <tr>
-                        <td><span class="label label-info">09-08-2017</span></td>
+                        <td><span class="label label-primary">09-08-2017</span></td>
                         <td>Order #175631 / VPS / IPAddress</td>
                         <td>€ 4.00 EUR</td>
                         <td><span class="label label-warning">Unpaid</span></td>
@@ -45,7 +45,7 @@
                         <td><a class="btn btn-success btn-xs"><i class="fa fa-shopping-cart "> </i> Pay Now</a></td>
                     </tr>
                     <tr>
-                        <td><span class="label label-info">09-08-2017</span></td>
+                        <td><span class="label label-primary">09-08-2017</span></td>
                         <td>Order #175631 / Web Hosting / pragmaticlinux.org(192.168.50.100)</td>
                         <td>€ 50.00 EUR</td>
                         <td><span class="label label-warning">Unpaid</span></td>
@@ -53,7 +53,7 @@
                         <td><a class="btn btn-success btn-xs"><i class="fa fa-shopping-cart "> </i> Pay Now</a></td>
                     </tr>
                     <tr>
-                        <td><span class="label label-info">09-08-2017</span></td>
+                        <td><span class="label label-primary">09-08-2017</span></td>
                         <td>Order #175631 / Web Hosting / VPS(192.168.50.100)</td>
                         <td>€ 50.00 EUR</td>
                         <td><span class="label label-warning">Unpaid</span></td>
@@ -61,7 +61,7 @@
                         <td><a class="btn btn-success btn-xs"><i class="fa fa-shopping-cart "> </i> Pay Now</a></td>
                     </tr>
                     <tr>
-                        <td><span class="label label-info">09-08-2017</span></td>
+                        <td><span class="label label-primary">09-08-2017</span></td>
                         <td>Order #175631 / Web Hosting / pragmaticlinux.org(192.168.50.100)</td>
                         <td>€ 50.00 EUR</td>
                         <td><span class="label label-danger">Overdue</span></td>
@@ -84,21 +84,21 @@
                         <th>Actions</th>
                     </tr>
                     <tr>
-                        <td><span class="label label-info">09-08-2017</span></td>
+                        <td><span class="label label-primary">09-08-2017</span></td>
                         <td>Order #175631 / VPS / IPAddress</td>
                         <td>€ 4.00 EUR</td>
                         <td><span class="label label-success">Paid</span></td>
                         <td><a class="btn btn-success btn-xs"><i class="fa fa-file-text-o"> </i> Download Invoice</a></td>
                     </tr>
                     <tr>
-                        <td><span class="label label-info">09-08-2017</span></td>
+                        <td><span class="label label-primary">09-08-2017</span></td>
                         <td>Order #175631 / VPS / IPAddress</td>
                         <td>€ 4.00 EUR</td>
                         <td><span class="label label-success">Paid</span></td>
                         <td><a class="btn btn-success btn-xs"><i class="fa fa-file-text-o"> </i> Download Invoice</a></td>
                     </tr>
                     <tr>
-                        <td><span class="label label-info">09-08-2017</span></td>
+                        <td><span class="label label-primary">09-08-2017</span></td>
                         <td>Order #175631 / VPS / IPAddress</td>
                         <td>€ 4.00 EUR</td>
                         <td><span class="label label-success">Paid</span></td>

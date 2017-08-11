@@ -35,6 +35,13 @@
 body{
     color:#4A5960;
 }
+.label{
+    border-radius:1px;
+}
+.label-primary{
+    background:#3d8be0;
+    border-radius:1px;
+}
 .btn{
     transition: all .25s linear;
     border-radius:1px;    
