@@ -35,8 +35,32 @@ class SettingsSeeder extends Seeder {
                 'value' => 'info@larabit.com',
                 'lang' => 'contact_email',
                 'type' => 'string',
-                'tab_name' => 'general',
+                'tab_name' => 'contacts',
                 'validation_rules' => 'email'
+            ],
+            [
+                'code' => 'sales_email',
+                'value' => 'info@larabit.com',
+                'lang' => 'sales_email',
+                'type' => 'string',
+                'tab_name' => 'contacts',
+                'validation_rules' => 'email'
+            ],
+            [
+                'code' => 'support_email',
+                'value' => 'info@larabit.com',
+                'lang' => 'support_email',
+                'type' => 'string',
+                'tab_name' => 'contacts',
+                'validation_rules' => 'email'
+            ],
+            [
+                'code' => 'footer_description',
+                'value' => '...',
+                'lang' => 'footer_description',
+                'type' => 'string',
+                'tab_name' => 'general',
+                'validation_rules' => 'string'
             ]
         ];
         foreach ($permission as $key => $value) {

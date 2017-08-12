@@ -6,6 +6,6 @@ Route::group(['prefix' => 'cp/control', 'middleware' => ['web', 'auth'], 'namesp
     Route::get('/server', ['as' => 'clients.clientarea-server', 'uses' => 'ClientsController@server', 'middleware' => 'permission:clients.clientarea']);
     Route::get('/hosting', ['as' => 'clients.clientarea-hosting', 'uses' => 'ClientsController@hosting', 'middleware' => 'permission:clients.clientarea']);
 });
-Route::group(['namespace' => 'App\Core\Clients\Controllers'], function() {
+Route::group(['namespace' => 'App\Core\Clients\Controllers', 'middleware' => ['web']], function() {
     Route::get('/', ['as' => 'website.home', 'uses' => 'WebsiteController@home']);
 });

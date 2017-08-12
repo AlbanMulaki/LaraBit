@@ -108,6 +108,11 @@ class PermissionSeeder extends Seeder {
                 'name' => 'system.monitor.detach-health-server',
                 'display_name' => 'Dettach Health Check to server',
                 'description' => 'Dettach any healthcheck to servers.'
+            ],
+            [
+                'name' => 'clients.clientarea',
+                'display_name' => 'Client Area MulakiHost',
+                'description' => 'Client Area MulakiHost.'
             ]
         ];
         foreach ($permission as $key => $value) {

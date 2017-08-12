@@ -97,6 +97,7 @@
             .sign-in{
                 list-style: none;
                 padding: 8px;
+                color:#3d8be0;
                 font-weight: bold;
                 text-transform: uppercase;
             }
@@ -123,7 +124,13 @@
 
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
                         <ul class="sign-in">
-                            <li class="text-right menu-item menu-item-type-post_type menu-item-object-page"><a title="Sign In" href="{{ route("login") }}">Sign In</a></li>
+                            @if(Auth::check())
+                            <li class="text-right">
+                                {{ Auth::user()->first_name." ".Auth::user()->last_name }}
+                            </li>
+                            @else                            
+                            <li class="text-right"><a title="Sign In" href="{{ route("login") }}">Sign In</a></li>
+                            @endif
                         </ul>
                     </div>
                 </div>
@@ -132,137 +139,29 @@
             <div class="container-fluid menu-header">
                 <div class="container">
                     <div class='col-xs-12 '>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="mainmenu">
                             <ul class="nav navbar-nav ">
                                 <li class="active"><a href="#">Email Business</a></li>
                                 <li><a href="#">Web Hosting</a></li>
                                 <li><a href="#">Reseller Hosting</a></li>
                                 <li><a href="#">Cloud VPS </a></li>
+                                @if(Auth::check())
                                 <li><a href="{{ route('clients.clientarea') }}">My Services</a></li>
                                 <li><a href="{{ route('clients.clientarea-invoices')}}">My Invoices</a></li>
+                                @endif
                             </ul>
-                        </div><!-- /.navbar-collapse -->
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <header class="header-title">
-            <div class="container">
 
-                <h1>Your Services</h1>
-
-            </div>
-        </header>
-
-        <div class="container">
-            @yield('content')
-        </div>
+        @yield('content')
 
 
-
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="footer-widget">
-                            <p>
-                                <img src="https://mulakihost.com/wp-content/uploads/2017/05/MulakiHost-logo-white-500-117.png?8057bc" alt=""><br>
-                                MulakiHost is specialized in providing dedicated server hosting, server renta, web designing, business email, startup solutions, enterprise solutions, cloud solutions.</p>
-                            <p>
-                                <img src="https://mulakihost.com/wp-content/uploads/2017/06/rsz_paypalsvg.png?8057bc" alt="" style="height:70px; margin-top:10px;">
-                            </p>
-                            <div style=" border-top: solid 1px #333;">
-                                <p>
-                                    &nbsp;
-                                </p>
-                            </div>
-                            <p>
-                                <img src="https://mulakihost.com/wp-content/uploads/2017/06/rsz_visa.png?8057bc" alt="" style="height: 30px; padding-right: 10px;">
-                                <img src="https://mulakihost.com/wp-content/uploads/2017/06/MasterCard_Logosvg.png?8057bc" alt="" style="height: 30px; padding-right: 10px;">
-                                <img src="https://mulakihost.com/wp-content/uploads/2017/06/Maestro_logo.png?8057bc" alt="" style="height: 30px; padding-right: 10px;">
-                                <img src="https://mulakihost.com/wp-content/uploads/2017/06/American-Express-icon.png?8057bc" alt="" style="height: 30px; padding-right: 10px;">
-                                <img src="https://mulakihost.com/wp-content/uploads/2017/06/rsz_discover.png?8057bc" alt="" style="height: 30px; padding-right: 10px;">
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="footer-widget">
-                            <h3>Products</h3>
-                            <ul>
-                                <li>
-                                    <a href="https://mulakihost.com/web-hosting/"> Web Hosting </a>
-                                </li>
-                                <li>
-                                    <a href="https://mulakihost.com/reseller-hosting/"> Reseller Hosting </a>
-                                </li>
-                                <li>
-                                    <a href="https://mulakihost.com/vps-compute/"> VPS Compute</a>
-                                </li>
-                                <li>
-                                    <a href="https://mulakihost.com/email-hosting/"> Email Business</a>
-                                </li>
-                                <li>
-                                    <a href="https://mulakihost.com/promotional-server-vps//"> Promotional Servers VPS</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="footer-widget">
-                            <h3>Solutions</h3>
-                            <ul>
-                                <li>
-                                    <a href="https://mulakihost.com/web-hosting/"> Web Hosting </a>
-                                </li>
-                                <li>
-                                    <a href="https://mulakihost.com/reseller-hosting/"> Reseller Hosting </a>
-                                </li>
-                                <li>
-                                    <a href="https://mulakihost.com/vps-compute/"> VPS Compute</a>
-                                </li>
-                                <li>
-                                    <a href="https://mulakihost.com/web-hosting/"> Web Hosting </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="footer-widget">
-                            <h3>About MulakiHost</h3>
-                            <ul>
-                                <li>
-                                    <a href="https://mulakihost.com/why-mulakihost/"> Why MulakiHost </a>
-                                </li>
-                                <li>
-                                    <a href="http://www.webhosting-top.com/" target="_blank">Top Webhosting</a>
-                                </li>
-                            </ul>
-                            <p><strong>Email:</strong><br>
-                                <a href="mailto:support@mulakihost.com"><i class="fa fa-envelope"></i> support@mulakihost.com</a><br>
-                                <a href="mailto:sales@mulakihost.com"><i class="fa fa-envelope"></i> sales@mulakihost.com</a><br>
-                                Business No. 810027252</p>
-                        </div>
-                    </div>
-                </div>
-            </div>    
-        </div>
-        <div class="subfooter">
-            <div class="container">
-                <div class="col-sm-6">
-                    Copyright © 2017 MulakiHost.com LLC. All Rights Reserved.
-                </div>   
-                <div class="col-sm-6">
-                    <ul>
-                        <li><a href="/privacy-policy/">PRIVACY POLICY</a></li>
-                    </ul>
-                </div> 
-            </div>
-        </div>
-
-    </footer>
+        
+        @include('clients::includes.footer')
 </div>
 
 <script type='text/javascript' src="https://mulakihost.com/wp-includes/js/jquery/jquery.js?8057bc"></script>

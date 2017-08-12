@@ -10,4 +10,8 @@ return [
     'contact_email'=> 'Contact Email',
     'select_image' => 'Select Image',
     'change' => 'Change',
+    'footer_description'=>"Footer description",
+    'contacts'=> "Contacts",
+    'sales_email' => "Sales Email",
+    'support_email' => 'Support Email'
 ];
