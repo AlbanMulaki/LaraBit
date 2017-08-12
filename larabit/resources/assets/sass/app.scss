@@ -87,3 +87,19 @@ body{
 .btn-info:hover{
     border:none;
 }
+
+a{
+    color:#3d8be0;
+}
+
+a:focus,a:hover{
+    color:#337ccc;
+}
+
+a:focus{
+    text-decoration: underline;
+}
+
+.navbar{
+    border:none;
+}

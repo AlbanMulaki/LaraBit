@@ -10,7 +10,7 @@ use App\ServersMonitor;
 use App\ServersHealthPivot;
 use App\ServersHealth;
 
-class ClientsController extends Controller {
+class WebsiteController extends Controller {
 
     public function __construct() {
         parent::__construct();
@@ -21,8 +21,9 @@ class ClientsController extends Controller {
      * Get packages
      * @return type
      */
-    public function clientarea() {
-        return view('clients::pages.mypackages');
+    public function home() {
+        return view('clients::pages.mypackages',['title'=>"Hosting, Cloud VPS, Dedicated Server, Email Business | MulakiHost",
+            "description" => "Mulaki Host is a web hosting provider that specializes in dedicated server hosting, cloud server and its related products and services. Enterprise Solutions"]);
     }
 
     /**

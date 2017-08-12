@@ -1,45 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}" lang="en-US" prefix="og: http://ogp.me/ns#">
     <head itemscope="" itemtype="http://schema.org/WebSite">
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
-        <link rel="canonical" href="https://mulakihost.com/" itemprop="url">
-        <link rel="profile" href="http://gmpg.org/xfn/11">
-        <link rel="icon" href="https://mulakihost.com/wp-content/uploads/2017/05/favicon.ico?8057bc" type="image/x-icon">    
-
-        <meta name="description" content="Mulaki Host is a web hosting provider that specializes in dedicated server hosting, cloud server and its related products and services. Enterprise Solutions"/>
-        <link rel="canonical" href="https://mulakihost.com/" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Hosting, Cloud VPS, Dedicated Server, Email Business | MulakiHost" />
-        <meta property="og:description" content="Mulaki Host is a web hosting provider that specializes in dedicated server hosting, cloud server and its related products and services. Enterprise Solutions" />
-        <meta property="og:url" content="https://mulakihost.com/" />
-        <meta property="og:site_name" content="Mulaki Host" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:description" content="Mulaki Host is a web hosting provider that specializes in dedicated server hosting, cloud server and its related products and services. Enterprise Solutions" />
-        <meta name="twitter:title" content="Hosting, Cloud VPS, Dedicated Server, Email Business | MulakiHost" />
-        <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/mulakihost.com\/","name":"Mulaki Host","potentialAction":{"@type":"SearchAction","target":"https:\/\/mulakihost.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
-        <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/mulakihost.com\/","sameAs":["https:\/\/web.facebook.com\/MulakiHost\/"],"@id":"#organization","name":"Mulaki Host","logo":"https:\/\/mulakihost.com\/wp-content\/uploads\/2017\/05\/MulakiHost-logo.png"}</script>
-
-
-        <link rel='dns-prefetch' href='//s.w.org' />
-        <link rel="alternate" type="application/rss+xml" title="Mulaki Host &raquo; Feed" href="https://mulakihost.com/feed/" />
-        <link rel="alternate" type="application/rss+xml" title="Mulaki Host &raquo; Comments Feed" href="https://mulakihost.com/comments/feed/" />
-        <link rel="alternate" type="application/rss+xml" title="Mulaki Host &raquo; Home Comments Feed" href="https://mulakihost.com/home/feed/" />
-        <link rel='shortlink' href='https://mulakihost.com/'/>
-
-        <link rel="alternate" type="text/html" hreflang="en" href="https://mulakihost.com/"/>
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-        <link href="{{ asset('/css/lib/font-awesome.min.css')}}" rel="stylesheet">
-        <link href="{{ asset('/css/lib/website.min.css')}}" rel="stylesheet">
-        <link href="{{ asset('/css/lib/clientarea.min.css')}}" rel="stylesheet">
-        <link href="{{ asset('/css/lib/app.min.css')}}" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        @include('clients::includes.head')
         <style>
             html body{
                 font-family: "Roboto",Arial,Helvetica,sans-serif;
@@ -60,7 +22,7 @@
                 font-size: 14px;
                 padding: 14px;
             }
-            #mainmenu li:active{
+            #mainmenu .active{
                 font-weight: bold;
                 border-bottom: 2px solid #3d8be0;
             }
@@ -131,6 +93,13 @@
                 padding: 0 15px 0 15px;
                 border-left: solid 1px #404040;
             }
+
+            .sign-in{
+                list-style: none;
+                padding: 8px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
         </style>
     </head>
 
@@ -146,15 +115,15 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="https://mulakihost.com" style='display:flex;'>
-                            <img src="https://mulakihost.com/wp-content/uploads/2017/05/MulakiHost-logo_500-117.png?8057bc" alt="">
+                        <a href="{{ route("website.home") }}" style='display:flex;'>
+                            <img src="{{ route('images.image-get',[$settings['logo'],'small']) }}" alt="" height='46'>
                         </a>
                     </div>
 
 
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
-                        <ul data-breakpoint="800" id="menu-primary-menu" style="list-style: none;">
-                            <li class="text-right menu-item menu-item-type-post_type menu-item-object-page"><a title="Sign In" href="https://billing.mulakihost.com/clientarea.php/">Sign In</a></li>
+                        <ul class="sign-in">
+                            <li class="text-right menu-item menu-item-type-post_type menu-item-object-page"><a title="Sign In" href="{{ route("login") }}">Sign In</a></li>
                         </ul>
                     </div>
                 </div>
@@ -170,6 +139,8 @@
                                 <li><a href="#">Web Hosting</a></li>
                                 <li><a href="#">Reseller Hosting</a></li>
                                 <li><a href="#">Cloud VPS </a></li>
+                                <li><a href="{{ route('clients.clientarea') }}">My Services</a></li>
+                                <li><a href="{{ route('clients.clientarea-invoices')}}">My Invoices</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div>
