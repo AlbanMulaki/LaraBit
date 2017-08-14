@@ -10,7 +10,6 @@ before_install:
   - composer create-project laravel/laravel
   - cd ./laravel
   - composer config repositories.AlbanMulaki vcs https://github.com/AlbanMulaki/LaraBit.git
-  - composer require AlbanMulaki/LaraBit dev-master
   - composer update
   - cp ./vendor/AlbanMulaki/LaraBit/tests/config/.env ./
   - rm ./config/app.php
