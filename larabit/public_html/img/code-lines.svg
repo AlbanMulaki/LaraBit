@@ -1,0 +1,96 @@
+<svg id="_6-lines-of-code.svg" data-name="6-lines-of-code.svg" xmlns="http://www.w3.org/2000/svg" width="184.75" height="184.719" viewBox="0 0 184.75 184.719">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #ccc;
+        stroke-width: 1px;
+      }
+
+      .cls-2, .cls-5, .cls-6, .cls-7, .cls-8 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        opacity: 0.07;
+      }
+
+      .cls-3 {
+        fill: #3d5362;
+      }
+
+      .cls-4 {
+        fill: #6e7e89;
+      }
+
+      .cls-5, .cls-6, .cls-7, .cls-8 {
+        fill: none;
+        stroke-width: 4px;
+      }
+
+      .cls-5 {
+        stroke: #53bb83;
+      }
+
+      .cls-6 {
+        stroke: #ffbe00;
+      }
+
+      .cls-7 {
+        stroke: #fff;
+      }
+
+      .cls-8 {
+        stroke: #eb2c28;
+      }
+
+      .cls-9 {
+        opacity: 0.1;
+      }
+
+      .cls-10 {
+        fill: #ffbe00;
+      }
+
+      .cls-11 {
+        fill: #53bb83;
+      }
+
+      .cls-12 {
+        fill: #eb2c28;
+      }
+    </style>
+  </defs>
+  <circle id="Circle" class="cls-1" cx="92.375" cy="92.359" r="91.875"/>
+  <path class="cls-2" d="M46,130.9L101.051,186A91.716,91.716,0,0,0,186,101.253L141.786,57Z" transform="translate(-2.313 -2.188)"/>
+  <g id="Code">
+    <rect id="Rounded_Rectangle_1195" data-name="Rounded Rectangle 1195" class="cls-3" x="42.688" y="52.813" width="100" height="80" rx="8" ry="8"/>
+    <rect id="Rounded_Rectangle_1195_copy" data-name="Rounded Rectangle 1195 copy" class="cls-4" x="42.688" y="52.813" width="100" height="12" rx="8" ry="8"/>
+    <g>
+      <g>
+        <path class="cls-5" d="M56,79H97" transform="translate(-2.313 -2.188)"/>
+        <path id="Shape_1202_copy" data-name="Shape 1202 copy" class="cls-6" d="M56,89H77" transform="translate(-2.313 -2.188)"/>
+        <path id="Shape_1202_copy_2" data-name="Shape 1202 copy 2" class="cls-7" d="M56,99H67" transform="translate(-2.313 -2.188)"/>
+        <path id="Shape_1202_copy_3" data-name="Shape 1202 copy 3" class="cls-5" d="M56,109h51" transform="translate(-2.313 -2.188)"/>
+        <path id="Shape_1202_copy_4" data-name="Shape 1202 copy 4" class="cls-6" d="M56,119H67" transform="translate(-2.313 -2.188)"/>
+      </g>
+      <g>
+        <path id="Shape_1202_copy_5" data-name="Shape 1202 copy 5" class="cls-7" d="M111,79H100" transform="translate(-2.313 -2.188)"/>
+        <path id="Shape_1202_copy_5-2" data-name="Shape 1202 copy 5" class="cls-7" d="M111,89H80" transform="translate(-2.313 -2.188)"/>
+        <path id="Shape_1202_copy_5-3" data-name="Shape 1202 copy 5" class="cls-8" d="M91,99H70" transform="translate(-2.313 -2.188)"/>
+        <path id="Shape_1202_copy_5-4" data-name="Shape 1202 copy 5" class="cls-7" d="M121,109H110" transform="translate(-2.313 -2.188)"/>
+        <path id="Shape_1202_copy_5-5" data-name="Shape 1202 copy 5" class="cls-7" d="M101,119H70" transform="translate(-2.313 -2.188)"/>
+      </g>
+      <g id="Group_6_copy" data-name="Group 6 copy">
+        <path id="Shape_1202_copy_5-6" data-name="Shape 1202 copy 5" class="cls-6" d="M125,79H114" transform="translate(-2.313 -2.188)"/>
+        <path id="Shape_1202_copy_5-7" data-name="Shape 1202 copy 5" class="cls-5" d="M120,89h-6" transform="translate(-2.313 -2.188)"/>
+        <path id="Shape_1202_copy_5-8" data-name="Shape 1202 copy 5" class="cls-6" d="M105,99H94" transform="translate(-2.313 -2.188)"/>
+        <path id="Shape_1202_copy_5-9" data-name="Shape 1202 copy 5" class="cls-5" d="M132,119H104" transform="translate(-2.313 -2.188)"/>
+      </g>
+    </g>
+    <path class="cls-9" d="M92.688,52.813h42a8,8,0,0,1,8,8v64a8,8,0,0,1-8,8h-42a0,0,0,0,1,0,0v-80A0,0,0,0,1,92.688,52.813Z"/>
+    <circle class="cls-10" cx="62.188" cy="59.313" r="2.5"/>
+    <circle id="Ellipse_1197_copy" data-name="Ellipse 1197 copy" class="cls-11" cx="72.188" cy="59.313" r="2.5"/>
+    <circle id="Ellipse_1197_copy_2" data-name="Ellipse 1197 copy 2" class="cls-12" cx="52.188" cy="59.313" r="2.5"/>
+  </g>
+</svg>

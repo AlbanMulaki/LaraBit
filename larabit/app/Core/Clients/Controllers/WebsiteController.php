@@ -22,7 +22,7 @@ class WebsiteController extends Controller {
      * @return type
      */
     public function home() {
-        return view('clients::pages.mypackages',['title'=>"Hosting, Cloud VPS, Dedicated Server, Email Business | MulakiHost",
+        return view('clients::website.index',['title'=>"Hosting, Cloud VPS, Dedicated Server, Email Business | MulakiHost",
             "description" => "Mulaki Host is a web hosting provider that specializes in dedicated server hosting, cloud server and its related products and services. Enterprise Solutions"]);
     }
 

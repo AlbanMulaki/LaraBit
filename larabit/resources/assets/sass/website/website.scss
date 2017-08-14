@@ -8,3 +8,39 @@ and open the template in the editor.
     Author     : alban_mulaki
 */
 
+/*
+** Price Table
+*/
+.price-table{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+}
+.price-table:hover{
+    transition: all .25s linear;
+    box-shadow: 0 10px 20px 0 rgb(61, 139, 224);
+}
+.package-title{
+    background:#3d8be0;
+}
+
+.package-features li{
+    line-height: 2;
+}
+.package-features li:nth-child(2n-1){
+    background:#f7f7f7;
+}
+.package-features ul{
+    padding:0;
+}
+
+.price-table h3,.price-table h2{
+    color:#fff;
+    font-weight:bold;
+}
+.price-table li{
+    list-style:none;
+    padding: 6px;
+    /*         background:#eee; */
+}
+.order-button{
+    margin-top: -25px;
+}
