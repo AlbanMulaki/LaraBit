@@ -1,87 +1,89 @@
 
 <footer>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="footer-widget">
-                    <p>
-                        <img src="https://mulakihost.com/wp-content/uploads/2017/05/MulakiHost-logo-white-500-117.png?8057bc" alt=""><br>
-                        MulakiHost is specialized in providing dedicated server hosting, server renta, web designing, business email, startup solutions, enterprise solutions, cloud solutions.</p>
-                    <p>
-                        <img src="https://mulakihost.com/wp-content/uploads/2017/06/rsz_paypalsvg.png?8057bc" alt="" style="height:50px; margin-top:10px;">
-                    </p>
-                    <div style=" border-top: solid 1px #333;">
-                        <p>
-                            &nbsp;
-                        </p>
-                    </div>
-                    <p>
-                        <img src="https://mulakihost.com/wp-content/uploads/2017/06/rsz_visa.png?8057bc" alt="" style="height: 30px; padding-right: 10px;">
-                        <img src="https://mulakihost.com/wp-content/uploads/2017/06/MasterCard_Logosvg.png?8057bc" alt="" style="height: 30px; padding-right: 10px;">
-                        <img src="https://mulakihost.com/wp-content/uploads/2017/06/Maestro_logo.png?8057bc" alt="" style="height: 30px; padding-right: 10px;">
-                        <img src="https://mulakihost.com/wp-content/uploads/2017/06/American-Express-icon.png?8057bc" alt="" style="height: 30px; padding-right: 10px;">
-                        <img src="https://mulakihost.com/wp-content/uploads/2017/06/rsz_discover.png?8057bc" alt="" style="height: 30px; padding-right: 10px;">
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-4 col-xs-12">
                 <div class="footer-widget">
                     <h3>Products</h3>
                     <ul>
                         <li>
-                            <a href="https://mulakihost.com/web-hosting/"> Web Hosting </a>
+                            <a href="#"> Web Hosting </a>
                         </li>
                         <li>
-                            <a href="https://mulakihost.com/reseller-hosting/"> Reseller Hosting </a>
+                            <a href="#"> Reseller Hosting </a>
                         </li>
                         <li>
-                            <a href="https://mulakihost.com/vps-compute/"> VPS Compute</a>
+                            <a href="#"> Email Business</a>
                         </li>
                         <li>
-                            <a href="https://mulakihost.com/email-hosting/"> Email Business</a>
+                            <a href="#"> VPS Server</a>
                         </li>
                         <li>
-                            <a href="https://mulakihost.com/promotional-server-vps//"> Promotional Servers VPS</a>
+                            <a href="#"> Cloud VM</a>
+                        </li>
+                        <li>
+                            <a href="#"> Domain Name </a>
                         </li>
                     </ul>
                 </div>
 
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-4 col-xs-12">
                 <div class="footer-widget">
                     <h3>Solutions</h3>
                     <ul>
                         <li>
-                            <a href="https://mulakihost.com/web-hosting/"> Web Hosting </a>
+                            <a href="#"> Website & Web Apps </a>
                         </li>
                         <li>
-                            <a href="https://mulakihost.com/reseller-hosting/"> Reseller Hosting </a>
+                            <a href="#"> Mobile Application </a>
                         </li>
                         <li>
-                            <a href="https://mulakihost.com/vps-compute/"> VPS Compute</a>
+                            <a href="#"> Business Email</a>
                         </li>
                         <li>
-                            <a href="https://mulakihost.com/web-hosting/"> Web Hosting </a>
+                            <a href="#"> Web Hosting </a>
+                        </li>
+                        <li>
+                            <a href="#"> Cloud Hosting </a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-sm-4 col-xs-12">
                 <div class="footer-widget">
-                    <h3>About MulakiHost</h3>
+                    <h3>Engage</h3>
                     <ul>
                         <li>
-                            <a href="https://mulakihost.com/why-mulakihost/"> Why MulakiHost </a>
+                            <a href="#"> Blog </a>
                         </li>
                         <li>
-                            <a href="http://www.webhosting-top.com/" target="_blank">Top Webhosting</a>
+                            <a href="#"> Google+ </a>
+                        </li>
+                        <li>
+                            <a href="#"> Twitter </a>
+                        </li>
+                        <li>
+                            <a href="#"> Linkeding </a>
+                        </li>
+                        <li>
+                            <a href="#"> Newsletter Signup </a>
                         </li>
                     </ul>
-                    <p><strong>Email:</strong><br>
-                        <a href="mailto:{{ $settings['support_email'] }}"><i class="fa fa-envelope"></i> {{ $settings['support_email'] }}</a><br>
-                        <a href="mailto:{{ $settings['sales_email'] }}"><i class="fa fa-envelope"></i> {{ $settings['sales_email'] }}</a><br>
-                        Business No. 810027252</p>
                 </div>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 footer-link-box">
+                <div class="row footer-link-box-logo">
+                    <img src="https://mulakihost.com/wp-content/uploads/2017/05/MulakiHost-logo-white-500-117.png?8057bc" alt=""><br>
+                </div>
+                <p>
+                    MulakiHost is specialized in providing dedicated server hosting, server renta, web designing, business email, startup solutions, enterprise solutions, cloud solutions.
+                </p>
+                <p><strong>Email:</strong><br>
+                    <a href="mailto:{{ $settings['support_email'] }}"><i class="fa fa-envelope"></i> {{ $settings['support_email'] }}</a><br>
+                    <a href="mailto:{{ $settings['sales_email'] }}"><i class="fa fa-envelope"></i> {{ $settings['sales_email'] }}</a><br>
+                    Business No. 810027252
+                </p>
             </div>
         </div>
     </div>    

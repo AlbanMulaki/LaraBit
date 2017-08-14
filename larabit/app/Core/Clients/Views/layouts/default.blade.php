@@ -19,7 +19,7 @@
                 letter-spacing: 0;
             }
             #mainmenu li{
-                font-size: 14px;
+                font-size: 13px;
                 padding: 14px;
             }
             #mainmenu .active{
@@ -48,9 +48,8 @@
             /* footer */
             /* -------------------------------------------------- */
             footer{
-                background: #222;
+                background: #303c42;
                 color: #ccc;
-                padding: 40px 0 40px 0;
             }
             footer h3 {
                 font-size: 20px;
@@ -73,13 +72,23 @@
             .footer-widget ul {
                 padding: 0;
             }
+            .footer-link-box-logo {
+                border-bottom:1px solid #455a64;
+                padding:10px;
+            }
+            .footer-link-box {
+                background:#37424b;
+                border-bottom:1px solid #455a64;
+            }
+            .footer-link-box p{
+                padding:10px;
+            }
             /* -------------------------------------------------- */
             /* subfooter */
             /* -------------------------------------------------- */
             .subfooter {
                 border-top: solid 1px #333;
-                margin: 40px 0 -40px 0;
-                background: #222;
+                background: #455a64;
                 padding: 20px 0 20px 0;
                 font-size: 12px;
             }
@@ -141,10 +150,11 @@
                     <div class='col-xs-12 '>
                         <div class="collapse navbar-collapse" id="mainmenu">
                             <ul class="nav navbar-nav ">
-                                <li class="active"><a href="#">Email Business</a></li>
-                                <li><a href="#">Web Hosting</a></li>
-                                <li><a href="#">Reseller Hosting</a></li>
-                                <li><a href="#">Cloud VPS </a></li>
+                                <li class="active"><a href="#">Why MulakiHost</a></li>
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">Solutions</a></li>
+                                <li><a href="#">Data Center</a></li>
+                                <li><a href="#">FAQ</a></li>
                                 @if(Auth::check())
                                 <li><a href="{{ route('clients.clientarea') }}">My Services</a></li>
                                 <li><a href="{{ route('clients.clientarea-invoices')}}">My Invoices</a></li>

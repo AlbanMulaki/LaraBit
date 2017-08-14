@@ -86,9 +86,21 @@
 <style>
 
     /**
+    * Pre Footer
+    */
+    .prefooter{
+        background:#666;
+        padding:15px;
+    }
+    .prefooter a{
+        color:#fff;
+        font-size:2.8em;
+    }
+
+    /**
     * header description
     */
-    
+
     .article-products{
         box-shadow: 0 5px 20px 0 #c5c5c5;
     }
@@ -175,7 +187,9 @@
                 </div>
                 <div class="col-xs-5 col-xs-offset-4">
                     <a href="mailto:{{$settings['sales_email']}}" class="btn  btn-default btn-lg " style="padding-right:40px;padding-left:40px; font-size:14px;">Contact Sales</a>
+                    <br> <br>
                 </div>
+
             </div>
         </div>
         <div class="col-md-6 col-lg-6 col-xs-12 hidden-xs  hidden-sm">
@@ -221,7 +235,7 @@
                 <h3>VPS Server</h3>
                 <br>
                 <p>
-                    Each virtual server is hosted on a full SSD platform, thus ensuring the fastest I/O available on the market today.<br>
+                    Each virtual server is hosted on a full SSD platform, thus ensuring the fastest I/O available on the market today.<br><br>
                 </p>
                 <div class="row text-left text-uppercase" style="    border-top: 1px solid #e4e4e4;">
                     <a href="#">Learn More</a>
@@ -302,7 +316,7 @@
                 <h3>Web Hosting</h3>
                 <br>
                 <p>
-                    Cloud Compute Engine provides highly customizable virtual machines with best-of-breed features.
+                    Mulaki Host gives you a vast array of tools to take your idea or business online today! From site building tools and templates, to our one-click application installer, everything you need to launch a website is literally at your fingertips.
                 </p>
                 <div class="row text-left text-uppercase" style="border-top: 1px solid #e4e4e4;">
                     <a href="#">Learn More</a>
@@ -315,28 +329,26 @@
                 <h3>Reseller Hosting</h3>
                 <br>
                 <p>
-                    Cloud Compute Engine provides highly customizable virtual machines with best-of-breed features.
+                    A Mulaki Host Reseller hosting plan gives you complete control over every aspect of your hosting business, from resource allocation to payment methods and what (if any) additional services you choose to provide your clients (domains, SSL certificates, etc.).
                 </p>
                 <div class="row text-left text-uppercase" style="border-top: 1px solid #e4e4e4;">
                     <a href="#">Learn More</a>
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-6  col-md-4 col-lg-4 ">
+        <div class="col-xs-12 col-sm-6  col-md-4 col-lg-4 " style="    margin-bottom: 10px;">
             <div class="col-xs-12 article article-products">
                 <i class="fa fa-envelope fa-lg fa-5x"></i>
                 <h3>Business Email</h3>
                 <br>
                 <p>
-                    Cloud Compute Engine provides highly customizable virtual machines with best-of-breed features.
+                    Communication has always been a key in building a successful business.
+                    Our premium mail hosting services protect your critical business communications and provide you with the peace of mind that your email will always be available for receiving and sending email. 
                 </p>
                 <div class="row text-left text-uppercase" style="border-top: 1px solid #e4e4e4;">
                     <a href="#">Learn More</a>
                 </div>
             </div>
-        </div>
-        <div class="col-xs-12">
-            <br>
         </div>
         <div class="col-xs-12 col-sm-6  col-md-4 col-lg-4 ">
             <div class="col-xs-12 article article-products">
@@ -344,7 +356,7 @@
                 <h3>Domain Name</h3>
                 <br>
                 <p>
-                    Cloud Compute Engine provides highly customizable virtual machines with best-of-breed features.
+                    If you already have a business or brand, your domain should match your name. If the .com domain is taken, you can try an alternate TLD, but be sure not to put yourself in another company’s shadow or infringe on their trademark.
                 </p>
                 <div class="row text-left text-uppercase" style="border-top: 1px solid #e4e4e4;">
                     <a href="#">Learn More</a>
@@ -357,7 +369,7 @@
                 <h3>VPS Server</h3>
                 <br>
                 <p>
-                    Cloud Compute Engine provides highly customizable virtual machines with best-of-breed features.
+                    Unleashed powerful power. Deliver real-time processing for your business. Get great data center efficiency and proven reliability to handle—and scale for—any workload. Keep your data center working without interruption.
                 </p>
                 <div class="row text-left text-uppercase" style="border-top: 1px solid #e4e4e4;">
                     <a href="#">Learn More</a>
@@ -370,7 +382,8 @@
                 <h3>Cloud VPS</h3>
                 <br>
                 <p>
-                    Cloud Compute Engine provides highly customizable virtual machines with best-of-breed features.
+                    Our virtual servers are available in many configurations, including predefined sizes, and options to create Custom Machine Types optimized for your specific needs.
+                    <br> <br>
                 </p>
                 <div class="row text-left text-uppercase" style="border-top: 1px solid #e4e4e4;">
                     <a href="#">Learn More</a>
@@ -378,9 +391,33 @@
             </div>
         </div>
     </div>
+    <br><br>
 </div>
+<div class="prefooter">
+    <div class='container '>
+        <div class="col-lg-4 col-sm-4 col-xs-12">
+            <h4 style="color: #ffffff;font-weight:bold; margin-bottom: 15px;">Follow MulakiHost</h4>
+            <p><span style="color: #ffffff; font-size: 16px;">Stay updated on MulakiHost by following us on your favorite social networks.</span></p>
+            <div class="col-xs-4">
+                <a href="#" ><i class="fa fa-google-plus-official"></i></a>
+            </div>
+            <div class="col-xs-4">
+                <a href="#" ><i class="fa fa-twitter"></i></a>
+            </div> 
+            <div class="col-xs-4">
+                <a href="#" ><i class="fa fa-facebook-official"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-4  col-xs-12 ">
+            <h4 style="color: #ffffff;font-weight:bold; margin-bottom: 15px;">MulakiHost Blog</h4>
+            <p><span style="color: #ffffff; font-size: 16px;">Product updates, customer stories, and tips and tricks on MulakiHost.</span></p>
 
-<div class='container'>
-    @yield('price-table')
+        </div>
+        <div class="col-lg-4 col-sm-4 col-xs-12">
+            <h4 style="color: #ffffff;font-weight:bold; margin-bottom: 15px;">Sign up for the newsletter</h4>
+            <p><span style="color: #ffffff; font-size: 16px;">Get the latest MulakiHost news, product updates, promotions, event information and special offers, delivered straight to your inbox.</span></p>
+
+        </div>
+    </div>
 </div>
 @stop
