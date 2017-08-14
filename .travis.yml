@@ -5,3 +5,19 @@ php:
   - '5.6'
   - '7.0'
   - '7.1'
+before_install:
+  - composer self-update
+  - composer create-project laravel/laravel
+  - cd ./laravel
+  - composer config repositories.[GITHUB_NAME] vcs https://github.com/[GITHUB_NAME]/[PACKAGE_NAME].git
+  - composer require [GITHUB_NAME]/[PACKAGE_NAME] dev-master
+  - composer update
+  - cp ./vendor/[GITHUB_NAME]/[PACKAGE_NAME]/tests/config/.env ./
+  - rm ./config/app.php
+  - cp ./vendor/[GITHUB_NAME]/[PACKAGE_NAME]/tests/config/app.php ./config
+  - php artisan vendor:publish
+  - mysql -e "create database IF NOT EXISTS test;" -uroot
+  - php artisan migrate
+  - cd ./vendor/[GITHUB_NAME]/[PACKAGE_NAME]
+
+script: "phpunit"
