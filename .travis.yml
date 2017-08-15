@@ -5,7 +5,7 @@ before_script:
     - export DISPLAY=:99.0
     - sh -e /etc/init.d/xvfb start
     - ./larabit/vendor/laravel/dusk/bin/chromedriver-linux &
-    - cp larabit/.env.testing larabit/.env
+    - cp .env.testing .env
     - php artisan serve > /dev/null 2>&1 &
 
 script:
