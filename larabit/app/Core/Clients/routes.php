@@ -13,4 +13,5 @@ Route::group(['prefix' => 'cp/control', 'middleware' => ['web', 'auth'], 'namesp
  */
 Route::group(['namespace' => 'App\Core\Clients\Controllers', 'middleware' => ['web']], function() {
     Route::get('/', ['as' => 'website.home', 'uses' => 'WebsiteController@home']);
+    Route::get('/solutions/website-web-apps', ['as' => 'website.solutions-website-web-apps', 'uses' => 'WebsiteController@solutionsWebApps']);
 });

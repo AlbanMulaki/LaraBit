@@ -54,26 +54,8 @@ class WebsiteController extends Controller {
      * @param HealthServerValidator $request
      * @return json
      */
-    public function attachHealthServer(HealthServerValidator $request) {
-        try {
-            $healthServer = ServersHealthPivot::create($request->all());
-        } catch (\Illuminate\Database\QueryException $e) {
-            if ($e->errorInfo[1] == 1062) {
-                $message['message'][] = trans("system::validation.health_check_duplicate");
-            } else {
-                $message['message'][] = $e->errorInfo;
-            }
-            $message['code'] = 500;
-            $message['status'] = 'error';
-            $message['action'] = 'create';
-            return response()->json($message, $message['code']);
-        }
-        $healthCheck = ServersHealth::find($request->get('health_id'));
-        $message['message'][] = trans('system::validation.health_check_attached', ["healthcheck" => $healthCheck->name]);
-        $message['code'] = 200;
-        $message['status'] = 'success';
-        $message['action'] = 'create';
-        return response()->json($message, $message['code']);
+    public function solutionsWebApps() {
+        return view('clients::website.solutions.webapps');
     }
 
     /**

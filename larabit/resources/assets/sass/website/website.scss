@@ -44,3 +44,85 @@ and open the template in the editor.
 .order-button{
     margin-top: -25px;
 }
+/**
+* Pre Footer
+*/
+.prefooter{
+    background:#666;
+    padding:15px;
+}
+.prefooter a{
+    color:#fff;
+    font-size:2.8em;
+}
+
+/**
+* header description
+*/
+
+.article-products{
+    box-shadow: 0 5px 20px 0 #c5c5c5;
+}
+.article{
+    background:#fff;
+    padding:15px;
+    /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);*/
+    margin-bottom:15px;
+}
+.article:hover{
+    transition: all .25s linear;
+    box-shadow: 0 5px 20px 0 #3d8be0;
+    margin-top: -4px;
+}
+.article img{
+    padding:15px;
+    height: 92px;
+    width: 92px; 
+}
+
+.article i{
+    padding:17px;
+    color:#3d8be0;
+}
+
+.article div{
+    border-top: 1px solid #e4e4e4;
+    padding-top: 13px;
+    padding-left: 28px;
+}
+.article div a:hover{
+    text-decoration: none;
+}
+
+
+.article-feature{
+    padding:15px;
+    margin-bottom:15px;
+}
+.article-feature a:hover{
+    transition: all .25s linear;
+    margin-top: -4px;
+    cursor: pointer;
+    color:#3d8be0;
+    text-decoration: none;
+}
+.article-feature a{
+    color:#4A5960;
+    font-weight:bold;
+    font-size:20px;
+}
+.article-feature img{
+    padding:15px;
+    height: 150px;
+    width: 150px; 
+}
+
+.article-feature i{
+    padding:17px;
+    color:#3d8be0;
+}
+.article-feature p{
+    padding:16px;
+    font-size:16px;
+    font-weight:400;
+}
