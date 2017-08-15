@@ -2,14 +2,8 @@ language: php
 
 php:
   - 5.6
-  - 7.0.21
   - 7.1
   - 7.2
-
-env:
-  global:
-    - setup=basic
-
 matrix:
   allow_failures:
     - php: 7.2
@@ -20,25 +14,19 @@ matrix:
     - php: 5.6
       env: setup=stable
 
-sudo: false
+sudo: required
+dist: trusty
 
-cache:
-  directories:
-    - $HOME/.composer/cache
-
-services:
-  - memcached
-  - redis-server
-
-before_install:
-  - if [[ $TRAVIS_PHP_VERSION != 7.2 ]] ; then phpenv config-rm xdebug.ini; fi
-  - echo "extension = memcached.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  - printf "\n" | pecl install -f redis
-  - travis_retry composer self-update -d ./larabit
+addons:
+   chrome: stable
 
 install:
-  - if [[ $setup = 'basic' ]]; then travis_retry composer install -d ./larabit --no-interaction --prefer-dist --no-suggest; fi
-  - if [[ $setup = 'stable' ]]; then travis_retry composer update -d ./larabit --prefer-dist --no-interaction --prefer-stable --no-suggest; fi
-  - if [[ $setup = 'lowest' ]]; then travis_retry composer update -d ./larabit --prefer-dist --no-interaction --prefer-lowest --prefer-stable --no-suggest; fi
+   - cp .env.testing .env
+   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
 
-script: ls && larabit/vendor/bin/phpunit
+before_script:
+   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+   - php artisan serve &
+
+script:
+   - php artisan dusk
