@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use App\Helper\ParserValidationHTML;
 use Illuminate\Support\Facades\Blade;
+use Laravel\Dusk\DuskServiceProvider;
 
 class AppServiceProvider extends ServiceProvider {
 
@@ -29,14 +30,16 @@ class AppServiceProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
-        //
+        if ($this->app->environment('local', 'testing')) {
+            $this->app->register(DuskServiceProvider::class);
+        }
     }
-    
+
     /**
      * Directive @validate for validating frontend and backend with same rule
      */
     private function validateDirective(){
-        
+
         Blade::directive('validate', function($context) {
             $context = explode('@',$context);
             $formRequest = new $context[0]();
