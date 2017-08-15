@@ -29,4 +29,5 @@ before_script:
    - php larabit/artisan serve &
 
 script:
+   - php larabit/artisan dusk:install &
    - php larabit/artisan dusk
