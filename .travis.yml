@@ -1,15 +1,44 @@
-sudo: required
-dist: trusty
+language: php
+
+php:
+  - 5.6
+  - 7.0.21
+  - 7.1
+  - 7.2
+
+env:
+  global:
+    - setup=basic
+
+matrix:
+  allow_failures:
+    - php: 7.2
+  fast_finish: true
+  include:
+    - php: 5.6
+      env: setup=lowest
+    - php: 5.6
+      env: setup=stable
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache
 
 services:
-  - docker
+  - memcached
+  - redis-server
 
-before_script:
-    - export DISPLAY=:99.0
-    - sh -e /etc/init.d/xvfb start
-    - ./larabit/vendor/laravel/dusk/bin/chromedriver-linux &
-    - cp larabit/.env.testing larabit/.env
-    - php artisan serve > /dev/null 2>&1 &
+before_install:
+  - if [[ $TRAVIS_PHP_VERSION != 7.2 ]] ; then phpenv config-rm xdebug.ini; fi
+  - echo "extension = memcached.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - printf "\n" | pecl install -f redis
+  - travis_retry composer self-update
 
-script:
-    - php larabit/artisan dusk
+install:
+  - if [[ $setup = 'basic' ]]; then travis_retry composer install --no-interaction --prefer-dist --no-suggest; fi
+  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable --no-suggest; fi
+  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable --no-suggest; fi
+
+script: vendor/bin/phpunit
