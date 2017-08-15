@@ -12,4 +12,4 @@ before_script:
     - php artisan serve > /dev/null 2>&1 &
 
 script:
-    - php ./larabit/artisan dusk
+    - php larabit/artisan dusk
