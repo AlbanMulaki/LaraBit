@@ -9,6 +9,7 @@ use App\Core\System\Validator\HealthServerValidator;
 use App\ServersMonitor;
 use App\ServersHealthPivot;
 use App\ServersHealth;
+use App\Core\Clients\Helper\Helper;
 
 class WebsiteController extends Controller {
 
@@ -56,6 +57,8 @@ class WebsiteController extends Controller {
      * @return json
      */
     public function solutionsWebApps() {
+        $this->setPageDescription("Fast, Cheap, and Scalable. Write application in any language PHP,Perl,Python,Java.Leverage fraework laravel,wordpress,lumen,joomla.");
+        $this->setPageName("Website & Web Apps Solutions | " . $this->settings['app_name']);
         return view('clients::website.solutions.webapps');
     }
 
@@ -65,7 +68,8 @@ class WebsiteController extends Controller {
      * @return json
      */
     public function solutionsMobileApplication() {
-        $this->setPageName(trans("clients::website.mobile_application"));
+        $this->setPageDescription("Cloud helps you strike balance performance easily for your mobile backend.");
+        $this->setPageName(trans("clients::website.mobile_application") . " | " . $this->settings['app_name']);
         return view('clients::website.solutions.mobile-application');
     }
 
@@ -73,7 +77,44 @@ class WebsiteController extends Controller {
      * Sitemap
      */
     public function sitemap() {
+        $this->setPageDescription("Sitemap MulakiHost structure of website");
+        $this->setPageName("Sitemap MulakiHost structure of website | " . $this->settings['app_name']);
         return view('clients::website.sitemap');
+    }
+
+    /**
+     * vpsServer
+     */
+    public function vpsServer() {
+        $this->setPageDescription("Cheap Quality VPS SSD and Cloud Services using Container or Full KVM Virtualization SSD Server.");
+        $this->setPageName("High Quality Linux and Windows VPS SSD and Cloud Servers | " . $this->settings['app_name']);
+        return view('clients::website.products.vps.vps-server');
+    }
+    /**
+     * vpsServerKvm
+     */
+    public function vpsServerLinuxKVM() {
+        $this->setPageDescription("Cheap Quality VPS SSD and Cloud Services using Container or Full KVM Virtualization SSD Server.");
+        $this->setPageName("High Quality Linux VPS SSD and Cloud Servers | " . $this->settings['app_name']);
+        return view('clients::website.products.vps.linux-kvm');
+    }
+
+    /**
+     * vpsServerWindowsKVM
+     */
+    public function vpsServerWindowsKVM() {
+        $this->setPageDescription("Cheap Quality VPS SSD Windows VPS Hosting Server.");
+        $this->setPageName("High Quality Windows VPS SSD and Cloud Servers | " . $this->settings['app_name']);
+        return view('clients::website.products.vps.windows-kvm');
+    }
+
+    /**
+     * Web Hosting
+     */
+    public function webHosting() {
+        $this->setPageDescription("Fine tuned Web Hosting, SSD Hosting, Popular Languages and frameworks Laravel, Django, Flask, Wordpress, MyBB Node JS. Free SSL");
+        $this->setPageName("Web Hosting | cPanel Control Panel | Fast Web Hosting | " . $this->settings['app_name']);
+        return view('clients::website.products.web-hosting');
     }
 
 }

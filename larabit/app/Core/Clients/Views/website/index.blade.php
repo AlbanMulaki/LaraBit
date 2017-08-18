@@ -1,87 +1,5 @@
 @extends('clients::layouts.default')
 
-@section('price-table')
-<br><br>
-<div class='col-xs-4 '>
-    <div class='price-table col-xs-12'>
-        <div class='row package-title'>
-            <h3 class='text-center text-uppercase'>VPS - LITE</h3>
-        </div>
-        <div class='row' class="text-center">
-            <h1 class='text-center text-uppercase' style='color:#3d8be0; font-weight:bold;'>€3.99 </h1>
-            <div class="text-center "><p style='font-weight:bold;'>/month</p></div>
-        </div>
-        <div class='row package-features text-center'>
-            <ul>
-                <li><strong>1&nbsp;</strong>Website</li>
-                <li><b>Unlimited </b>Subdomain</li>
-                <li><strong>100 GB&nbsp;</strong>Transfer Bandwidth</li>
-                <li><strong>5&nbsp;</strong>Databases</li>
-                <li><strong>20 GB&nbsp;</strong>Storage</li>
-                <li><strong>Yes&nbsp;</strong>Backup Daily</li>
-                <li><b>SSL</b></li>
-            </ul>
-        </div>
-        <div class='row'>
-            <br>
-            <a href='#' class="btn btn-primary btn-lg order-button btn-block">Order Now!</a>
-        </div>
-    </div>
-</div>
-<div class='col-xs-4 '>
-    <div class='price-table col-xs-12'>
-        <div class='row package-title'>
-            <h3 class='text-center text-uppercase'>VPS - LITE</h3>
-        </div>
-        <div class='row' class="text-center">
-            <h1 class='text-center text-uppercase' style='color:#3d8be0; font-weight:bold;'>€3.99 </h1>
-            <div class="text-center "><p style='font-weight:bold;'>/month</p></div>
-        </div>
-        <div class='row package-features text-center'>
-            <ul>
-                <li><strong>1&nbsp;</strong>Website</li>
-                <li><b>Unlimited </b>Subdomain</li>
-                <li><strong>100 GB&nbsp;</strong>Transfer Bandwidth</li>
-                <li><strong>5&nbsp;</strong>Databases</li>
-                <li><strong>20 GB&nbsp;</strong>Storage</li>
-                <li><strong>Yes&nbsp;</strong>Backup Daily</li>
-                <li><b>SSL</b></li>
-            </ul>
-        </div>
-        <div class='row'>
-            <br>
-            <a href='#' class="btn btn-primary btn-lg order-button btn-block">Order Now!</a>
-        </div>
-    </div>
-</div>
-<div class='col-xs-4 '>
-    <div class='price-table col-xs-12'>
-        <div class='row package-title'>
-            <h3 class='text-center text-uppercase'>VPS - LITE</h3>
-        </div>
-        <div class='row' class="text-center">
-            <h1 class='text-center text-uppercase' style='color:#3d8be0; font-weight:bold;'>€3.99 </h1>
-            <div class="text-center "><p style='font-weight:bold;'>/month</p></div>
-        </div>
-        <div class='row package-features text-center'>
-            <ul>
-                <li><strong>1&nbsp;</strong>Website</li>
-                <li><b>Unlimited </b>Subdomain</li>
-                <li><strong>100 GB&nbsp;</strong>Transfer Bandwidth</li>
-                <li><strong>5&nbsp;</strong>Databases</li>
-                <li><strong>20 GB&nbsp;</strong>Storage</li>
-                <li><strong>Yes&nbsp;</strong>Backup Daily</li>
-                <li><b>SSL</b></li>
-            </ul>
-        </div>
-        <div class='row'>
-            <br>
-            <a href='#' class="btn btn-primary btn-lg order-button btn-block">Order Now!</a>
-        </div>
-    </div>
-</div>
-@stop
-
 @section('content')
 <style>
 
@@ -130,7 +48,7 @@
                     Our IasS & PaaS products can deliver your web experience on fast scalable VMs and our global fiber network.
                 </p>
                 <div class="row text-left text-uppercase" style="    border-top: 1px solid #e4e4e4;">
-                    <a href="#">Learn More</a>
+                    <a href="{{ route('website.solutions-website-web-apps') }}">Learn More</a>
                 </div>
             </div>
         </div>
@@ -143,7 +61,7 @@
                     Build your app for Android, iOS, and the mobile web on services that will reliably scale as your app grows.<br><br>
                 </p>
                 <div class="row text-left text-uppercase" style="    border-top: 1px solid #e4e4e4;">
-                    <a href="#">Learn More</a>
+                    <a href="{{ route('website.solutions-mobile-application') }}">Learn More</a>
                 </div>
             </div>
         </div>

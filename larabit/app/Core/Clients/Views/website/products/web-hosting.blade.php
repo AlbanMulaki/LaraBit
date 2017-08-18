@@ -6,9 +6,9 @@
 <div class=" header-box">
     <div class="container ">
         <header>
-            <h2>Website & Web Apps Solutions</h2>
+            <h2>Web Hosting</h2>
             <h4>
-                Deliver your web experience on MulakiHost fast, scalable Hosting
+                Deliver your web experience on MulakiHost fast, scalable Hosting. 
             </h4>
         </header>
     </div>
@@ -16,11 +16,14 @@
 <div class="container feature-solutions">
     <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-            <h2>Fast, Cheap, and Scalable</h2>
+            <h2>Linux Web Hosting</h2>
             <p>
                 Whether you need to build a multi-tiered web application from scratch or host a static website, 
                 MulakiHost provides services and infrastructure that enable you to develop and deploy scalable, 
-                globally-available applications and websites. 
+                globally-available applications and websites. <br><br>
+                Mulaki Host gives you a vast array of tools to take your idea or business online today!
+                From site building tools and templates, to our one-click application installer, everything you need to
+                launch a website is literally at your fingertips.
                 Focus on your application and your users and let MulakiHost take care of the infrastructure for you.
                 When the time comes that your website traffic and data needs exceed your current plan – 
                 we make it easy to upgrade your plan! We offer premiuM customer support that is 24/7 
@@ -237,7 +240,7 @@
             <br><br>
         </div>
         <div class="col-xs-12">
-            <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>
+            <div class='col-xs-4 '>
                 <div class='price-table col-xs-12'>
                     <div class='row package-title'>
                         <h3 class='text-center text-uppercase'>Lite</h3>
@@ -263,7 +266,7 @@
                     </div>
                 </div>
             </div>
-            <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12 '>
+            <div class='col-xs-4 '>
                 <div class='price-table col-xs-12'>
                     <div class='row package-title'>
                         <h3 class='text-center text-uppercase'>Advanced</h3>
@@ -289,7 +292,7 @@
                     </div>
                 </div>
             </div>
-            <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>
+            <div class='col-xs-4 '>
                 <div class='price-table col-xs-12'>
                     <div class='row package-title'>
                         <h3 class='text-center text-uppercase'>Professional</h3>

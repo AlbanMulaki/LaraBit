@@ -14,6 +14,18 @@ Route::group(['prefix' => 'cp/control', 'middleware' => ['web', 'auth'], 'namesp
 Route::group(['namespace' => 'App\Core\Clients\Controllers', 'middleware' => ['web']], function() {
     Route::get('/', ['as' => 'website.home', 'uses' => 'WebsiteController@home']);
     Route::get('/sitemap', ['as' => 'website.sitemap', 'uses' => 'WebsiteController@sitemap']);
+
+    /*     * VPS SERVER* */
+    Route::get('/vps-server', ['as' => 'website.vps-server', 'uses' => 'WebsiteController@vpsServer']);
+    Route::get('/linux-vps-server-ssd-kvm', ['as' => 'website.vps-server-linux-kvm', 'uses' => 'WebsiteController@vpsServerLinuxKVM']);
+    Route::get('/linux-vps-windows-ssd-kvm', ['as' => 'website.vps-server-windows-kvm', 'uses' => 'WebsiteController@vpsServerWindowsKVM']);
+
+
+
+
+
+
+    Route::get('/web-hosting', ['as' => 'website.web-hosting', 'uses' => 'WebsiteController@webHosting']);
     Route::group(['prefix' => 'solutions'], function() {
         Route::get('website-web-apps', ['as' => 'website.solutions-website-web-apps', 'uses' => 'WebsiteController@solutionsWebApps']);
         Route::get('mobile-application', ['as' => 'website.solutions-mobile-application', 'uses' => 'WebsiteController@solutionsMobileApplication']);

@@ -1,93 +1,11 @@
 @extends('clients::layouts.default')
 
-@section('price-table')
-<br><br>
-<div class='col-xs-4 '>
-    <div class='price-table col-xs-12'>
-        <div class='row package-title'>
-            <h3 class='text-center text-uppercase'>Cloud VMs - TOP</h3>
-        </div>
-        <div class='row' class="text-center">
-            <h1 class='text-center text-uppercase' style='color:#3d8be0; font-weight:bold;'>€3.99 </h1>
-            <div class="text-center "><p style='font-weight:bold;'>/month</p></div>
-        </div>
-        <div class='row package-features text-center'>
-            <ul>
-                <li><strong>1&nbsp;</strong>Website</li>
-                <li><b>Unlimited </b>Subdomain</li>
-                <li><strong>100 GB&nbsp;</strong>Transfer Bandwidth</li>
-                <li><strong>5&nbsp;</strong>Databases</li>
-                <li><strong>20 GB&nbsp;</strong>Storage</li>
-                <li><strong>Yes&nbsp;</strong>Backup Daily</li>
-                <li><b>SSL</b></li>
-            </ul>
-        </div>
-        <div class='row'>
-            <br>
-            <a href='#' class="btn btn-primary btn-lg order-button btn-block">Order Now!</a>
-        </div>
-    </div>
-</div>
-<div class='col-xs-4 '>
-    <div class='price-table col-xs-12'>
-        <div class='row package-title'>
-            <h3 class='text-center text-uppercase'>VPS - LITE</h3>
-        </div>
-        <div class='row' class="text-center">
-            <h1 class='text-center text-uppercase' style='color:#3d8be0; font-weight:bold;'>€3.99 </h1>
-            <div class="text-center "><p style='font-weight:bold;'>/month</p></div>
-        </div>
-        <div class='row package-features text-center'>
-            <ul>
-                <li><strong>1&nbsp;</strong>Website</li>
-                <li><b>Unlimited </b>Subdomain</li>
-                <li><strong>100 GB&nbsp;</strong>Transfer Bandwidth</li>
-                <li><strong>5&nbsp;</strong>Databases</li>
-                <li><strong>20 GB&nbsp;</strong>Storage</li>
-                <li><strong>Yes&nbsp;</strong>Backup Daily</li>
-                <li><b>SSL</b></li>
-            </ul>
-        </div>
-        <div class='row'>
-            <br>
-            <a href='#' class="btn btn-primary btn-lg order-button btn-block">Order Now!</a>
-        </div>
-    </div>
-</div>
-<div class='col-xs-4 '>
-    <div class='price-table col-xs-12'>
-        <div class='row package-title'>
-            <h3 class='text-center text-uppercase'>VPS - LITE</h3>
-        </div>
-        <div class='row' class="text-center">
-            <h1 class='text-center text-uppercase' style='color:#3d8be0; font-weight:bold;'>€3.99 </h1>
-            <div class="text-center "><p style='font-weight:bold;'>/month</p></div>
-        </div>
-        <div class='row package-features text-center'>
-            <ul>
-                <li><strong>1&nbsp;</strong>Website</li>
-                <li><b>Unlimited </b>Subdomain</li>
-                <li><strong>100 GB&nbsp;</strong>Transfer Bandwidth</li>
-                <li><strong>5&nbsp;</strong>Databases</li>
-                <li><strong>20 GB&nbsp;</strong>Storage</li>
-                <li><strong>Yes&nbsp;</strong>Backup Daily</li>
-                <li><b>SSL</b></li>
-            </ul>
-        </div>
-        <div class='row'>
-            <br>
-            <a href='#' class="btn btn-primary btn-lg order-button btn-block">Order Now!</a>
-        </div>
-    </div>
-</div>
-@stop
 
 @section('content')
-
 <div class=" header-box">
     <div class="container ">
         <header>
-            <h2>{{ $title }}</h2>
+            <h2>Mobile Application Solutions</h2>
             <h4>
                 @lang('clients::website.create_mobile_apps')
             </h4>
