@@ -13,5 +13,9 @@ Route::group(['prefix' => 'cp/control', 'middleware' => ['web', 'auth'], 'namesp
  */
 Route::group(['namespace' => 'App\Core\Clients\Controllers', 'middleware' => ['web']], function() {
     Route::get('/', ['as' => 'website.home', 'uses' => 'WebsiteController@home']);
-    Route::get('/solutions/website-web-apps', ['as' => 'website.solutions-website-web-apps', 'uses' => 'WebsiteController@solutionsWebApps']);
+    Route::get('/sitemap', ['as' => 'website.sitemap', 'uses' => 'WebsiteController@sitemap']);
+    Route::group(['prefix' => 'solutions'], function() {
+        Route::get('website-web-apps', ['as' => 'website.solutions-website-web-apps', 'uses' => 'WebsiteController@solutionsWebApps']);
+        Route::get('mobile-application', ['as' => 'website.solutions-mobile-application', 'uses' => 'WebsiteController@solutionsMobileApplication']);
+    });
 });

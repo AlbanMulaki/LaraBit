@@ -154,7 +154,10 @@
                                 <li><a href="#">Products</a></li>
                                 <li><a href="#">Solutions</a></li>
                                 <li><a href="#">Data Center</a></li>
+                                <li><a href="#">Web Hosting</a></li>
+                                <li><a href="#">Cloud VPS</a></li>
                                 <li><a href="#">FAQ</a></li>
+
                                 @if(Auth::check())
                                 <li><a href="{{ route('clients.clientarea') }}">My Services</a></li>
                                 <li><a href="{{ route('clients.clientarea-invoices')}}">My Invoices</a></li>

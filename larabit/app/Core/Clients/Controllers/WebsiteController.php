@@ -22,7 +22,7 @@ class WebsiteController extends Controller {
      * @return type
      */
     public function home() {
-        return view('clients::website.index',['title'=>"Hosting, Cloud VPS, Dedicated Server, Email Business | MulakiHost",
+        return view('clients::website.index', ['title' => "Hosting, Cloud VPS, Dedicated Server, Email Business | MulakiHost",
             "description" => "Mulaki Host is a web hosting provider that specializes in dedicated server hosting, cloud server and its related products and services. Enterprise Solutions"]);
     }
 
@@ -41,6 +41,7 @@ class WebsiteController extends Controller {
     public function server() {
         return view('clients::pages.packages.server');
     }
+
     /**
      * Get server
      * @return type
@@ -59,47 +60,20 @@ class WebsiteController extends Controller {
     }
 
     /**
-     * Remove check health from server
+     * Add check health to server
      * @param HealthServerValidator $request
      * @return json
      */
-    public function dettachHealthServer(HealthServerValidator $request) {
-        try {
-            $serverHealth = ServersHealthPivot::where('server_id', $request->server_id)->where('health_id', $request->health_id)->first();
-            \App\ServersHealthChecks::where('shr_id', $serverHealth->id)->delete();
-            $serverHealth->delete();
-        } catch (\ErrorException $e) {
-            if ((request()->ajax() && !request()->pjax()) || request()->wantsJson()) {
-                $message['message'][] = trans("system::validation.health_server_doesnt_exist");
-                $message['code'] = 500;
-                $message['status'] = 'error';
-                $message['action'] = 'delete';
-                return response()->json($message, $message['code']);
-            }
-            return abort(500);
-        } catch (\Illuminate\Database\QueryException $e) {
+    public function solutionsMobileApplication() {
+        $this->setPageName(trans("clients::website.mobile_application"));
+        return view('clients::website.solutions.mobile-application');
+    }
 
-            if ((request()->ajax() && !request()->pjax()) || request()->wantsJson()) {
-                if ($e->errorInfo[1] == 1062) {
-                    $message['message'][] = trans("common::validation.generic_error");
-                } else {
-                    $message['message'][] = $e->errorInfo;
-                }
-                $message['code'] = 500;
-                $message['status'] = 'error';
-                $message['action'] = 'delete';
-                return response()->json($message, $message['code']);
-            }
-            return abort(500);
-        }
-        if ((request()->ajax() && !request()->pjax()) || request()->wantsJson()) {
-            $message['message'][] = trans('system::validation.health_check_dettached', ["healthcheck" => ""]);
-            $message['code'] = 200;
-            $message['status'] = 'success';
-            $message['action'] = 'delete';
-            return response()->json($message, $message['code']);
-        }
-        return redirect()->back();
+    /**
+     * Sitemap
+     */
+    public function sitemap() {
+        return view('clients::website.sitemap');
     }
 
 }

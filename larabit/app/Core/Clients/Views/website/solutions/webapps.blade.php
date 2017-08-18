@@ -85,55 +85,12 @@
 @section('content')
 
 
-<style>
-    .header-box{
-        background:#fff;
-        padding:20px;
-    }
-    .feature-solutions .row,
-    .feature-solutions img{
-        padding:20px;
-    }
-    .feature-solutions p{
-        padding-top:20px;
-    }
-    .feature-solutions-small{
-        background:#eceff1;
-    }
-    .feature-solutions-small-single h4{
-        font-weight:bold;
-    }
-
-    .feature-divicer-icon{
-        margin: -30px auto 0 auto;
-    }
-    .feature-divicer-icon i{
-        background: #eceff1;
-        padding: 18px;
-        border-radius: 50%;
-    }
-    .additional-resources .article a{
-        color: inherit;
-        font-size:16px;
-    }
-    .additional-resources .article:hover{
-        margin-top:0;
-        cursor: pointer;
-        color:#3d8be0;
-        text-decoration: none;
-    }
-    .additional-resources small{
-        color:#3d8be0;
-        /*font-size:10px;*/
-    }
-</style>
-
 <div class=" header-box">
     <div class="container ">
         <header>
             <h2>Website & Web Apps Solutions</h2>
             <h4>
-                Deliver your web experience on MulakiHost fast, scalable VMs
+                Deliver your web experience on MulakiHost fast, scalable Hosting
             </h4>
         </header>
     </div>
@@ -216,7 +173,7 @@
                 We take pride in our work and show the same dedication and care you would expect from your own employees. 
                 We never sleep and are dedicated to keeping your business running with personalised support available 
                 24 hours a day, 7 days a week, 365 days a year.
-                Apart from advanced monitoring of your website, we are also available for expert administrative 
+                Apart from advanced monitoring of your website, we are also available for expert administrative.
             </p>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
@@ -337,7 +294,7 @@
         <p>Web Hosting has competitive pricing.</p>
     </div>
     <div class="col-xs-12 text-center" style="margin:20px 0;">
-        <a href="#" class="btn btn-lg btn-primary"><i class="fa fa-arrow-circle-right"></i> &nbsp;View Price Hosting </a>
+        <a href="#price-table" class="btn btn-lg btn-primary"><i class="fa fa-arrow-circle-right"></i> &nbsp;View Price Hosting </a>
     </div>
 </div>
 
@@ -349,15 +306,15 @@
         <br>
     </div>
 </div>
-<div class="feature-solutions-small">
+<div class="feature-solutions-small" id="price-table">
     <div class="container" >
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center feature-divicer-icon">
             <i class="fa fa-shopping-basket fa-3x"></i>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-            <h2>Hosting Packages</h2>
+            <h2>Linux Web Hosting Packages</h2>
             <h4>
-                Choose one of our fine-tuned Web Hosting solutions!
+                Choose one of our fine-tuned Linux Web Hosting solutions!
             </h4>
             <br><br>
         </div>

@@ -126,3 +126,43 @@ and open the template in the editor.
     font-size:16px;
     font-weight:400;
 }
+.header-box{
+    background:#fff;
+    padding:20px;
+}
+.feature-solutions .row,
+.feature-solutions img{
+    padding:20px;
+}
+.feature-solutions p{
+    padding-top:20px;
+}
+.feature-solutions-small{
+    background:#eceff1;
+}
+.feature-solutions-small-single h4{
+    font-weight:bold;
+}
+
+.feature-divicer-icon{
+    margin: -30px auto 0 auto;
+}
+.feature-divicer-icon i{
+    background: #eceff1;
+    padding: 18px;
+    border-radius: 50%;
+}
+.additional-resources .article a{
+    color: inherit;
+    font-size:16px;
+}
+.additional-resources .article:hover{
+    margin-top:0;
+    cursor: pointer;
+    color:#3d8be0;
+    text-decoration: none;
+}
+.additional-resources small{
+    color:#3d8be0;
+    /*font-size:10px;*/
+}
