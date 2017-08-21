@@ -117,5 +117,13 @@ class WebsiteController extends Controller {
         $this->setPageName("Web Hosting | cPanel Control Panel | Fast Web Hosting | " . $this->settings['app_name']);
         return view('clients::website.products.web-hosting');
     }
+    
+    /**
+     * businessEmail
+     */
+    public function businessEmail(){
+        
+        return view("clients::website.products.business-email");
+    }
 
 }

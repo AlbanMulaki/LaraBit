@@ -44,7 +44,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Business Email</a>
+                            <a href="{{ route("website.business-email") }}">Business Email</a><span class='label label-warning'>Links</span>
                         </li>
                         <li>
                             <a href="#">Domain Name Registration</a>
