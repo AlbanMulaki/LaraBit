@@ -173,10 +173,12 @@
 
         @include('clients::includes.footer')
 
-        <script type='text/javascript' src="https://mulakihost.com/wp-includes/js/jquery/jquery.js?8057bc"></script>
+        <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/lib/bootstrap-slider.min.js') }}"></script>
+        @yield('script')
     </body>
 </html>

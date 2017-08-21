@@ -35,5 +35,6 @@
 <link href="{{ asset('/css/lib/font-awesome.min.css')}}" rel="stylesheet">
 <link href="{{ asset('/css/lib/website.min.css')}}" rel="stylesheet">
 <link href="{{ asset('/css/lib/clientarea.min.css')}}" rel="stylesheet">
+<link href="{{ asset('/css/lib/bootstrap-slider.min.css')}}" rel="stylesheet">
 <link href="{{ asset('/css/lib/app.min.css')}}" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">

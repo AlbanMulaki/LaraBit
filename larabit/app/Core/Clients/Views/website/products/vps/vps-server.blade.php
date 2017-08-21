@@ -25,13 +25,13 @@
             </p>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <img src="{{ asset("img/serverless.svg") }}" class="img-responsive"/>
+            <img src="{{ asset("img/serverless.svg") }}" class="img-responsive" title="High Performance Server" alt="High Performance Server"/>
         </div>
     </div>
 
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <img src="{{ asset("img/optimal-availability.png") }}" class="img-responsive"/>
+            <img src="{{ asset("img/optimal-availability.png") }}" class="img-responsive" title="Fast Network & Data Center Europe" alt="Fast Network & Data Center Europe" />
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
             <h3>Fast Network & Data Center Europe</h3>
@@ -61,7 +61,7 @@
             </p>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <img src="{{ asset("img/self-healing.svg") }}" class="img-responsive"/>
+            <img src="{{ asset("img/self-healing.svg") }}" class="img-responsive"  title="Virtaulization & Container" alt="Virtaulization & Container"/>
         </div>
     </div>
 

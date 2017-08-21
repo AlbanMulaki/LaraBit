@@ -90,8 +90,9 @@ class WebsiteController extends Controller {
         $this->setPageName("High Quality Linux and Windows VPS SSD and Cloud Servers | " . $this->settings['app_name']);
         return view('clients::website.products.vps.vps-server');
     }
+
     /**
-     * vpsServerKvm
+     * vpsServerKvms
      */
     public function vpsServerLinuxKVM() {
         $this->setPageDescription("Cheap Quality VPS SSD and Cloud Services using Container or Full KVM Virtualization SSD Server.");

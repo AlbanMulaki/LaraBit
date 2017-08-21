@@ -25,7 +25,8 @@ elixir(function (mix) {
     mix.copy('./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf', './public_html/css/fonts/glyphicons-halflings-regular.ttf');
     mix.copy('./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', './public_html/css/fonts/glyphicons-halflings-regular.woff');
     mix.copy('./node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2', './public_html/css/fonts/glyphicons-halflings-regular.woff2');
-
+    mix.scripts(npm + 'bootstrap-slider/dist/bootstrap-slider.min.js', './public_html/js/lib/bootstrap-slider.min.js');
+    mix.copy(npm + 'bootstrap-slider/dist/css/bootstrap-slider.min.css', './public_html/css/lib/bootstrap-slider.min.css');
     //Bootflat
 //    mix.copy(npm + 'bootflat/bootflat/css/bootflat.min.css', './public_html/css/lib/bootflat.min.css');
     mix.sass("clients/clientarea.scss", './public_html/css/lib/clients.min.css');
@@ -34,8 +35,8 @@ elixir(function (mix) {
     //Nprogress
     mix.copy('./node_modules/nprogress/nprogress.css', './public_html/css/lib/nprogress.min.css');
     mix.scripts('./node_modules/nprogress/nprogress.js', './public_html/js/lib/nprogress.min.js');
-    
-    
+
+
     //Easy Pie Chart
     mix.scripts('./node_modules/easy-pie-chart/dist/jquery.easypiechart.min.js', './public_html/js/lib/jquery.easypiechart.min.js');
 //    mix.scripts('./node_modules/nprogress/nprogress.js', './public_html/js/lib/nprogress.min.js');
@@ -118,8 +119,8 @@ elixir(function (mix) {
     mix.scripts(npm + "pnotify/dist/pnotify.js", './public_html/js/lib/pnotify.min.js');
     mix.sass(npm + "pnotify/dist/pnotify.css", './public_html/css/lib/pnotify.min.css');
     //ParsleyJS
-    mix.scripts(npm+"parsleyjs/dist/parsley.min.js", './public_html/js/lib/parsleyjs.min.js');
-    mix.scripts(npm+"parsleyjs/dist/i18n/en.js", './public_html/js/lib/en.min.js');
+    mix.scripts(npm + "parsleyjs/dist/parsley.min.js", './public_html/js/lib/parsleyjs.min.js');
+    mix.scripts(npm + "parsleyjs/dist/i18n/en.js", './public_html/js/lib/en.min.js');
 
 
     //Users Module
@@ -131,10 +132,10 @@ elixir(function (mix) {
 
     //System Module
     mix.scripts("system/system-monitor.js", './public_html/js/lib/system-monitor.min.js');
-    
+
     //Fileinput
-    mix.sass(npm+"jasny-bootstrap/dist/css/jasny-bootstrap.min.css", './public_html/css/lib/fileinput.min.css');
-    mix.scripts(npm+"jasny-bootstrap/dist/js/jasny-bootstrap.min.js", './public_html/js/lib/fileinput.min.js');
+    mix.sass(npm + "jasny-bootstrap/dist/css/jasny-bootstrap.min.css", './public_html/css/lib/fileinput.min.css');
+    mix.scripts(npm + "jasny-bootstrap/dist/js/jasny-bootstrap.min.js", './public_html/js/lib/fileinput.min.js');
 
 
     // mix.sass("users/user-roles.scss", './public_html/css/lib/user-roles.min.css');

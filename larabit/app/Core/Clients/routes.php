@@ -21,7 +21,8 @@ Route::group(['namespace' => 'App\Core\Clients\Controllers', 'middleware' => ['w
     Route::get('/linux-vps-windows-ssd-kvm', ['as' => 'website.vps-server-windows-kvm', 'uses' => 'WebsiteController@vpsServerWindowsKVM']);
 
 
-
+    /*** Business Email ***/
+    Route::get('/business-email', ['as' => 'website.business-email', 'uses' => 'WebsiteController@businessEmail']);
 
 
 

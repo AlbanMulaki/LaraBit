@@ -21,7 +21,7 @@
                             <a href="#">Cloud VMs</a></span>
                         </li>
                         <li>
-                            <a href="{{ route("website.vps-server") }}">SSD VPS Server </a>  <span class='label label-warning'>Links</span>
+                            <a href="{{ route("website.vps-server") }}">VPS Server </a>  <span class='label label-success'>OK</span>
                             <ul class="">
                                 <li><a href="{{ route('website.vps-server-linux-kvm') }}">Linux VPS SSD KVM</a> <span class='label label-warning'>Links</span></li>
                                 <li><a href="{{ route("website.vps-server-windows-kvm") }}">Windows VPS SSD</a> <span class='label label-warning'>Links</span></li>
