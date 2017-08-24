@@ -10,6 +10,7 @@ use App\ServersMonitor;
 use App\ServersHealthPivot;
 use App\ServersHealth;
 use App\Core\Clients\Helper\Helper;
+use App\Core\Clients\Helper\WHMCS;
 
 class WebsiteController extends Controller {
 
@@ -117,13 +118,68 @@ class WebsiteController extends Controller {
         $this->setPageName("Web Hosting | cPanel Control Panel | Fast Web Hosting | " . $this->settings['app_name']);
         return view('clients::website.products.web-hosting');
     }
-    
+
     /**
      * businessEmail
      */
-    public function businessEmail(){
-        
+    public function businessEmail() {
+
+        $this->setPageDescription("Business Email secure email, 24/7 support and more. Documents, file storage.");
+        $this->setPageName("Business Email - Get business email, storage, FTP and more.| " . $this->settings['app_name']);
+        $this->setKeyword("Business Email, Storage FTP, Secure Email, email with your domain.");
         return view("clients::website.products.business-email");
+    }
+
+    /**
+     * Domain names
+     */
+    public function domainNames() {
+        $tldPricing = WHMCS::fetch("GetTLDPricing");
+        try {
+            $domainsList = $tldPricing['pricing'];
+            $tldPricing = array_chunk($tldPricing['pricing'], ceil(count($tldPricing['pricing']) / 4), true);
+//        return $tldPricing;
+//        return $tldPricing['pricing'];
+//        return array_chunk($tldPricing['pricing']->chunk(1), 2);
+//        return $tldPricing['pricing']->chunk(2);
+//        return $tldPricing->pricing;
+            $this->setPageDescription("Buy your domain name cheapest price .com, .net, .eu, .biz and .us. Transfer your existing domain names for the lowest prices on the internet.");
+            $this->setPageName("Web Domain Registraton - Domain register, Search Domains | " . $this->settings['app_name']);
+        } catch (Exception $e) {
+            abort(500);
+        }
+        return view("clients::website.products.domain-name", ['tldPricing' => $tldPricing, 'domainsList' => $domainsList]);
+    }
+
+    /**
+     * businessEmail
+     */
+    public function checkDomainAvailability() {
+        if (WHMCS::is_valid_domain_name(request()->get('domain') . "." . request()->get('tld'))) {
+            $response = WHMCS::fetch("DomainWhois", ['domain' => request()->get('domain') . "." . request()->get('tld')]);
+            // Chec Additional tld Against domain
+            $tldLists = WHMCS::fetch("GetTLDPricing");
+            foreach ($tldLists['pricing'] as $tld => $tldLists) {
+                if ($tld == request()->get('tld')) {
+                    continue;
+                }
+                $responseMultiple = WHMCS::fetch("DomainWhois", ['domain' => request()->get('domain') . "." . $tld]);
+                if (isset($responseMultiple['status'])) {
+                    $message['message']['similar']["." . $tld] = [
+                        "status" => $responseMultiple['status'],
+                        "price" => current($tldLists['register'])
+                    ];
+                }
+            }
+
+
+            $message['message']['current'] = $response;
+            $message['code'] = 200;
+            $message['status'] = 'success';
+            $message['action'] = 'select';
+            return response()->json($message, $message['code']);
+        }
+        return abort(500);
     }
 
 }

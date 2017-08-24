@@ -47,7 +47,7 @@
                             <a href="{{ route("website.business-email") }}">Business Email</a><span class='label label-warning'>Links</span>
                         </li>
                         <li>
-                            <a href="#">Domain Name Registration</a>
+                            <a href="{{ route("website.domain-names-registraton") }}">Domain Name Registration</a><span class='label label-warning'>Links</span>
                         </li>
                     </ul>
                 </li>

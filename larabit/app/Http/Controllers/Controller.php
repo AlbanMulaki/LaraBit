@@ -18,12 +18,14 @@ class Controller extends BaseController {
 
   private $pageName;
   private $appName;
+  private $keywords;
   private $pageDescription;
   public $settings;
 
   public function __construct() {
 	$this->setPageName();
 	$this->setPageDescription();
+	$this->setKeyword();
 	$this->settings = Settings::pluck('value', 'code')->all();
 	View::share('settings', $this->settings);
   }
@@ -36,6 +38,10 @@ class Controller extends BaseController {
   public function setPageDescription($text = null) {
 	$this->pageDescription = ($text != null ? $text : trans('general.page_description'));
 	$this->setComposerValue('description', $this->pageDescription);
+  }
+  public function setKeyword($text = null) {
+	$this->keywords = ($text != null ? $text : trans('general.page_description'));
+	$this->setComposerValue('keywords', $this->keywords);
   }
 
   /**

@@ -8,6 +8,7 @@
 <link rel="icon" href="https://mulakihost.com/wp-content/uploads/2017/05/favicon.ico?8057bc" type="image/x-icon">    
 
 <meta name="description" content="{{ $description }}"/>
+<meta name="keywords" content="{{ $keywords }}" />
 <link rel="canonical" href="{{ route("website.home") }}" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="website" />
