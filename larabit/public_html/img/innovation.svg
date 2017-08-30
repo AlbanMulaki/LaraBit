@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="66px" viewBox="0 0 62 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>innovation</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="31" cy="35" r="31"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="WhyGoogle2" transform="translate(-584.000000, -1212.000000)">
+            <g id="whygoogle" transform="translate(188.000000, 603.000000)">
+                <g id="card" transform="translate(364.000000, 573.000000)">
+                    <g id="innovation" transform="translate(32.000000, 36.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Oval" fill="#445965" xlink:href="#path-1"></use>
+                        <path d="M-2.47363281,39.6152344 C-2.47363281,39.6152344 8.07519531,38.080742 22.3476562,45.0730859 C36.6201172,52.0654297 41.9814453,66.3261719 41.9814453,66.3261719" id="Path-2" stroke="#567B8D" stroke-width="3" mask="url(#mask-2)"></path>
+                        <path d="M19.8664192,14.3571566 C19.8664192,14.3571566 29.4261436,16.344027 40.7116515,27.6139273 C51.9971594,38.8838275 54.5801206,58.366547 54.5801206,58.366547" id="Path-2" stroke="#567B8D" stroke-width="3" mask="url(#mask-2)" transform="translate(37.223270, 36.361852) rotate(-59.000000) translate(-37.223270, -36.361852) "></path>
+                        <path d="M9,12 C3.48571429,12 -1,16.553 -1,22.15 C-1,29.7625 9,41 9,41 C9,41 19,29.7625 19,22.15 C19,16.553 14.5142857,12 9,12 Z" id="Shape" fill="#66BBFF" mask="url(#mask-2)"></path>
+                        <circle id="Oval-6" fill="#F5F5F5" mask="url(#mask-2)" cx="9" cy="23" r="4"></circle>
+                        <path d="M40,34 C34.4857143,34 30,38.553 30,44.15 C30,51.7625 40,63 40,63 C40,63 50,51.7625 50,44.15 C50,38.553 45.5142857,34 40,34 Z" id="Shape" fill="#66BBFF" mask="url(#mask-2)"></path>
+                        <circle id="Oval-6" fill="#F5F5F5" mask="url(#mask-2)" cx="40" cy="45" r="4"></circle>
+                        <path d="M50,0 C44.4857143,0 40,4.553 40,10.15 C40,17.7625 50,29 50,29 C50,29 60,17.7625 60,10.15 C60,4.553 55.5142857,0 50,0 Z" id="Shape" fill="#66BBFF"></path>
+                        <circle id="Oval-6" fill="#F5F5F5" cx="50" cy="11" r="4"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

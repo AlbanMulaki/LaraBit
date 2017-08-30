@@ -145,7 +145,7 @@ class WebsiteController extends Controller {
 //        return $tldPricing->pricing;
             $this->setPageDescription("Buy your domain name cheapest price .com, .net, .eu, .biz and .us. Transfer your existing domain names for the lowest prices on the internet.");
             $this->setPageName("Web Domain Registraton - Domain register, Search Domains | " . $this->settings['app_name']);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             abort(500);
         }
         return view("clients::website.products.domain-name", ['tldPricing' => $tldPricing, 'domainsList' => $domainsList]);
@@ -180,6 +180,13 @@ class WebsiteController extends Controller {
             return response()->json($message, $message['code']);
         }
         return abort(500);
+    }
+    
+    public function aboutUs(){
+        $this->setPageDescription("Why Mulaki Host is Different, A global fiber network, connecting you to the world. Here’s a taste of what’s next, available now.");
+        $this->setPageName("Mulaki Host is Different - Specialized in dedicated server hosting, cloud server and its related products and services. | " . $this->settings['app_name']);
+        $this->setKeyword("Web Hosting, Future-proof Infrastructure, VPS Linux, VPS Windws, Cloud VPS, Cloud VM");
+        return view("clients::website.about-us.index");
     }
 
 }

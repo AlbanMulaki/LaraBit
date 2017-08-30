@@ -23,9 +23,11 @@ Route::group(['namespace' => 'App\Core\Clients\Controllers', 'middleware' => ['w
 
     /*** Business Email ***/
     Route::get('/business-email', ['as' => 'website.business-email', 'uses' => 'WebsiteController@businessEmail']);
+
+    /*** About Us  ***/
+    Route::get('/about-us', ['as' => 'website.about-us', 'uses' => 'WebsiteController@aboutUs']);
     /*** Domain Names ***/
     Route::get('/domain-names-registration', ['as' => 'website.domain-names-registraton', 'uses' => 'WebsiteController@domainNames']);
-    
     Route::post('/check-domain',['as'=>'website.check-domain','uses'=>'WebsiteController@checkDomainAvailability']);
     
     Route::get('/web-hosting', ['as' => 'website.web-hosting', 'uses' => 'WebsiteController@webHosting']);

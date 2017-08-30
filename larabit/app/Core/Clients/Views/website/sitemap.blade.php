@@ -55,12 +55,25 @@
 
             <ul class="">
                 <li>
-                    <a href="#">About Us</a>
+                    <a href="{{ route("website.about-us") }}">About Us</a><span class='label label-warning'>Links</span>
                     <ul class="">
                         <li>
                             <a href="#">Biref overview about</a>
-                            <a href="#">Date Center</a>
-                            <a href="#">Network</a>
+                        </li>
+                        <li>
+                            <a href="#">Date Center Innovation</a>
+                        </li>
+                        <li>
+                            <a href="#">Serverless, Just Code</a>
+                        </li>
+                        <li>
+                            <a href="#">Future-Proof Infrastructure</a>
+                        </li>
+                        <li>
+                            <a href="#">Security at Scale</a>
+                        </li>
+                        <li>
+                            <a href="#">Startups</a>
                         </li>
                     </ul>
                 </li>

@@ -5,7 +5,7 @@
         <style>
             html body{
                 font-family: "Roboto",Arial,Helvetica,sans-serif;
-                font-size:400 16px/24px Roboto,sans-serif;
+                font:400 15px/24px Roboto,sans-serif;
             }
 
             .subheader{
