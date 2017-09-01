@@ -6,7 +6,7 @@
 <div class=" header-box">
     <div class="container ">
         <header>
-            <h2>Web Hosting</h2>
+            <h2>Linux Reseller Hosting</h2>
             <h4>
                 Deliver your web experience on MulakiHost fast, scalable Hosting. 
             </h4>
@@ -47,6 +47,34 @@
                 Leverage existing frameworks such as Django, Flask, Spring, Laravel, Codeigniter, Lumen, webapp2 and much more. 
                 Dependency management in as Composer, NodeJS.Version Control as Git.
                 Pair your applications with custom architectures on Hosting Or VPS Server to integrate any tech stack you can image: Node.js, MongoDB, MySQL, Redis, Memcached, Disk Caching SSD.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            <h3>Reseller cPanel & WHM</h3>
+            <p>
+                Create and modify unlimited hosting accounts with WebHostManager,
+                then manage each individual account with cPanel. These browser-based 
+                applications make life easier than ever for resellers. 
+                Package design your own hosting packages from the resources we allocate to your account. 
+                Each account you create is separate from your own accounts – ideal for creating hosting packages for your clients.
+            </p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <img src="{{ asset("img/cpanel-whm.png") }}" class="img-responsive"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <img src="{{ asset("img/pay-for.png") }}" class="img-responsive"/>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+            <h3>Flexibility & Quality</h3>
+            <p>
+                Experiencing growth? No problem, we are here for you! We’ll help move you to bigger and larger plans at any time.
+                All our facilities are designed to be resilient to denial of service attacks, and are equipped with additional network safeguarding.
+                Our data centers utilize on-site security, redundant switches, routers, power systems, and many additional features.
             </p>
         </div>
     </div>
@@ -145,7 +173,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h4>Free SSL</h4>
                     <p>
-                        Keeping your site and visitors secure for free with Let’s Encrypt SSL Certificates.
+                        Keeping your site,clients and visitors secure for free with Let’s Encrypt SSL Certificates.
                     </p>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -243,21 +271,21 @@
             <div class='col-xs-4 '>
                 <div class='price-table col-xs-12'>
                     <div class='row package-title'>
-                        <h3 class='text-center text-uppercase'>Lite</h3>
+                        <h3 class='text-center text-uppercase'>Standard</h3>
                     </div>
                     <div class='row' class="text-center">
-                        <h1 class='text-center text-uppercase' style='color:#3d8be0; font-weight:bold;'>€3.99 </h1>
+                        <h1 class='text-center text-uppercase' style='color:#3d8be0; font-weight:bold;'>€19.95 </h1>
                         <div class="text-center "><p style='font-weight:bold;'>/month</p></div>
                     </div>
                     <div class='row package-features text-center'>
                         <ul>
-                            <li><strong>1&nbsp;</strong>Website</li>
-                            <li><b>Unlimited </b>Subdomain</li>
-                            <li><strong>100 GB&nbsp;</strong>Transfer Bandwidth</li>
-                            <li><strong>5&nbsp;</strong>Databases</li>
-                            <li><strong>20 GB&nbsp;</strong>Storage</li>
+                            <li><strong>Yes&nbsp;</strong>cPanel & WHM</li>
+                            <li><strong>Europe </strong>Data Center</li>
+                            <li><strong>Unlimited&nbsp;</strong>Transfer Bandwidth</li>
+                            <li><strong>40&nbsp;</strong>Clients Accounts</li>
+                            <li><strong>300 GB&nbsp;</strong>Storage</li>
                             <li><strong>Yes&nbsp;</strong>Backup Daily</li>
-                            <li><b>SSL</b></li>
+                            <li><strong>Yes&nbsp;</strong>Private Nameserver</li>
                         </ul>
                     </div>
                     <div class='row'>
@@ -269,21 +297,21 @@
             <div class='col-xs-4 '>
                 <div class='price-table col-xs-12'>
                     <div class='row package-title'>
-                        <h3 class='text-center text-uppercase'>Advanced</h3>
+                        <h3 class='text-center text-uppercase'>Enterprise</h3>
                     </div>
                     <div class='row' class="text-center">
-                        <h1 class='text-center text-uppercase' style='color:#3d8be0; font-weight:bold;'>€5.59 </h1>
+                        <h1 class='text-center text-uppercase' style='color:#3d8be0; font-weight:bold;'>€34.95 </h1>
                         <div class="text-center "><p style='font-weight:bold;'>/month</p></div>
                     </div>
                     <div class='row package-features text-center'>
                         <ul>
-                            <li><strong>5&nbsp;</strong>Website</li>
-                            <li><b>Unlimited </b>Subdomain</li>
+                            <li><strong>Yes&nbsp;</strong>cPanel & WHM</li>
+                            <li><strong>Europe </strong>Data Center</li>
                             <li><strong>Unlimited&nbsp;</strong>Transfer Bandwidth</li>
-                            <li><strong>Unlimited&nbsp;</strong>Databases</li>
-                            <li><strong>100 GB&nbsp;</strong>Storage</li>
+                            <li><strong>80&nbsp;</strong>Clients Accounts</li>
+                            <li><strong>500 GB&nbsp;</strong>Storage</li>
                             <li><strong>Yes&nbsp;</strong>Backup Daily</li>
-                            <li><b>SSL</b></li>
+                            <li><strong>Yes&nbsp;</strong>Private Nameserver</li>
                         </ul>
                     </div>
                     <div class='row'>
@@ -298,18 +326,18 @@
                         <h3 class='text-center text-uppercase'>Professional</h3>
                     </div>
                     <div class='row' class="text-center">
-                        <h1 class='text-center text-uppercase' style='color:#3d8be0; font-weight:bold;'>€8.99 </h1>
+                        <h1 class='text-center text-uppercase' style='color:#3d8be0; font-weight:bold;'>€51.95 </h1>
                         <div class="text-center "><p style='font-weight:bold;'>/month</p></div>
                     </div>
                     <div class='row package-features text-center'>
                         <ul>
-                            <li><strong>Unlimited&nbsp;</strong>Website</li>
-                            <li><b>Unlimited </b>Subdomain</li>
+                            <li><strong>Yes&nbsp;</strong>cPanel & WHM</li>
+                            <li><strong>Europe </strong>Data Center</li>
                             <li><strong>Unlimited&nbsp;</strong>Transfer Bandwidth</li>
-                            <li><strong>Unlimited&nbsp;</strong>Databases</li>
-                            <li><strong>200 GB&nbsp;</strong>Storage</li>
+                            <li><strong>200&nbsp;</strong>Clients Accounts</li>
+                            <li><strong>700 GB&nbsp;</strong>Storage</li>
                             <li><strong>Yes&nbsp;</strong>Backup Daily</li>
-                            <li><b>SSL</b></li>
+                            <li><strong>Yes&nbsp;</strong>Private Nameserver</li>
                         </ul>
                     </div>
                     <div class='row'>

@@ -188,5 +188,23 @@ class WebsiteController extends Controller {
         $this->setKeyword("Web Hosting, Future-proof Infrastructure, VPS Linux, VPS Windws, Cloud VPS, Cloud VM");
         return view("clients::website.about-us.index");
     }
+//    public function cloudVm(){
+//        $this->setPageDescription("Why Mulaki Host is Different, A global fiber network, connecting you to the world. Here’s a taste of what’s next, available now.");
+//        $this->setPageName("Mulaki Host is Different - Specialized in dedicated server hosting, cloud server and its related products and services. | " . $this->settings['app_name']);
+//        $this->setKeyword("Web Hosting, Future-proof Infrastructure, VPS Linux, VPS Windws, Cloud VPS, Cloud VM");
+//        return view("clients::website.products.cloud-vms");
+//    }
+    public function products(){
+        $this->setPageDescription("MulakiHost includes many services and prodcts, application hosting, server computing, database services and more.");
+        $this->setPageName("Products & Hosting Services. | " . $this->settings['app_name']);
+        $this->setKeyword("Web Hosting, Future-proof Infrastructure, VPS Linux, VPS Windows, Dedicated Server, Cloud VPS, Busines Email");
+        return view("clients::website.products.products");
+    }
+    public function resellerHosting(){
+        $this->setPageDescription("MulakiHost includes many services and prodcts, application hosting, server computing, database services and more.");
+        $this->setPageName("Products & Hosting Services. | " . $this->settings['app_name']);
+        $this->setKeyword("Web Hosting, Future-proof Infrastructure, VPS Linux, VPS Windows, Dedicated Server, Cloud VPS, Busines Email");
+        return view("clients::website.products.reseller-hosting");
+    }
 
 }

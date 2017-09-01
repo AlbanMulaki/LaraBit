@@ -15,10 +15,10 @@
                 </li>
             </ul>
             <ul class="">
-                <li><a href="#">Products</a>
+                <li><a href="{{ route("website.products") }}">Products</a><span class='label label-success'>OK</span>
                     <ul class="">
                         <li>
-                            <a href="#">Cloud VMs</a></span>
+                            <a href="{{ route('website.reseller-hosting') }}">Dedicated Server</a></span><span class='label label-warning'>Links</span>
                         </li>
                         <li>
                             <a href="{{ route("website.vps-server") }}">VPS Server </a>  <span class='label label-success'>OK</span>

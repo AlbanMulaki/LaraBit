@@ -30,6 +30,17 @@ Route::group(['namespace' => 'App\Core\Clients\Controllers', 'middleware' => ['w
     Route::get('/domain-names-registration', ['as' => 'website.domain-names-registraton', 'uses' => 'WebsiteController@domainNames']);
     Route::post('/check-domain',['as'=>'website.check-domain','uses'=>'WebsiteController@checkDomainAvailability']);
     
+    /*** Cloud VMs  ***/
+    Route::get('/products', ['as' => 'website.products', 'uses' => 'WebsiteController@products']);
+    
+    
+    
+    
+    Route::get('/reseller-hosting', ['as' => 'website.reseller-hosting', 'uses' => 'WebsiteController@resellerHosting']);
+    
+    
+    
+    
     Route::get('/web-hosting', ['as' => 'website.web-hosting', 'uses' => 'WebsiteController@webHosting']);
     Route::group(['prefix' => 'solutions'], function() {
         Route::get('website-web-apps', ['as' => 'website.solutions-website-web-apps', 'uses' => 'WebsiteController@solutionsWebApps']);

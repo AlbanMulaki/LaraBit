@@ -202,12 +202,14 @@
         </div>
         <div class="col-xs-12 col-sm-6  col-md-4 col-lg-4 ">
             <div class="col-xs-12 article article-products">
-                <i class="fa fa-cloud fa-lg fa-5x"></i>
-                <h3>Cloud VMs</h3>
+                <i class="fa fa-cubes fa-lg fa-5x"></i>
+                <h3>Dedicated Server</h3>
                 <br>
                 <p>
-                    Our virtual servers are available in many configurations, including predefined sizes, and options to create Custom Machine Types optimized for your specific needs.
-                    <br> <br>
+                    We are continuously improving our infrastructure so you can have the absolute best dedicated server hosting for your ventures.
+                    European Tier 3+ Data Center
+                    We make sure your servers are always online by offering FREE DDoS protection.
+
                 </p>
                 <div class="row text-left text-uppercase" style="border-top: 1px solid #e4e4e4;">
                     <a href="#">Learn More</a>
