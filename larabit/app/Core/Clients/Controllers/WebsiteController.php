@@ -161,7 +161,7 @@ class WebsiteController extends Controller {
             $tldLists = WHMCS::fetch("GetTLDPricing");
             foreach ($tldLists['pricing'] as $tld => $tldLists) {
                 if ($tld == request()->get('tld')) {
-                    $priceCurrentTld= $tldLists;
+                    $priceCurrentTld = $tldLists;
                     continue;
                 }
                 $responseMultiple = WHMCS::fetch("DomainWhois", ['domain' => request()->get('domain') . "." . $tld]);
@@ -213,20 +213,21 @@ class WebsiteController extends Controller {
 
     public function setOrder(\App\Core\Clients\Validator\PlanValidator $request) {
         $tldPricing = WHMCS::fetch("GetTLDPricing");
-        $products = WHMCS::fetch("GetProducts",['gid'=>(int)$request->gid]);
+        $products = WHMCS::fetch("GetProducts", ['gid' => (int) $request->gid]);
         try {
             $domainsList = $tldPricing['pricing'];
         } catch (\Exception $e) {
             abort(500, "IP is not in allowed list WHMCS" . $tldPricing);
         }
-        return view("clients::website.products.order.web-hosting", ['tldPricing' => $tldPricing, 'products' => $products,'gid'=>$request->gid]);
+        return view("clients::website.products.order.web-hosting", ['tldPricing' => $tldPricing, 'products' => $products, 'gid' => $request->gid]);
     }
-    public function sendOrder(){
+
+    public function sendOrder() {
         return request()->all();
     }
-    
+
     public function calculateBilling() {
-        $products = WHMCS::fetch("GetProducts",['pid'=>request()->get('pid')]);
+        $products = WHMCS::fetch("GetProducts", ['pid' => request()->get('pid')]);
         return $products;
     }
 

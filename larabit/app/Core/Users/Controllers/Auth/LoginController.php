@@ -8,40 +8,40 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\View;
 
 class LoginController extends Controller {
-  /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-   */
+    /*
+      |--------------------------------------------------------------------------
+      | Login Controller
+      |--------------------------------------------------------------------------
+      |
+      | This controller handles authenticating users for the application and
+      | redirecting them to your home screen. The controller uses a trait
+      | to conveniently provide its functionality to your applications.
+      |
+     */
 
 use AuthenticatesUsers;
 
-  // sadasda
-  /**
-   * Where to redirect users after login.
-   *
-   * @var string
-   */
-  protected $redirectTo = '/cp/dashboard';
+    // sadasda
+    /**
+     * Where to redirect users after login.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/cp/dashboard';
 
-  /**
-   * Create a new controller instance.
-   *
-   * @return void
-   */
-  public function __construct() {
-    parent::__construct();
-    $this->setPageName("Login");
-    $this->middleware('guest', ['except' => 'logout']);
-  }
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct() {
+        parent::__construct();
+        $this->setPageName("Login");
+        $this->middleware('guest', ['except' => 'logout']);
+    }
 
-  public function showLoginForm() {
-    return view('users::auth.login');
-  }
+    public function showLoginForm() {
+        return view('users::auth.login');
+    }
 
 }

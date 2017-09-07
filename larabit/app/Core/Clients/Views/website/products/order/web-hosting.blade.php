@@ -85,265 +85,295 @@
 </div>
 
 <div class="container ">
-    
-        {{ csrf_field() }}
-        <input type="hidden" name="myowndomain" value="0"/>
-        <div class='col-xs-12 order'>
-            <div class='row'>
-                <h4 class='text-uppercase'>1. &nbsp;<span class="fa fa-cubes fa-lg"></span>&nbsp;&nbsp;Choose a Plan</h4>
-            </div> 
-            <div class='row' class="text-center" id='domain-info'>
-                <label class="control-label col-md-3  text-right" style="margin-top:10px;" for="hostingplan"><p>Hostng Plan</p></label>
-                <div class="col-md-7">
-                    <div class="form-group ">
-                        <select class="form-control input-lg" id="hostingplan" name="hostingplan">
-                            @foreach($products['products']['product'] as $product)
-                            <option value="{{ $product['pid'] }}">{{ $product['name'] }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-                <label class="control-label col-md-3  text-right" style="margin-top:10px;" for="billingcycle"><p>Billing Cycle</p></label>
-                <div class="col-md-7">
-                    <div class="form-group ">
-                        <select class="form-control input-lg" id="billingcycle" name="billingcycle">
-                            <option>1 Month - €4</option>
-                        </select>
-                    </div>
+
+    {{ csrf_field() }}
+    <input type="hidden" name="myowndomain" value="0"/>
+    <div class='col-xs-12 order'>
+        <div class='row'>
+            <h4 class='text-uppercase'>1. &nbsp;<span class="fa fa-cubes fa-lg"></span>&nbsp;&nbsp;Choose a Plan</h4>
+        </div> 
+        <div class='row' class="text-center" id='domain-info'>
+            <label class="control-label col-md-3  text-right" style="margin-top:10px;" for="hostingplan"><p>Hostng Plan</p></label>
+            <div class="col-md-7">
+                <div class="form-group ">
+                    <select class="form-control input-lg" id="hostingplan" name="hostingplan">
+                        @foreach($products['products']['product'] as $product)
+                        <option value="{{ $product['pid'] }}">{{ $product['name'] }}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
-            <div class='row'>
-                <h4 class='text-uppercase'>2. &nbsp;<span class="fa fa-globe fa-lg"></span>&nbsp;&nbsp;Choose Domain</h4>
-            </div> 
-            <div class='row' class="text-center" id='domain-info'>
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active col-md-offset-3 col-md-3 text-center"><a href="#register-new-domain" aria-controls="home" role="tab" data-toggle="tab">Register a domain</a></li>
-                    <li role="presentation" class='col-md-3 text-center'><a href="#owned-domain" aria-controls="profile" role="tab" data-toggle="tab">Already own the domain</a></li>
-                </ul>
-                <div class="row ">
-                    <div class="tab-content col-md-12 ">
-                        <div role="tabpanel" class="tab-pane in fade active" id="register-new-domain">
-                            <div class="col-md-12 text-center domain-order">
-                                <label class="control-label col-md-3  text-right" style="margin-top:10px;" for="domainrt"><p>Enter your domain</p></label>
-                                <div class="col-md-5 col-sm-12">
-                                    <div class="form-group text-left">
-                                        <input class="form-control input-lg" id="domainrt" name="domain" placeholder="yourdomain" type="text">
-                                    </div>
-                                </div>
-                                <div class="col-md-2   col-xs-10">
-                                    <div class="form-group ">
-                                        <select class="form-control input-lg" id="domaindropdown" name="tld">
-                                            @foreach($tldPricing['pricing'] as $tld=>$value)
-                                            <option value="{{ $tld }}" @if($loop->index == 0) selected @endif>.{{ $tld }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-2  col-xs-6">
-                                    <button class="btn btn-primary btn-lg" id="domain_search">Check</button>
+            <label class="control-label col-md-3  text-right" style="margin-top:10px;" for="billingcycle"><p>Billing Cycle</p></label>
+            <div class="col-md-7">
+                <div class="form-group ">
+                    <select class="form-control input-lg" id="billingcycle" name="billingcycle">
+                        <option>1 Month - €4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <h4 class='text-uppercase'>2. &nbsp;<span class="fa fa-globe fa-lg"></span>&nbsp;&nbsp;Choose Domain</h4>
+        </div> 
+        <div class='row' class="text-center" id='domain-info'>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active col-md-offset-3 col-md-3 text-center"><a href="#register-new-domain" aria-controls="home" role="tab" data-toggle="tab">Register a domain</a></li>
+                <li role="presentation" class='col-md-3 text-center'><a href="#owned-domain" aria-controls="profile" role="tab" data-toggle="tab">Already own the domain</a></li>
+            </ul>
+            <div class="row ">
+                <div class="tab-content col-md-12 ">
+                    <div role="tabpanel" class="tab-pane in fade active" id="register-new-domain">
+                        <div class="col-md-12 text-center domain-order">
+                            <label class="control-label col-md-3  text-right" style="margin-top:10px;" for="domainrt"><p>Enter your domain</p></label>
+                            <div class="col-md-5 col-sm-12">
+                                <div class="form-group text-left">
+                                    <input class="form-control input-lg" id="domainrt" name="domain" placeholder="yourdomain" type="text">
                                 </div>
                             </div>
-                            <div class="col-md-12 text-center">
-                                <div id="status-domain">
-                                </div>
-                            </div>
-
-                        </div>
-                        <div role="tabpanel" class="tab-pane fade" id="owned-domain">
-
-                            <div class="col-md-12 text-center domain-order">
-                                <label class="control-label col-md-3  text-right" style="margin-top:10px;" for="domainrt"><p>Enter your domain</p></label>
-                                <div class="col-md-5 col-sm-12">
-                                    <div class="form-group text-left">
-                                        <input class="form-control input-lg" id="domainrt" name="domaintransfer" placeholder="yourdomain.com" type="text">
-                                    </div>
-                                </div>
-                                <div class="col-md-2  col-xs-6">
-                                    <button class="btn btn-primary btn-lg" id="save-domain">save</button>
-                                </div>
-                            </div>
-                            <div class="col-md-12 domain-order">
-                                <label class="control-label col-md-3 text-right" style="margin-top:10px;" for="transfer-mydomain"><p>I want to transfer my domain</p></label>
+                            <div class="col-md-2   col-xs-10">
                                 <div class="form-group ">
-                                    <div class=" col-md-3 ">
-                                        <input type='checkbox'  name='transfer' />
-                                    </div>
+                                    <select class="form-control input-lg" id="domaindropdown" name="tld">
+                                        @foreach($tldPricing['pricing'] as $tld=>$value)
+                                        <option value="{{ $tld }}" @if($loop->index == 0) selected @endif>.{{ $tld }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2  col-xs-6">
+                                <button class="btn btn-primary btn-lg" id="domain_search">Check</button>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <div id="status-domain">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="owned-domain">
+
+                        <div class="col-md-12 text-center domain-order">
+                            <label class="control-label col-md-3  text-right" style="margin-top:10px;" for="domainrt"><p>Enter your domain</p></label>
+                            <div class="col-md-5 col-sm-12">
+                                <div class="form-group text-left">
+                                    <input class="form-control input-lg" id="domainrt" name="domaintransfer" placeholder="yourdomain.com" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-2  col-xs-6">
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-primary">
+                                        <input type="checkbox" autocomplete="off" name='myowndomain'> Save
+                                    </label>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class='row'>
-                <h4 class='text-uppercase'>3. &nbsp;<span class="fa fa-vcard fa-lg"></span>&nbsp;&nbsp;Billing Information</h4>
-            </div> 
-            <div class='row text-center billing-information'>
-                <div class='col-md-6'>
-                    <div class='col-md-12'>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-addon"><i class='fa fa-user fa-lg'></i></div>
-                                <input type="text" class="form-control input-lg" name='firstname' placeholder="Firstname">
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-md-12'>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-addon"><i class='fa fa-user fa-lg'></i></div>
-                                <input type="text" class="form-control input-lg" name='lastname' placeholder="Lastname">
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-md-12'>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-addon"><i class='fa fa-user fa-lg'></i></div>
-                                <input type="text" class="form-control input-lg" name='address1' placeholder="Address">
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-md-12'>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-addon"><i class='fa fa-globe fa-lg'></i></div>
-                                <select class="form-control input-lg" id="domaindropdown" name="country">
-                                    @foreach($tldPricing['pricing'] as $tld=>$value)
-                                    <option>Albania</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class='col-md-6'>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon"><i class='fa fa-envelope fa-lg'></i></div>
-                            <input type="text" class="form-control input-lg" name='email' placeholder="Email Address">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon"><i class='fa fa-lock fa-lg'></i></div>
-                            <input type="text" class="form-control input-lg" name='password' placeholder="Password">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon"><i class='fa fa-lock fa-lg'></i></div>
-                            <input type="text" class="form-control input-lg" name='password_confirm' placeholder="Repeat Password">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 ">
-                    <br>
-                    <h3>Payment Method</h3>
-                    <hr>
-                    <label class="checkbox-inline">
-                        <input type="radio" name="paymentMethod" value="paypal" checked> 
-                        <img src='https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-150px.png'>
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="radio" name="paymentMethod" value="banktransfer"> <i class="fa fa-bank fa-2x">  Bank Transfer</i>
-                    </label>
-                </div>
-            </div>
-            <!--        <div class='row'>
-                        <h4 class='text-uppercase'>4. &nbsp;<span class="fa fa-money fa-lg"></span>&nbsp;&nbsp;Payment Method</h4>
-                    </div> 
-                    <div class='row' class="text-center" id='domain-info'>
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active col-md-offset-3 col-md-3 text-center"><a href="#register-new-domain" aria-controls="home" role="tab" data-toggle="tab">Register a domain</a></li>
-                            <li role="presentation" class='col-md-3 text-center'><a href="#owned-domain" aria-controls="profile" role="tab" data-toggle="tab">Already own the domain</a></li>
-                        </ul>
-                        <div class="row ">
-                            <div class="tab-content col-md-12 ">
-                                <div role="tabpanel" class="tab-pane in fade active" id="register-new-domain">
-                                    <form class=" domain-order">
-                                        <div class="row text-center">
-                                            <label class="control-label col-md-3  text-right" style="margin-top:10px;" for="domainrt"><p>Enter your domain</p></label>
-                                            <div class="col-md-5 col-sm-12">
-                                                <div class="form-group text-left">
-                                                    <input class="form-control input-lg" id="domainrt" name="domain" placeholder="yourdomain" type="text">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2   col-xs-10">
-                                                <div class="form-group ">
-                                                    {{ debug($tldPricing) }}
-                                                    <select class="form-control input-lg" id="domaindropdown" name="tld">
-                                                        @foreach($tldPricing['pricing'] as $tld=>$value)
-                                                        <option value="{{ $tld }}" @if($loop->index == 0) selected @endif>.{{ $tld }}</option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2  col-xs-6">
-                                            </div>
-                                        </div>
-                                    </form>
-            
+                        <div class="col-md-12 domain-order">
+                            <label class="control-label col-md-3 text-right" style="margin-top:10px;" for="transfer-mydomain"><p>I want to transfer my domain</p></label>
+                            <div class="form-group ">
+                                <div class=" col-md-3 ">
+                                    <input type='checkbox'  name='transfer' />
                                 </div>
-                                <div role="tabpanel" class="tab-pane fade" id="owned-domain">asdasdasfasgasg</div>
                             </div>
-                        </div>
-                    </div>-->
-            <div class='row'>
-                <h4 class='text-uppercase'>4. &nbsp;<span class="fa fa-list-ul fa-lg"></span>&nbsp;&nbsp;Review your order details</h4>
-            </div> 
-            <div class='row ' id='review-order' >
-
-                <div class='col-md-12'>
-                    <table class="table table-striped" id='servicesprices'>
-
-                        <tr>
-                            <td>
-                                <h4>Support 24/h<small>&nbsp;&nbsp;&nbsp;&nbsp; FREE</small></h4>
-                            </td>
-                            <td class='text-center'>
-                                <h4>€0</h4>
-                            </td>
-                        </tr>
-                        <tr style='background: #deeeff;'>
-                            <td class='text-right'  style='border-top:none; '>
-                                <h4>Amount Due</h4>
-                            </td>
-                            <td class='text-center' id="amountdue" style='border-top:none; '>
-                                <h4>€4</h4>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan='3' class='text-center'>
-                                <p>
-                                    <input type='checkbox' name="accepttos" style='border:none;'>
-                                    &nbsp;
-                                    I have read and agree to the
-                                    <a href="#" target="_blank">Terms of Service</a>
-                                </p>
-                            </td>
-                        </tr>
-                    </table> 
-                </div>
-                <div class='col-md-12 text-center'>
-                    <div class='col-md-12'>
-                        <button type='submit' class='btn btn-lg btn-success'>Place my order & Pay Now</button>
-                        <br><br>
-                    </div>
-                    <div class="alert alert-success col-md-12" role="alert" >
-                        <div class='col-md-1'>
-                            <span class="fa fa-lock fa-3x"></span>
-                        </div>
-                        <div class='col-md-11 text-left'>
-                            <p>This order form is provided in a secure environment and to help protect against 
-                                fraud your current IP address ({{ request()->ip() }}) is being logged.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </form>
+        <div class='row'>
+            <h4 class='text-uppercase'>3. &nbsp;<span class="fa fa-vcard fa-lg"></span>&nbsp;&nbsp;Billing Information</h4>
+        </div> 
+        <div class='row text-center billing-information'>
+            <div class='col-md-12'>
+                <a href='#' class='btn btn-info'>@lang('clients::website.already_registered')</a>
+                <br><br>
+            </div>
+            <div class='col-md-12'>
+                <a href='#' class='btn btn-info'>@lang('clients::website.already_registered')</a>
+                <br><br>
+            </div>
+            <div class='col-md-6'>
+                <div class='col-md-12'>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class='fa fa-user fa-lg'></i></div>
+                            <input type="text" class="form-control input-lg" name='firstname' placeholder="Firstname">
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-12'>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class='fa fa-user fa-lg'></i></div>
+                            <input type="text" class="form-control input-lg" name='lastname' placeholder="Lastname">
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-12'>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class='fa fa-user fa-lg'></i></div>
+                            <input type="text" class="form-control input-lg" name='address1' placeholder="Address">
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-12'>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class='fa fa-globe fa-lg'></i></div>
+                            <select class="form-control input-lg" id="domaindropdown" name="country">
+                                @foreach($tldPricing['pricing'] as $tld=>$value)
+                                <option>Albania</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6'>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class='fa fa-envelope fa-lg'></i></div>
+                        <input type="text" class="form-control input-lg" name='email' placeholder="Email Address">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class='fa fa-lock fa-lg'></i></div>
+                        <input type="text" class="form-control input-lg" name='password' placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class='fa fa-lock fa-lg'></i></div>
+                        <input type="text" class="form-control input-lg" name='password_confirm' placeholder="Repeat Password">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 ">
+                <br>
+                <h3>Payment Method</h3>
+                <hr>
+                <label class="checkbox-inline">
+                    <input type="radio" name="paymentMethod" value="paypal" checked> 
+                    <img src='https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-150px.png'>
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio" name="paymentMethod" value="banktransfer"> <i class="fa fa-bank fa-2x">  Bank Transfer</i>
+                </label>
+            </div>
+        </div>
+        <!--        <div class='row'>
+                    <h4 class='text-uppercase'>4. &nbsp;<span class="fa fa-money fa-lg"></span>&nbsp;&nbsp;Payment Method</h4>
+                </div> 
+                <div class='row' class="text-center" id='domain-info'>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active col-md-offset-3 col-md-3 text-center"><a href="#register-new-domain" aria-controls="home" role="tab" data-toggle="tab">Register a domain</a></li>
+                        <li role="presentation" class='col-md-3 text-center'><a href="#owned-domain" aria-controls="profile" role="tab" data-toggle="tab">Already own the domain</a></li>
+                    </ul>
+                    <div class="row ">
+                        <div class="tab-content col-md-12 ">
+                            <div role="tabpanel" class="tab-pane in fade active" id="register-new-domain">
+                                <form class=" domain-order">
+                                    <div class="row text-center">
+                                        <label class="control-label col-md-3  text-right" style="margin-top:10px;" for="domainrt"><p>Enter your domain</p></label>
+                                        <div class="col-md-5 col-sm-12">
+                                            <div class="form-group text-left">
+                                                <input class="form-control input-lg" id="domainrt" name="domain" placeholder="yourdomain" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2   col-xs-10">
+                                            <div class="form-group ">
+                                                {{ debug($tldPricing) }}
+                                                <select class="form-control input-lg" id="domaindropdown" name="tld">
+                                                    @foreach($tldPricing['pricing'] as $tld=>$value)
+                                                    <option value="{{ $tld }}" @if($loop->index == 0) selected @endif>.{{ $tld }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2  col-xs-6">
+                                        </div>
+                                    </div>
+                                </form>
+        
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="owned-domain">asdasdasfasgasg</div>
+                        </div>
+                    </div>
+                </div>-->
+        <div class='row'>
+            <h4 class='text-uppercase'>4. &nbsp;<span class="fa fa-list-ul fa-lg"></span>&nbsp;&nbsp;Review your order details</h4>
+        </div> 
+        <div class='row ' id='review-order' >
+
+            <div class='col-md-12'>
+                <table class="table table-striped" id='servicesprices'>
+
+                    <tr>
+                        <td>
+                            <h4>Support 24/h<small>&nbsp;&nbsp;&nbsp;&nbsp; FREE</small></h4>
+                        </td>
+                        <td class='text-center'>
+                            <h4>€0</h4>
+                        </td>
+                    </tr>
+                    <tr style='background: #deeeff;'>
+                        <td class='text-right'  style='border-top:none; '>
+                            <h4>Amount Due</h4>
+                        </td>
+                        <td class='text-center' id="amountdue" style='border-top:none; '>
+                            <h4>€4</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='3' class='text-center'>
+                            <p>
+                                <input type='checkbox' name="accepttos" style='border:none;'>
+                                &nbsp;
+                                I have read and agree to the
+                                <a href="#" target="_blank">Terms of Service</a>
+                            </p>
+                        </td>
+                    </tr>
+                </table> 
+            </div>
+            <div class='col-md-12 text-center'>
+                <div class='col-md-12'>
+                    <button type='submit' class='btn btn-lg btn-success'>Place my order & Pay Now</button>
+                    <br><br>
+                </div>
+                <div class="alert alert-success col-md-12" role="alert" >
+                    <div class='col-md-1'>
+                        <span class="fa fa-lock fa-3x"></span>
+                    </div>
+                    <div class='col-md-11 text-left'>
+                        <p>This order form is provided in a secure environment and to help protect against 
+                            fraud your current IP address ({{ request()->ip() }}) is being logged.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
 </div>
 <br><br>
+
+
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id='domaininvalid'>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">@lang('clients::website.domain_name_not_valid')</h4>
+            </div>
+            <div class="modal-body">
+                <p>@lang('clients::website.domain_name_not_valid')</p>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 @stop
 
 @section('styles')
@@ -400,6 +430,12 @@ $("#domain_search").click(function () {
                 $('#similar-domain').append("<tr><td>" + suggestedDomain + "</td><td>€" + value.price + "</td><td class='text-capitalize " + statusClass + "' >" + value.status + "</td><td>" + orderLink + "</td></tr>");
             });
             $('#similar-domain').fadeIn(1000);
+        },
+        statusCode: {
+            500: function () {
+                $('#domaininvalid').modal('show');
+                $('#status-domain').empty()
+            }
         }
     });
 });
@@ -474,14 +510,13 @@ $("#billingcycle").change(function () {
 });
 
 $(document).on('DOMNodeInserted DOMNodeRemoved DOMSubtreeModified', '.prices', function () {
-    var domainPrice = $("input[name='domainprice']").val() != "" && $("input[name='domainprice']").val() != "undefined" ? $("input[name='domainprice']").val() : '0';
-    var hostingPrice = ($('#hostingprice td:last-child price').text() != "" ? $('#hostingprice td:last-child price').text() : "0");
-    console.log(parseFloat(domainPrice));
-    console.log((domainPrice));
-    console.log(parseFloat(hostingPrice));
+    var domainPrice = $("input[name='domainprice']").val() ? $("input[name='domainprice']").val() : "0";
+    var hostingPrice = ($('#hostingprice td:last-child price').text() ? $('#hostingprice td:last-child price').text() : "0");
     var totalPrice = parseFloat(domainPrice) + parseFloat(hostingPrice);
-    $('#amountdue').empty().html(totalPrice);
+    $('#amountdue').empty().html("<h4>€" + parseFloat(totalPrice) + "</h4>");
 });
+
+
 $(document).ready(function () {
     getBillingCycleForPlan();
     calculateHostingPlanPrice();
