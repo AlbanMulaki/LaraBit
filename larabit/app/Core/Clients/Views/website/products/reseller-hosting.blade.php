@@ -16,7 +16,7 @@
 <div class="container feature-solutions">
     <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-            <h2>Linux Web Hosting</h2>
+            <h2>Linux Reseller Hosting</h2>
             <p>
                 Whether you need to build a multi-tiered web application from scratch or host a static website, 
                 MulakiHost provides services and infrastructure that enable you to develop and deploy scalable, 
@@ -118,7 +118,7 @@
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
             <h3>Dedication & Support</h3>
             <p>
-                All our web hosting accounts are covered under our fully managed support contract. 
+                All our linux reseller hosting accounts are covered under our fully managed support contract. 
                 We take pride in our work and show the same dedication and care you would expect from your own employees. 
                 We never sleep and are dedicated to keeping your business running with personalised support available 
                 24 hours a day, 7 days a week, 365 days a year.
@@ -137,11 +137,11 @@
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
             <h3>Daily Data Backups & Security</h3>
             <p>
-                All our web hosting account backups are processed on a daily basis. 
+                All our linux reseller hosting account backups are processed on a daily basis. 
                 We retain multiple recovery points and offer restoration from most recent to historical backups. 
                 This service will allow you unlimited restores at any time during the service period (contingent on availability of the backup).
                 All data are encrypted for each account using more then one encryption mechanisms.
-                The same encryption and key management policies, cryptographic libraries, and root of trust used for your data in MulakiHost are used by many of Mulaki Host production services, including Web Hosting, Server, Storage, Mulaki Host own corporate data.
+                The same encryption and key management policies, cryptographic libraries, and root of trust used for your data in MulakiHost are used by many of Mulaki Host production services, including Linux Reseller Hosting, Server, Storage, Mulaki Host own corporate data.
             </p>
         </div>
     </div>
@@ -223,7 +223,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h4>cPanel</h4>
                     <p>
-                        In the competitive web hosting industry, cPanel & WHM offers hosting providers the tools that they need to succeed.
+                        In the competitive hosting industry, cPanel & WHM offers hosting providers the tools that they need to succeed.
                     </p>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -239,8 +239,8 @@
 
 <div class="container ">
     <div class="col-xs-12  text-center" style="margin:20px 0;">
-        <h2>Web Hosting Pricing</h2>
-        <p>Web Hosting has competitive pricing.</p>
+        <h2>Linux Reseller Hosting Pricing</h2>
+        <p>Linux Reseller has competitive pricing.</p>
     </div>
     <div class="col-xs-12 text-center" style="margin:20px 0;">
         <a href="#price-table" class="btn btn-lg btn-primary"><i class="fa fa-arrow-circle-right"></i> &nbsp;View Price Hosting </a>
@@ -261,9 +261,9 @@
             <i class="fa fa-shopping-basket fa-3x"></i>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-            <h2>Linux Web Hosting Packages</h2>
+            <h2>Linux Linux Reseller Packages</h2>
             <h4>
-                Choose one of our fine-tuned Linux Web Hosting solutions!
+                Choose one of our fine-tuned Linux Reseller Hosting solutions!
             </h4>
             <br><br>
         </div>

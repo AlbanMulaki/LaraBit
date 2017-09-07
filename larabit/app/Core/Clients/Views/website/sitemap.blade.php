@@ -31,15 +31,15 @@
                             <a href="{{ route("website.web-hosting") }}">Web Hosting</a> <span class='label label-warning'>Links</span>
                             <ul class="">
                                 <li>
-                                    <a href="#">Compare Web Hosting</a>
+                                    <a href="#">Compare Web Hosting</a><span class='label label-danger'>Later</span>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Reseller Hosting</a>
+                            <a href="{{ route('website.reseller-hosting') }}">Reseller Hosting</a><span class='label label-warning'>Links</span>
                             <ul class="">
                                 <li>
-                                    <a href="#">Compare Web Hosting</a>
+                                    <a href="#">Compare Web Hosting</a><span class='label label-danger'>Later</span>
                                 </li>
                             </ul>
                         </li>

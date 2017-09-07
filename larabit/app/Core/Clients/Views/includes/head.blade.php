@@ -38,4 +38,5 @@
 <link href="{{ asset('/css/lib/clientarea.min.css')}}" rel="stylesheet">
 <link href="{{ asset('/css/lib/bootstrap-slider.min.css')}}" rel="stylesheet">
 <link href="{{ asset('/css/lib/app.min.css')}}" rel="stylesheet">
+@yield('styles')
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">

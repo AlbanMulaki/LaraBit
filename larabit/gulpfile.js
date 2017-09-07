@@ -79,6 +79,9 @@ elixir(function (mix) {
     mix.sass(npm + "gentelella/vendors/iCheck/skins/square/green.css", './public_html/css/lib/icheck.min.css');
     mix.copy(npm + "gentelella/vendors/iCheck/skins/square/green.png", './public_html/css/lib/green.png');
     mix.copy(npm + "gentelella/vendors/iCheck/skins/square/green@2x.png", './public_html/css/lib/green@2x.png');
+    mix.sass(npm + "gentelella/vendors/iCheck/skins/square/blue.css", './public_html/css/lib/icheck-blue.min.css');
+    mix.copy(npm + "gentelella/vendors/iCheck/skins/square/blue.png", './public_html/css/lib/blue.png');
+    mix.copy(npm + "gentelella/vendors/iCheck/skins/square/blue.png", './public_html/css/lib/blue.png');
     mix.scripts(npm + "gentelella/vendors/iCheck/icheck.min.js", './public_html/js/lib/icheck.min.js');
 
 

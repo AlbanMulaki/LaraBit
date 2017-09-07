@@ -42,6 +42,9 @@ Route::group(['namespace' => 'App\Core\Clients\Controllers', 'middleware' => ['w
     
     
     Route::get('/web-hosting', ['as' => 'website.web-hosting', 'uses' => 'WebsiteController@webHosting']);
+    Route::get('/order/{gid}', ['as' => 'website.web-hosting-order', 'uses' => 'WebsiteController@setOrder']);
+    Route::post('/order/send', ['as' => 'website.web-hosting-order-send', 'uses' => 'WebsiteController@sendOrder']);
+    Route::post('/calculate-price-cycle', ['as' => 'website.calculate-price-cycle', 'uses' => 'WebsiteController@calculateBilling']);
     Route::group(['prefix' => 'solutions'], function() {
         Route::get('website-web-apps', ['as' => 'website.solutions-website-web-apps', 'uses' => 'WebsiteController@solutionsWebApps']);
         Route::get('mobile-application', ['as' => 'website.solutions-mobile-application', 'uses' => 'WebsiteController@solutionsMobileApplication']);
